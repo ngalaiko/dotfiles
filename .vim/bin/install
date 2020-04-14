@@ -1,0 +1,114 @@
+#!/bin/bash
+
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BUNDLE_PATH=${CURRENT_DIR}'/../bundle/'
+MAIN_OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/main.vim'
+OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/plugins/'
+
+plugins=(
+    https://github.com/Shougo/deoplete.nvim
+    https://github.com/zchee/deoplete-go
+    https://github.com/roxma/nvim-yarp
+    https://github.com/scrooloose/nerdtree
+    https://github.com/tpope/vim-fugitive
+    https://github.com/scrooloose/nerdcommenter
+    https://github.com/fatih/vim-go
+    https://github.com/jiangmiao/auto-pairs
+    https://github.com/majutsushi/tagbar
+    https://github.com/junegunn/fzf
+    https://github.com/junegunn/fzf.vim
+    https://github.com/mhinz/vim-signify
+    https://github.com/hexdigest/gounit-vim
+    https://github.com/w0rp/ale
+    https://github.com/vim-airline/vim-airline
+    https://github.com/tpope/vim-surround
+    https://github.com/morhetz/gruvbox
+    https://github.com/neovimhaskell/haskell-vim
+    https://github.com/eagletmt/neco-ghc
+    https://github.com/leafOfTree/vim-svelte-plugin
+    https://github.com/pangloss/vim-javascript
+    https://github.com/tpope/vim-rhubarb
+    https://github.com/lervag/vimtex
+    https://github.com/leafgarland/typescript-vim
+    https://github.com/hashivim/vim-terraform
+    https://github.com/juliosueiras/vim-terraform-completion
+        )
+
+reset_plugins () {
+    installed=( `ls ${BUNDLE_PATH}` )
+
+    plugin_names=( )
+
+    diff=()
+    for i in "${installed[@]}"; do
+        skip=
+        for plugin in ${plugins[@]}; do
+            j=`echo "${plugin}" | cut -d "/" -f 5`
+            [[ $i == $j ]] && { skip=1; break; }
+        done
+        [[ -n $skip ]] || diff+=("$i")
+    done
+
+    for d in ${diff[@]}; do
+        echo "Deleting ${d}..."
+        rm -rf ${BUNDLE_PATH}${d}
+    done
+}
+
+reset_options () {
+    echo "source ${OPTIONS_PATH}../basic.vim" > ${MAIN_OPTIONS_PATH}
+    echo "source ${OPTIONS_PATH}../extended.vim" >> ${MAIN_OPTIONS_PATH}
+    echo "source ${OPTIONS_PATH}../../custom_config.vim" >> ${MAIN_OPTIONS_PATH}
+    echo >> ${MAIN_OPTIONS_PATH}
+    echo '" Load pathogen paths' >> ${MAIN_OPTIONS_PATH}
+    echo "call pathogen#infect('~/.vim/bundle/{}')" >> ${MAIN_OPTIONS_PATH} 
+    echo "call pathogen#helptags()" >> ${MAIN_OPTIONS_PATH}
+    echo >> ${MAIN_OPTIONS_PATH}
+    echo '" Load plugins settings' >> ${MAIN_OPTIONS_PATH}
+
+    if [ ! -d ${OPTIONS_PATH} ]; then
+        mkdir ${OPTIONS_PATH}
+    fi
+}
+
+create_options_for () {
+    plugin=$1
+
+    plugin_name=`echo "${plugin}" | cut -d "/" -f 5`
+    name=`echo ${plugin_name} | cut -d "." -f 1`.vim
+
+    FILE_NAME="${OPTIONS_PATH}${name}"
+    if [ ! -f  ${FILE_NAME} ]; then
+        touch ${FILE_NAME}
+    fi
+
+    echo "source ${OPTIONS_PATH}${name}" >> ${MAIN_OPTIONS_PATH}
+}
+
+clone_from_git () {
+    plugin=$1
+
+    name=`echo "${plugin}" | cut -d "/" -f 5`
+
+    if [ -d ${BUNDLE_PATH}${name} ]; then
+        echo "Updating ${name}..."
+        (cd ${BUNDLE_PATH}${name} && git pull -q)
+    else
+        echo "Installing ${name}..."
+        (cd ${BUNDLE_PATH} && git clone -q ${plugin})
+    fi
+
+    create_options_for ${plugin}
+}
+
+if [ ! -d ${BUNDLE_PATH} ]; then
+    mkdir ${BUNDLE_PATH}
+fi
+
+reset_plugins
+reset_options
+for plugin in ${plugins[@]}; do
+    clone_from_git ${plugin}
+done
+
+
