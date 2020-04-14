@@ -12,6 +12,10 @@ antibody bundle < "$HOME/.zsh_plugins.txt"
 # load aliases
 source "$HOME/.aliases"
 
+# cmd navigation
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # https://github.com/zsh-users/zsh-history-substring-search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="none"
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="none"
