@@ -9,6 +9,10 @@ fi
 source <(antibody init)
 antibody bundle < "$HOME/.zsh_plugins.txt"
 
+
+# load autocomplition
+autoload -U compinit && compinit
+
 # load aliases
 source "$HOME/.aliases"
 
