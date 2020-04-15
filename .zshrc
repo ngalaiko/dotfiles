@@ -9,9 +9,11 @@ fi
 source <(antibody init)
 antibody bundle < "$HOME/.zsh_plugins.txt"
 
-
 # load autocomplition
 autoload -U compinit && compinit
+
+# kubectl completion
+source <(kubectl completion zsh)
 
 # load aliases
 source "$HOME/.aliases"
