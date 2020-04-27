@@ -5,6 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# golang stuff
+GOPATH="$HOME/go"
+GOBIN="$GOPATH/bin"
+PATH="$PATH:$GOBIN"
+
 # load plugins via antigen 
 source <(antibody init)
 antibody bundle < "$HOME/.zsh_plugins.txt"
