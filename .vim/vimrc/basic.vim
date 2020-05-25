@@ -78,6 +78,9 @@ set infercase
 " Ignore case when searching
 set ignorecase
 
+" Double ESC to unhilight your search
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
 " When searching try to be smart about cases
 set smartcase
 
