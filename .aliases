@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Shortcuts
-alias p="cd ~/projects"
 alias g="git"
 
 # connect to the running tmux session
