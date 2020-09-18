@@ -18,18 +18,12 @@ plugins=(
     https://github.com/junegunn/fzf
     https://github.com/junegunn/fzf.vim
     https://github.com/mhinz/vim-signify
-    https://github.com/hexdigest/gounit-vim
     https://github.com/w0rp/ale
     https://github.com/vim-airline/vim-airline
     https://github.com/tpope/vim-surround
     https://github.com/morhetz/gruvbox
-    https://github.com/neovimhaskell/haskell-vim
-    https://github.com/eagletmt/neco-ghc
-    https://github.com/leafOfTree/vim-svelte-plugin
     https://github.com/pangloss/vim-javascript
     https://github.com/tpope/vim-rhubarb
-    https://github.com/lervag/vimtex
-    https://github.com/leafgarland/typescript-vim
     https://github.com/hashivim/vim-terraform
     https://github.com/juliosueiras/vim-terraform-completion
         )
