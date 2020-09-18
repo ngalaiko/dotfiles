@@ -6,13 +6,10 @@ MAIN_OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/main.vim'
 OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/plugins/'
 
 plugins=(
-    https://github.com/Shougo/deoplete.nvim
-    https://github.com/zchee/deoplete-go
     https://github.com/roxma/nvim-yarp
     https://github.com/scrooloose/nerdtree
     https://github.com/tpope/vim-fugitive
     https://github.com/scrooloose/nerdcommenter
-    https://github.com/fatih/vim-go
     https://github.com/jiangmiao/auto-pairs
     https://github.com/majutsushi/tagbar
     https://github.com/junegunn/fzf
@@ -25,7 +22,8 @@ plugins=(
     https://github.com/pangloss/vim-javascript
     https://github.com/tpope/vim-rhubarb
     https://github.com/hashivim/vim-terraform
-    https://github.com/juliosueiras/vim-terraform-completion
+    https://github.com/neovim/nvim-lspconfig
+    https://github.com/nvim-lua/completion-nvim
         )
 
 reset_plugins () {
