@@ -1,6 +1,5 @@
 source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/../basic.vim
 source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/../extended.vim
-source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/../../custom_config.vim
 
 " Load pathogen paths
 call pathogen#infect('~/.vim/bundle/{}')

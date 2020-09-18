@@ -30,3 +30,14 @@ inoremap ∆ <Esc>:m .+1<CR>==gi
 inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m'>+<CR>gv=gv
 vnoremap ˚ :m'<-2<CR>gv=gv
+
+command! MakeTags !ctags -R .
+
+" disable mouse
+set mouse=
+map <ScrollWheelUp> <Nop>
+map <S-ScrollWhellUp> <Nop>
+map <ScrollWheelDown> <Nop>
+map <S-ScrollWheelDown> <Nop>
+
+syntax off
