@@ -6,6 +6,7 @@ MAIN_OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/main.vim'
 OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/plugins/'
 
 plugins=(
+    https://github.com/fatih/vim-go
     https://github.com/roxma/nvim-yarp
     https://github.com/scrooloose/nerdtree
     https://github.com/tpope/vim-fugitive
@@ -50,7 +51,6 @@ reset_plugins () {
 reset_options () {
     echo "source ${OPTIONS_PATH}../basic.vim" > ${MAIN_OPTIONS_PATH}
     echo "source ${OPTIONS_PATH}../extended.vim" >> ${MAIN_OPTIONS_PATH}
-    echo "source ${OPTIONS_PATH}../../custom_config.vim" >> ${MAIN_OPTIONS_PATH}
     echo >> ${MAIN_OPTIONS_PATH}
     echo '" Load pathogen paths' >> ${MAIN_OPTIONS_PATH}
     echo "call pathogen#infect('~/.vim/bundle/{}')" >> ${MAIN_OPTIONS_PATH} 
