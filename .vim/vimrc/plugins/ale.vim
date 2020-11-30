@@ -7,7 +7,7 @@ let g:ale_sign_warning = '⚠'
 
 let b:ale_fixers = {
 \   '*': ['remove_trailing_lines','trim_whitespace'],
-\   'go': ['gometalinter'],
+\   'go': ['gopls'],
 \   'dockerfile': ['hadolint'],
 \   'bash': ['shfmt'],
 \   'make': ['checkmake'],
