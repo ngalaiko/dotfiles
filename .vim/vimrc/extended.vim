@@ -1,6 +1,8 @@
 " Don't request terminal version string (for xterm)
 set t_RV=
 
+nmap <Leader>p O<ESC>o<ESC>Ofmt.Printf("\nnikitag: %+v\n\n", )<ESC>i
+
 " Switch between the last two files
 nnoremap <leader><leader> <C-^>
 

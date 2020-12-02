@@ -6,7 +6,7 @@ call pathogen#infect('~/.vim/bundle/{}')
 call pathogen#helptags()
 
 " Load plugins settings
-source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/vim-go.vim
+"source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/vim-go.vim
 source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/nvim-yarp.vim
 source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/nerdtree.vim
 source /Users/nikita.galaiko/dotfiles/.vim/bin/../vimrc/plugins/vim-fugitive.vim

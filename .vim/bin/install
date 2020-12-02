@@ -6,7 +6,6 @@ MAIN_OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/main.vim'
 OPTIONS_PATH=${CURRENT_DIR}'/../vimrc/plugins/'
 
 plugins=(
-    https://github.com/fatih/vim-go
     https://github.com/roxma/nvim-yarp
     https://github.com/scrooloose/nerdtree
     https://github.com/tpope/vim-fugitive
