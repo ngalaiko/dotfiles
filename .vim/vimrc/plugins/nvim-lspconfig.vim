@@ -1,5 +1,5 @@
 lua <<EOF
-    local nvim_lsp = require'nvim_lsp'
+    local nvim_lsp = require'lspconfig'
     local completion = require'completion'
 
     nvim_lsp.gopls.setup{
@@ -59,6 +59,6 @@ lua <<EOF
     end
 EOF
 
-autocmd BufWritePre *.go lua goimports(1000)
+"autocmd BufWritePre *.go lua goimports(1000)
 
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
