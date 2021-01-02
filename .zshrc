@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# homebrew
+
+export PATH="/opt/homebrew/bin:/opt/homebrew/opt:$PATH"
+
 # golang stuff
 GOPATH="$HOME/go"
 GOBIN="$GOPATH/bin"
