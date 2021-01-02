@@ -3,6 +3,9 @@
 # Shortcuts
 alias g="git"
 
+# editor
+alias vim="nvim"
+
 # connect to the running tmux session
 alias tmux='tmux attach || tmux'
 
