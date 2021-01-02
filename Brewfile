@@ -9,6 +9,9 @@ brew "gettext"
 brew "go"
 brew "kepubify"
 brew "libtool"
+brew "luajit", args: ["HEAD"]
+brew "tree-sitter", args: ["HEAD"]
+brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "pkg-config"
 brew "the_silver_searcher"
