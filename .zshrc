@@ -22,7 +22,7 @@ antibody bundle < "$HOME/.zsh_plugins.txt"
 autoload -U compinit && compinit
 
 # kubectl completion
-source <(kubectl completion zsh)
+[[ -z $(command -v kubectl) ]] || source <(kubectl completion zsh)
 
 # load aliases
 source "$HOME/.aliases"
