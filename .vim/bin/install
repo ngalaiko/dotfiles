@@ -25,6 +25,7 @@ plugins=(
     https://github.com/hashivim/vim-terraform
     https://github.com/neovim/nvim-lspconfig
     https://github.com/nvim-lua/completion-nvim
+    https://github.com/christoomey/vim-tmux-navigator
         )
 
 reset_plugins () {
