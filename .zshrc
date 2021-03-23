@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# gpg suite
+
+export GPG_TTY=$(tty)
+
 # homebrew
 
 export PATH="/opt/homebrew/bin:/opt/homebrew/opt:$PATH"
