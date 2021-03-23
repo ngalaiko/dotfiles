@@ -11,7 +11,7 @@ let NERDTreeShowLineNumbers = 1
 let NERDTreeAutoCenter = 1
 
 " Open NERDTree on startup, when no file has been specified
-autocmd VimEnter * if !argc() | NERDTree | endif
+"autocmd VimEnter * if !argc() | NERDTree | endif
 
 " Locate file in hierarchy quickly
 map <leader>O :NERDTreeFind<cr>
