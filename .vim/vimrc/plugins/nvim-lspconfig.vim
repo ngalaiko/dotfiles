@@ -36,7 +36,7 @@ lua <<EOF
     }
 
     -- Disable Diagnostcs globally
-    vim.lsp.callbacks["textDocument/publishDiagnostics"] = function() end
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
 
     function goimports(timeoutms)
         local context = { source = { organizeImports = true } }
