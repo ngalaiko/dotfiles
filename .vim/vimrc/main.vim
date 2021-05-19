@@ -1,27 +1,35 @@
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/../basic.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/../extended.vim
+source $HOME/.vim/vimrc/basic.vim
 
-" Load pathogen paths
-call pathogen#infect('~/.vim/bundle/{}')
-call pathogen#helptags()
+call plug#begin('$HOME/.vim/plugged')
+    Plug 'https://github.com/dense-analysis/ale'
+    Plug 'https://github.com/jiangmiao/auto-pairs'
+    Plug 'https://github.com/nvim-lua/completion-nvim'
+    Plug 'https://github.com/junegunn/fzf' , { 'do': { -> fzf#install() } }
+    Plug 'https://github.com/junegunn/fzf.vim'
+    Plug 'https://github.com/morhetz/gruvbox'
+    Plug 'https://github.com/scrooloose/nerdcommenter'
+    Plug 'https://github.com/scrooloose/nerdtree'
+    Plug 'https://github.com/neovim/nvim-lspconfig'
+    Plug 'https://github.com/majutsushi/tagbar'
+    Plug 'https://github.com/vim-airline/vim-airline'
+    Plug 'https://github.com/tpope/vim-fugitive'
+    Plug 'https://github.com/fatih/vim-go'
+    Plug 'https://github.com/tpope/vim-rhubarb'
+    Plug 'https://github.com/mhinz/vim-signify'
+    Plug 'https://github.com/tpope/vim-surround'
+    Plug 'https://github.com/hashivim/vim-terraform'
+    Plug 'https://github.com/christoomey/vim-tmux-navigator'
+call plug#end()
 
 " Load plugins settings
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/ale.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/auto-pairs.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/completion-nvim.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/fzf.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/fzf.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/gruvbox.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/nerdcommenter.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/nerdtree.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/nvim-lspconfig.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/nvim-yarp.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/tagbar.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-airline.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-fugitive.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-go.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-rhubarb.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-signify.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-surround.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-terraform.vim
-source /Users/nikita.galaiko/.vim/bin/../vimrc/plugins/vim-tmux-navigator.vim
+source $HOME/.vim/vimrc/plugins/ale.vim
+source $HOME/.vim/vimrc/plugins/completion-nvim.vim
+source $HOME/.vim/vimrc/plugins/fzf.vim
+source $HOME/.vim/vimrc/plugins/fzf.vim
+source $HOME/.vim/vimrc/plugins/gruvbox.vim
+source $HOME/.vim/vimrc/plugins/nerdtree.vim
+source $HOME/.vim/vimrc/plugins/nvim-lspconfig.vim
+source $HOME/.vim/vimrc/plugins/tagbar.vim
+source $HOME/.vim/vimrc/plugins/vim-airline.vim
+source $HOME/.vim/vimrc/plugins/vim-go.vim
+source $HOME/.vim/vimrc/plugins/vim-terraform.vim
