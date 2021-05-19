@@ -14,40 +14,11 @@ set history=700
 filetype plugin on
 filetype indent on
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
 
 " Reload config.
 nnoremap <leader>sv :source $MYVIMRC<CR>     
-
-" Don't request terminal version string (for xterm)
-set t_RV=
-
-nmap <Leader>p O<ESC>o<ESC>Ofmt.Printf("\nnikitag: %+v\n\n", )<ESC>i
-
-" Switch between the last two files
-nnoremap <leader><leader> <C-^>
-
-" Allow to copy/paste between VIM instances
-"copy the current visual selection to ~/.vbuf
-vmap <leader>y :w! ~/.vbuf<cr>
-
-"copy the current line to the buffer file if no visual selection
-nmap <leader>y :.w! ~/.vbuf<cr>
-
-"paste the contents of the buffer file
-nmap <leader>p :r ~/.vbuf<cr>
-
-" map CTRL-L to piece-wise copying of the line above the current one
-imap <C-L> @@@<esc>hhkywjl?@@@<CR>P/@@@<cr>3s
-
-" vurn off search highlighting (type <leader>n to de-select everything)
-nmap <silent> <leader>n :silent :nohlsearch<cr>
-
-" Make sure that CTRL-A (used by gnu screen) is redefined
-noremap <leader>inc <C-A>
 
 " Move lines around (macOS <A-j> = ˚ <A-k> = ∆)
 nnoremap ∆ :m+<CR>==
@@ -57,8 +28,6 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m'>+<CR>gv=gv
 vnoremap ˚ :m'<-2<CR>gv=gv
 
-command! MakeTags !ctags -R .
-
 " disable mouse
 set mouse=
 map <ScrollWheelUp> <Nop>
@@ -66,27 +35,14 @@ map <S-ScrollWhellUp> <Nop>
 map <ScrollWheelDown> <Nop>
 map <S-ScrollWheelDown> <Nop>
 
-set spell
-set spelllang=en_gb spell
+nmap <Leader>p O<ESC>o<ESC>Ofmt.Printf("\nnikitag: %+v\n\n", )<ESC>i
 
 "------------------------------------------------------------------------------
 " VIM user interface
 "------------------------------------------------------------------------------
 
-" Make sure that coursor is always vertically centered on j/k moves
-set so=999
-
 " add vertical lines on columns
 set colorcolumn=114
-
-" Avoid garbled characters in Chinese language windows OS
-let $LANG='en'
-set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-
-" Turn on the WiLd menu
-set wildmenu
 
 " Set command-line completion mode
 set wildmode=list:longest,full
@@ -98,16 +54,6 @@ set cursorline
 set completeopt=longest,menuone
 
 set path+=**
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-else
-    set wildignore+=.git\*,.hg\*,.svn\*
-endif
-
-set wildignore+=**/node_modules/**
-set wildignore+=**/vendor/**
 
 " Show (partial) commands (or size of selection in Visual mode) in the status line
 set showcmd
@@ -155,9 +101,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Make sure that extra margin on left is removed
-set foldcolumn=0
-
 " Enable Ctrl-A/Ctrl-X to work on octal and hex numbers, as well as characters
 set nrformats=octal,hex,alpha
 
@@ -166,15 +109,13 @@ set nrformats=octal,hex,alpha
 " Colors and Fonts
 "------------------------------------------------------------------------------
 
-" Show tabs and spaces.
-" set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-" set list
-
 " Enable syntax highlighting
 syntax on
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+set spelllang=en_us spell
+set spell
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -183,7 +124,7 @@ set ffs=unix,dos,mac
 " Files, backups and undo
 "------------------------------------------------------------------------------
 
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" Turn backup off
 set nobackup
 set nowb
 set noswapfile
@@ -214,19 +155,13 @@ set sessionoptions=blank,buffers,curdir,folds,help,options,winsize,tabpages
 " Text, tab and indent related
 "------------------------------------------------------------------------------
 
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
 
-" javascript: 1 tab == 4 spaces
-autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
-
+" Split tab vertically and horizontally
 map <leader>v :vsp<cr>
 map <leader>s :sp<cr>
 
@@ -250,108 +185,6 @@ set nowrap "Don't Wrap lines (it is stupid)
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
-"------------------------------------------------------------------------------
-" Moving around, tabs, windows and buffers
-"------------------------------------------------------------------------------
-
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" Close all the buffers
-map <leader>bda :1,1000 bd!<cr>
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove<cr>
-map <leader>tj :tabnext<cr>
-map <leader>tk :tabprevious<cr>
-
-" Let 'tl' toggle between this and the last accessed tab
-let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
-
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" Specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
-catch
-endtry
-
-" Return to last edit position when opening files 
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
-" Remember info about open buffers on close
-set viminfo^=%
-
-
-"------------------------------------------------------------------------------
-" Status line
-"------------------------------------------------------------------------------
-" Always show the status line
-set laststatus=2
-
-" Format the status line
-set statusline =
-" Buffer number
-set statusline +=[%n]
-" File description
-set statusline +=\ %f\ %h%m%r%w
-" Name of the current branch (needs fugitive.vim)
-set statusline +=\ %{fugitive#statusline()}
-" Date of the last time the file was saved
-set statusline +=\ %{strftime(\"[%d/%m/%y\ %T]\",getftime(expand(\"%:p\")))}
-" Total number of lines in the file
-set statusline +=%=%-10L
-" Line, column and percentage
-set statusline +=%=%-14.(%l,%c%V%)\ %P
-
-"------------------------------------------------------------------------------
-" Editing mappings
-"------------------------------------------------------------------------------
-
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-autocmd BufWrite *.go :call DeleteTrailingWS()
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-
-" visual shifting (does not exit Visual mode)
-vnoremap < <gv
-vnoremap > >gv
-
-"------------------------------------------------------------------------------
-" Helper functions
-"------------------------------------------------------------------------------
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
-
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
     execute "normal! vgvy"
@@ -373,11 +206,58 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
 endfunction
+
+" visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
+"------------------------------------------------------------------------------
+" Moving around, tabs, windows and buffers
+"------------------------------------------------------------------------------
+
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove<cr>
+map <leader>tj :tabnext<cr>
+map <leader>tk :tabprevious<cr>
+
+" Let 'tl' toggle between this and the last accessed tab
+let g:lasttab = 1
+nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Specify the behavior when switching between buffers
+try
+  set switchbuf=useopen,usetab,newtab
+  set stal=2
+catch
+endtry
+
+" Return to last edit position when opening files 
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
+" Remember info about open buffers on close
+set viminfo^=%

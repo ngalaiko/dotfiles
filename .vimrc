@@ -1,3 +1,3 @@
 set runtimepath^="$HOME/.vim"
 
-source $HOME/.vim/vimrc/main.vim
+source $HOME/.vim/init.vim
