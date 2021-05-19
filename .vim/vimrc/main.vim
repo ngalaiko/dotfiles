@@ -30,6 +30,5 @@ source $HOME/.vim/vimrc/plugins/gruvbox.vim
 source $HOME/.vim/vimrc/plugins/nerdtree.vim
 source $HOME/.vim/vimrc/plugins/nvim-lspconfig.vim
 source $HOME/.vim/vimrc/plugins/tagbar.vim
-source $HOME/.vim/vimrc/plugins/vim-airline.vim
 source $HOME/.vim/vimrc/plugins/vim-go.vim
 source $HOME/.vim/vimrc/plugins/vim-terraform.vim

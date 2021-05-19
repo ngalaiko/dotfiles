@@ -66,6 +66,9 @@ map <S-ScrollWhellUp> <Nop>
 map <ScrollWheelDown> <Nop>
 map <S-ScrollWheelDown> <Nop>
 
+set spell
+set spelllang=en_gb spell
+
 "------------------------------------------------------------------------------
 " VIM user interface
 "------------------------------------------------------------------------------
