@@ -27,7 +27,6 @@ treesitter.setup{
     },
     refactor = {
         highlight_definitions = { enable = languages },
-        highlight_current_scope = { enable = languages },
         smart_rename = {
             enable = languages,
             keymaps = {

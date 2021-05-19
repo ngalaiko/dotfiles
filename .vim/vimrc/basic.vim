@@ -111,6 +111,7 @@ set nrformats=octal,hex,alpha
 
 " Enable syntax highlighting
 syntax on
+set termguicolors
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8

@@ -4,7 +4,10 @@ call plug#begin('$HOME/.vim/plugged')
 	Plug 'https://github.com/nvim-lua/completion-nvim'
 	Plug 'https://github.com/junegunn/fzf' , { 'do': { -> fzf#install() } }
 	Plug 'https://github.com/junegunn/fzf.vim'
-	Plug 'https://github.com/morhetz/gruvbox'
+
+    Plug 'https://github.com/rktjmp/lush.nvim'
+    Plug 'https://github.com/npxbr/gruvbox.nvim'
+
 	Plug 'https://github.com/scrooloose/nerdcommenter'
 	Plug 'https://github.com/scrooloose/nerdtree'
 	Plug 'https://github.com/neovim/nvim-lspconfig'
