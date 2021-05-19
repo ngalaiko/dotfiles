@@ -116,10 +116,6 @@ set nrformats=octal,hex,alpha
 syntax on
 set termguicolors
 
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-set spelllang=en_us
-
 "------------------------------------------------------------------------------
 " Files, backups and undo
 "------------------------------------------------------------------------------
