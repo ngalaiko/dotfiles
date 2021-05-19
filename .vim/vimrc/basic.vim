@@ -41,6 +41,9 @@ nmap <Leader>p O<ESC>o<ESC>Ofmt.Printf("\nnikitag: %+v\n\n", )<ESC>i
 " VIM user interface
 "------------------------------------------------------------------------------
 
+" Make sure that coursor is always vertically centered on j/k moves
+set so=999
+
 " add vertical lines on columns
 set colorcolumn=114
 
@@ -116,7 +119,7 @@ set termguicolors
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 set spelllang=en_us spell
-set spell
+"set spell
 
 "------------------------------------------------------------------------------
 " Files, backups and undo

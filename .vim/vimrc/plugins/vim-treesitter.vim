@@ -1,1 +1,1 @@
-luafile $HOME/.vim/vimrc/lua/treesitter.lua
+luafile $HOME/.vim/vimrc/plugins/lua/treesitter.lua
