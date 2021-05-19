@@ -1,6 +1,7 @@
 lua <<EOF
     local nvim_lsp = require'lspconfig'
     local completion = require'completion'
+    local util = require 'lspconfig/util'
 
     nvim_lsp.gopls.setup{
         on_attach=completion.on_attach,
@@ -33,6 +34,19 @@ lua <<EOF
 
     nvim_lsp.dockerls.setup{
         on_attach=completion.on_attach
+    }
+
+    nvim_lsp.java_language_server.setup{
+        on_attach=completion.on_attach,
+        cmd = {"/Users/nikita.galaiko.code/java-language-server/dist/lang_server_mac.sh"},
+        filetypes = {'java'},
+        root_dir = function(fname)
+            for _, patterns in ipairs({{'*.bazelproject'}}) do
+                local root = util.root_pattern(unpack(patterns))(fname)
+                if root then return root end
+            end
+            return vim.fn.getcwd()
+        end
     }
 
     -- Disable Diagnostcs globally
