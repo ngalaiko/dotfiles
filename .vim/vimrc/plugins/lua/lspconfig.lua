@@ -73,11 +73,11 @@ nvim_lsp.java_language_server.setup{
     cmd = {"/Users/nikita.galaiko/code/java-language-server/dist/lang_server_mac.sh"},
     filetypes = {'java'},
     root_dir = function(fname)
-        for _, patterns in ipairs({{'WORKSPACE'}}) do
+        for _, patterns in ipairs({{'*.bazelproject'}, {'WORKSPACE'}}) do
             local root = util.root_pattern(unpack(patterns))(fname)
             if root then return root end
         end
-        return vim.fn.getcwd()
+        return util.find_git_ancestor(fname) or vim.loop.os_homedir()
     end
 }
 
