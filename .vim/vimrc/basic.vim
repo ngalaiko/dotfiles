@@ -117,9 +117,6 @@ set encoding=utf8
 set spelllang=en_us spell
 set spell
 
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
 "------------------------------------------------------------------------------
 " Files, backups and undo
 "------------------------------------------------------------------------------
@@ -155,6 +152,7 @@ set sessionoptions=blank,buffers,curdir,folds,help,options,winsize,tabpages
 " Text, tab and indent related
 "------------------------------------------------------------------------------
 
+set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
