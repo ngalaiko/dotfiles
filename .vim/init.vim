@@ -1,7 +1,7 @@
 source $HOME/.vim/vimrc/basic.vim
 source $HOME/.vim/vimrc/plugins.vim
 
-source $HOME/.vim/vimrc/plugins/completion-nvim.vim
+source $HOME/.vim/vimrc/plugins/nvim-compe.vim
 source $HOME/.vim/vimrc/plugins/galaxyline.vim
 source $HOME/.vim/vimrc/plugins/gruvbox.vim
 source $HOME/.vim/vimrc/plugins/lspkind-nvim.vim

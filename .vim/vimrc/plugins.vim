@@ -7,7 +7,7 @@ call plug#begin('$HOME/.vim/plugged')
     " fancy icons
     Plug 'https://github.com/kyazdani42/nvim-web-devicons'
     " file tree for the vim ui
-    Plug 'https://kyazdani42/nvim-tree.lua'
+    Plug 'https://github.com/kyazdani42/nvim-tree.lua'
     " icons for lsp hints
     Plug 'https://github.com/onsails/lspkind-nvim'
     " treesitter (better understand ast)
@@ -19,9 +19,9 @@ call plug#begin('$HOME/.vim/plugged')
     Plug 'https://github.com/nvim-lua/plenary.nvim'
     Plug 'https://github.com/nvim-telescope/telescope.nvim'
     " lua powered completion
-    Plug 'https://github.com/nvim-lua/completion-nvim'
+    Plug 'https://github.com/hrsh7th/nvim-compe'
     " better understanding of paired symbols like parentheses, brackets, quotes, etc.
-    Plug 'https://github.com/jiangmiao/auto-pairs'
+    Plug 'https://github.com/windwp/nvim-autopairs'
     Plug 'https://github.com/tpope/vim-surround'
     " smart code commenting
     Plug 'https://github.com/scrooloose/nerdcommenter'
