@@ -176,38 +176,29 @@ gls.left[5] = {
   }
 }
 gls.left[6] = {
+    Space = {
+        provider = function() return ' ' end,
+        highlight = { colors.bg0, colors.bg1 },
+    }
+}
+gls.left[7] = {
   DiffAdd = {
-    provider = function ()
-      if wide_enough(95) then
-        return vcs.diff_add()
-      end
-      return ''
-    end,
-    icon = ' ',
+    provider = 'DiffAdd',
+    icon = '+',
     highlight = {colors.bright_green, colors.bg1},
   }
 }
-gls.left[7] = {
+gls.left[8] = {
   DiffModified = {
-    provider = function ()
-      if wide_enough(95) then
-        return vcs.diff_modified()
-      end
-      return ''
-    end,
-    icon = ' ',
+    provider = 'DiffModified',
+    icon = '~',
     highlight = {colors.bright_orange, colors.bg1},
   }
 }
-gls.left[8] = {
+gls.left[9] = {
   DiffRemove = {
-    provider = function ()
-      if wide_enough(95) then
-        return vcs.diff_remove()
-      end
-      return ''
-    end,
-    icon = ' ',
+    provider = 'DiffRemove',
+    icon = '-',
     highlight = {colors.bright_red, colors.bg1},
   }
 }
