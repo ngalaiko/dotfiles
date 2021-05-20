@@ -7,7 +7,9 @@ call plug#begin('$HOME/.vim/plugged')
     " fancy icons
     Plug 'https://github.com/kyazdani42/nvim-web-devicons'
     " file tree for the vim ui
-    Plug 'kyazdani42/nvim-tree.lua'
+    Plug 'https://kyazdani42/nvim-tree.lua'
+    " icons for lsp hints
+    Plug 'https://github.com/onsails/lspkind-nvim'
     " treesitter (better understand ast)
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter-refactor'
