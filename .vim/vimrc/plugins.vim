@@ -33,4 +33,7 @@ call plug#begin('$HOME/.vim/plugged')
     Plug 'https://github.com/mhinz/vim-signify'
     " use same keys to move between vim/tmux panels
     Plug 'https://github.com/christoomey/vim-tmux-navigator'
+    " bazel integration
+    Plug 'https://github.com/google/vim-maktaba'
+    Plug 'https://github.com/bazelbuild/vim-bazel'
 call plug#end()
