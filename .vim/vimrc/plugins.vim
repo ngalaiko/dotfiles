@@ -30,7 +30,7 @@ call plug#begin('$HOME/.vim/plugged')
     " integrations with git(hub)
     Plug 'https://github.com/tpope/vim-fugitive'
     Plug 'https://github.com/tpope/vim-rhubarb'
-    Plug 'https://github.com/mhinz/vim-signify'
+    Plug 'https://github.com/lewis6991/gitsigns.nvim'
     " use same keys to move between vim/tmux panels
     Plug 'https://github.com/christoomey/vim-tmux-navigator'
     " bazel integration

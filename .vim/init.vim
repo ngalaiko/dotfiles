@@ -9,6 +9,7 @@ source $HOME/.vim/vimrc/visual.vim
 
 source $HOME/.vim/vimrc/plugins/nvim-compe.vim
 source $HOME/.vim/vimrc/plugins/galaxyline.vim
+source $HOME/.vim/vimrc/plugins/gitsigns.vim
 source $HOME/.vim/vimrc/plugins/gruvbox.vim
 source $HOME/.vim/vimrc/plugins/lspkind-nvim.vim
 source $HOME/.vim/vimrc/plugins/nvim-autopairs.vim
