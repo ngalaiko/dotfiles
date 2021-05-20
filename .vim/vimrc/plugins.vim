@@ -5,7 +5,9 @@ call plug#begin('$HOME/.vim/plugged')
     " file tree for the vim ui
     Plug 'https://github.com/scrooloose/nerdtree'
     " fancy status bar
-    Plug 'https://github.com/vim-airline/vim-airline'
+    Plug 'https://github.com/glepnir/galaxyline.nvim' , {'branch': 'main'}
+    " fancy icons
+    Plug 'https://github.com/kyazdani42/nvim-web-devicons'
     " treesitter (better understand ast)
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter-refactor'

@@ -35,6 +35,3 @@ nvim_lsp.java_language_server.setup{
         return util.find_git_ancestor(fname) or vim.loop.os_homedir()
     end
 }
-
--- Disable Diagnostcs globally
-vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
