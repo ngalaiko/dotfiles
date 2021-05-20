@@ -7,6 +7,7 @@ source $HOME/.vim/vimrc/plugins.vim
 source $HOME/.vim/vimrc/ui.vim
 source $HOME/.vim/vimrc/visual.vim
 
+source $HOME/.vim/vimrc/plugins/ale.vim
 source $HOME/.vim/vimrc/plugins/nvim-compe.vim
 source $HOME/.vim/vimrc/plugins/galaxyline.vim
 source $HOME/.vim/vimrc/plugins/gitsigns.vim

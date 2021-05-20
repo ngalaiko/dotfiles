@@ -36,4 +36,6 @@ call plug#begin('$HOME/.vim/plugged')
     " bazel integration
     Plug 'https://github.com/google/vim-maktaba'
     Plug 'https://github.com/bazelbuild/vim-bazel'
+    " linters
+    Plug 'https://github.com/dense-analysis/ale'
 call plug#end()
