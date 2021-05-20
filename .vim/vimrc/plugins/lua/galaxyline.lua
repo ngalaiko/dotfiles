@@ -3,6 +3,14 @@ local gls = gl.section
 local vcs = require 'galaxyline.provider_vcs'
 local condition = require'galaxyline.condition'
 
+gl.short_line_list = {
+    'NvimTree',
+    'vim-plug',
+    'fugitive',
+    'fugitiveblame',
+    'term',
+}
+
 -- Gruvbox
 local colors = {
   bg0_h = '#1d2021',
