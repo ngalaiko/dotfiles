@@ -1,5 +1,11 @@
-source $HOME/.vim/vimrc/basic.vim
+source $HOME/.vim/vimrc/colors.vim
+source $HOME/.vim/vimrc/general.vim
+source $HOME/.vim/vimrc/indent.vim
+source $HOME/.vim/vimrc/navigation.vim
+source $HOME/.vim/vimrc/navigation.vim
 source $HOME/.vim/vimrc/plugins.vim
+source $HOME/.vim/vimrc/ui.vim
+source $HOME/.vim/vimrc/visual.vim
 
 source $HOME/.vim/vimrc/plugins/nvim-compe.vim
 source $HOME/.vim/vimrc/plugins/galaxyline.vim
