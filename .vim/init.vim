@@ -1,4 +1,3 @@
-source $HOME/.vim/vimrc/colors.vim
 source $HOME/.vim/vimrc/general.vim
 source $HOME/.vim/vimrc/indent.vim
 source $HOME/.vim/vimrc/navigation.vim
@@ -19,3 +18,5 @@ source $HOME/.vim/vimrc/plugins/nvim-tree.vim
 source $HOME/.vim/vimrc/plugins/nvim-web-devicons.vim
 source $HOME/.vim/vimrc/plugins/telescope.vim
 source $HOME/.vim/vimrc/plugins/vim-treesitter.vim
+
+source $HOME/.vim/vimrc/colors.vim
