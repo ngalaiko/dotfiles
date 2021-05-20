@@ -35,3 +35,9 @@ nvim_lsp.java_language_server.setup{
         return util.find_git_ancestor(fname) or vim.loop.os_homedir()
     end
 }
+
+-- replace the default lsp diagnostic letters with prettier symbols
+vim.fn.sign_define("LspDiagnosticsSignError", {text = "", numhl = "LspDiagnosticsDefaultError"})
+vim.fn.sign_define("LspDiagnosticsSignWarning", {text = "", numhl = "LspDiagnosticsDefaultWarning"})
+vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", numhl = "LspDiagnosticsDefaultInformation"})
+vim.fn.sign_define("LspDiagnosticsSignHint", {text = "", numhl = "LspDiagnosticsDefaultHint"})
