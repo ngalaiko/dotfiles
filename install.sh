@@ -10,5 +10,6 @@ ln -sf $(pwd)/.vim "$HOME/.vim"
 ln -sf $(pwd)/.p10k.zsh "$HOME/.p10k.zsh"
 ln -sf $(pwd)/.tmux.conf "$HOME/.tmux.conf"
 ln -sf $(pwd)/.gitconfig "$HOME/.gitconfig"
+ln -sf $(pwd)/.config/nvim "$HOME/.config/nvim"
 
 brew bundle install
