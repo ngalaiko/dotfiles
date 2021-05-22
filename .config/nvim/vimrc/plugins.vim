@@ -1,4 +1,4 @@
-call plug#begin('$HOME/.vim/plugged')
+call plug#begin('$HOME/.config/nvim/plugged')
     " colors
     Plug 'https://github.com/rktjmp/lush.nvim'
     Plug 'https://github.com/npxbr/gruvbox.nvim'
