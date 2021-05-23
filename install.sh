@@ -2,13 +2,12 @@
 
 set -euo pipefail
 
-ln -sf $(pwd)/.zshrc "$HOME/.zshrc"
-ln -sf $(pwd)/.aliases "$HOME/.aliases"
-ln -sf $(pwd)/.zsh_plugins.txt "$HOME/.zsh_plugins.txt"
-ln -sf $(pwd)/.vim "$HOME/.vim"
-ln -sf $(pwd)/.p10k.zsh "$HOME/.p10k.zsh"
-ln -sf $(pwd)/.tmux.conf "$HOME/.tmux.conf"
-ln -sf $(pwd)/.gitconfig "$HOME/.gitconfig"
-ln -sf $(pwd)/.config/nvim "$HOME/.config/nvim"
+ln -sf $(pwd)/.zshrc "$HOME/"
+ln -sf $(pwd)/.aliases "$HOME/"
+ln -sf $(pwd)/.zsh_plugins.txt "$HOME/"
+ln -sf $(pwd)/.p10k.zsh "$HOME/"
+ln -sf $(pwd)/.gitconfig "$HOME/"
+ln -sf $(pwd)/.config/nvim "$HOME/.config/"
+ln -sf $(pwd)/.config/kitty "$HOME/.config/"
 
 brew bundle install

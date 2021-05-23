@@ -18,12 +18,15 @@ GOPATH="$HOME/go"
 GOBIN="$GOPATH/bin"
 PATH="$PATH:$GOBIN"
 
-# load plugins via antigen 
+# load plugins via antigen
 source <(antibody init)
 antibody bundle < "$HOME/.zsh_plugins.txt"
 
 # load autocomplition
 autoload -U compinit && compinit
+
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
 
 # kubectl completion
 [[ -z $(command -v kubectl) ]] || source <(kubectl completion zsh)
