@@ -7,6 +7,9 @@ set nocp
 " Sets how many lines of history VIM has to remember
 set history=700
 
+" allow unsaved files
+set hidden
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -15,7 +18,7 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Reload config.
-nnoremap <leader>sv :source $MYVIMRC<CR>     
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Move lines around (macOS <A-j> = ˚ <A-k> = ∆)
 nnoremap ∆ :m+<CR>==
