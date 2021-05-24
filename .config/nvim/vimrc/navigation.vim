@@ -3,10 +3,10 @@ map j gj
 map k gk
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -31,7 +31,7 @@ try
 catch
 endtry
 
-" Return to last edit position when opening files 
+" Return to last edit position when opening files
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |

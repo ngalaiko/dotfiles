@@ -36,4 +36,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/bazelbuild/vim-bazel'
     " linters
     Plug 'https://github.com/dense-analysis/ale'
+    " nvim - kitty navigation
+    Plug 'https://github.com/knubie/vim-kitty-navigator'
 call plug#end()
