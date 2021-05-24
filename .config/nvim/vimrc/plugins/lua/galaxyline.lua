@@ -89,6 +89,11 @@ local icons = {
   info = '', -- f05a
 }
 
+-- reset sections for smoother .vimrc reload
+gl.section.left = {}
+gl.section.mid = {}
+gl.section.right = {}
+
 local function ins_left(component)
   table.insert(gl.section.left, component)
 end
