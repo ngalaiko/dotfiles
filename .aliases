@@ -6,9 +6,6 @@ alias g="git"
 # editor
 alias vim="nvim"
 
-# connect to the running tmux session
-alias tmux='tmux attach || tmux'
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
