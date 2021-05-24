@@ -31,8 +31,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/tpope/vim-fugitive'
     Plug 'https://github.com/tpope/vim-rhubarb'
     Plug 'https://github.com/lewis6991/gitsigns.nvim'
-    " use same keys to move between vim/tmux panels
-    Plug 'https://github.com/christoomey/vim-tmux-navigator'
     " bazel integration
     Plug 'https://github.com/google/vim-maktaba'
     Plug 'https://github.com/bazelbuild/vim-bazel'
