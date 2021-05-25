@@ -10,9 +10,6 @@ set wildmode=list:longest,full
 " Highlight current line - allows you to track cursor position more easily
 set cursorline
 
-" Completion options (select longest + show menu even if a single match is found)
-set completeopt=longest,menuone
-
 set path+=**
 
 " Show (partial) commands (or size of selection in Visual mode) in the status line

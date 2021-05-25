@@ -12,7 +12,6 @@ source $HOME/.config/nvim/vimrc/plugins/galaxyline.vim
 source $HOME/.config/nvim/vimrc/plugins/gitsigns.vim
 source $HOME/.config/nvim/vimrc/plugins/gruvbox.vim
 source $HOME/.config/nvim/vimrc/plugins/lspkind-nvim.vim
-source $HOME/.config/nvim/vimrc/plugins/nvim-autopairs.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-lspconfig.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-tree.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-web-devicons.vim
