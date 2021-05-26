@@ -62,3 +62,6 @@ set noswapfile
 set sessionoptions=blank,buffers,curdir,folds,help,options,winsize,tabpages
 
 nmap <Leader>p O<ESC>o<ESC>Ofmt.Printf("\nnikitag: %+v\n\n", )<ESC>i
+
+" leave terminal mode with ease
+tnoremap <Esc> <C-\><C-n>
