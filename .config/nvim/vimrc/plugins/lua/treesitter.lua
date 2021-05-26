@@ -7,7 +7,8 @@ local languages = {
     "javascript",
     "json",
     "lua",
-    "yaml"
+    "yaml",
+    "clojure"
 }
 
 local treesitter = require'nvim-treesitter.configs'
