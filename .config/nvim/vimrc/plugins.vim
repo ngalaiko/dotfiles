@@ -38,4 +38,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/dense-analysis/ale'
     " nvim - kitty navigation
     Plug 'https://github.com/knubie/vim-kitty-navigator'
+    " terraform
+    Plug 'https://github.com/hashivim/vim-terraform'
 call plug#end()
