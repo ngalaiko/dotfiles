@@ -25,6 +25,8 @@ nvim_lsp.dockerls.setup{}
 
 nvim_lsp.vimls.setup{}
 
+nvim_lsp.clojure_lsp.setup{}
+
 nvim_lsp.java_language_server.setup{
     cmd = {"/Users/nikita.galaiko/code/java-language-server/dist/lang_server_mac.sh"},
     root_dir = function(fname)

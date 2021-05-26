@@ -40,4 +40,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/knubie/vim-kitty-navigator'
     " terraform
     Plug 'https://github.com/hashivim/vim-terraform'
+    " clojure
+    Plug 'https://github.com/Olical/conjure', {'tag': 'v4.19.0'}
+    Plug 'https://github.com/tpope/vim-dispatch'
+    Plug 'https://github.com/clojure-vim/vim-jack-in'
+    Plug 'https://github.com/radenling/vim-dispatch-neovim'
 call plug#end()

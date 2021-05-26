@@ -16,6 +16,9 @@ filetype indent on
 
 let mapleader = ","
 let g:mapleader = ","
+let maplocalleader = "."
+let g:maplocalleader = "."
+
 
 " Reload config.
 nnoremap <leader>sv :source $MYVIMRC<CR>
