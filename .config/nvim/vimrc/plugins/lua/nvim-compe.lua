@@ -24,52 +24,54 @@ require'compe'.setup {
 
 _G.MUtils = {}
 
+vim.g.completion_confirm_key = ""
 MUtils.completion_confirm=function()
-    if vim.fn.pumvisible() ~= 0  then
-        if vim.fn.complete_info()["selected"] ~= -1 then
-          vim.fn["compe#confirm"]()
-          return npairs.esc("<c-y>")
-        else
-          vim.fn.nvim_select_popupmenu_item(0, false, false,{})
-          vim.fn["compe#confirm"]()
-          return npairs.esc("<c-n><c-y>")
-        end
+  if vim.fn.pumvisible() ~= 0  then
+    if vim.fn.complete_info()["selected"] ~= -1 then
+      return vim.fn["compe#confirm"](npairs.esc("<cr>"))
     else
-        return npairs.check_break_line_char()
+      return npairs.esc("<cr>")
+    end
+  else
+    return npairs.autopairs_cr()
+  end
+end
+
+vim.api.nvim_set_keymap("i", "<CR>", "v:lua.MUtils.completion_confirm()", {expr = true, noremap = true})
+
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
     end
 end
 
-MUtils.tab=function()
-    if vim.fn.pumvisible() ~= 0  then
-        return npairs.esc("<C-n>")
-    else
-        if vim.fn["vsnip#available"](1) ~= 0 then
-            return vim.fn.feedkeys(string.format('%c%c%c(vsnip-expand-or-jump)', 0x80, 253, 83))
-        else
-            return npairs.esc("<Tab>")
-        end
-    end
+-- Use (s-)tab to:
+--- move to prev/next item in completion menuone
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif check_back_space() then
+    return t "<Tab>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+_G.s_tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  else
+    return t "<S-Tab>"
+  end
 end
 
-MUtils.s_tab=function()
-    if vim.fn.pumvisible() ~= 0  then
-        return npairs.esc("<C-p>")
-    else
-        if vim.fn["vsnip#jumpable"](-1) ~= 0 then
-            return vim.fn.feedkeys(string.format('%c%c%c(vsnip-jump-prev)', 0x80, 253, 83))
-        else
-            return npairs.esc("<C-h>")
-        end
-    end
-end
-
-function imap(lhs, rhs, opts)
-    local options = {noremap = false}
-    if opts then options = vim.tbl_extend('force', options, opts) end
-    vim.api.nvim_set_keymap('i', lhs, rhs, options)
-end
-
--- Autocompletion and snippets
-imap("<CR>", "v:lua.MUtils.completion_confirm()", {expr = true , noremap = true})
-imap("<Tab>", "v:lua.MUtils.tab()", {expr = true , noremap = true})
-imap("<S-Tab>", "v:lua.MUtils.s_tab()", {expr = true , noremap = true})
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
