@@ -6,7 +6,7 @@ parser_config.gotmpl = {
     files = {"src/parser.c"}
   },
   filetype = "gotmpl",
-  used_by = {"gohtmltmpl", "gotexttmpl", "gotmpl"}
+  used_by = {"gohtmltmpl", "gotexttmpl", "gotmpl", "yaml"}
 }
 
 local languages = {
