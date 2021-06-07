@@ -34,9 +34,9 @@ kitty + complete setup zsh | source /dev/stdin
 # load aliases
 source "$HOME/.aliases"
 
-# cmd navigation
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+# option navigation
+bindkey "\e[1;3D" backward-word # ⌥←
+bindkey "\e[1;3C" forward-word # ⌥→
 
 # https://github.com/zsh-users/zsh-history-substring-search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="none"
