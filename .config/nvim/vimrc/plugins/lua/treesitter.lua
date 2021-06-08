@@ -28,6 +28,17 @@ treesitter.setup{
     ensure_installed = languages,
     highlight = { enable = languages },
     indent = { enable = languages },
+    textobjects = {
+        select = {
+            enable = true,
+            keymaps = {
+                ["af"] = "@function.outer",
+                ["if"] = "@function.inner",
+                ["ac"] = "@class.outer",
+                ["ic"] = "@class.inner",
+            },
+        },
+    },
     incremental_delection = {
         enable = languages,
         keymaps = {
