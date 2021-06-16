@@ -173,28 +173,6 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
-# URL shorthands
-
-[url "git@github.com:"]
-
-	insteadOf = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-
-	insteadOf = "github:"
-
-[url "git@gist.github.com:"]
-
-	insteadOf = "gst:"
-	pushInsteadOf = "gist:"
-	pushInsteadOf = "git://gist.github.com/"
-
-[url "git://gist.github.com/"]
-
-	insteadOf = "gist:"
-
 [user]
 
     name = Nikita Galaiko
@@ -203,9 +181,6 @@
 [hub]
 	protocol = ssh
 
-
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
 [credential]
 	helper = osxkeychain
 [color "diff-highlight"]
@@ -215,3 +190,8 @@
 	newHighlight = green bold 22
 [gpg]
 	program = gpg
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
