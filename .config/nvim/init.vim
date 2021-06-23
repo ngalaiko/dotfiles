@@ -16,6 +16,7 @@ source $HOME/.config/nvim/vimrc/plugins/lspkind-nvim.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-lspconfig.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-tree.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-web-devicons.vim
+source $HOME/.config/nvim/vimrc/plugins/tagbar.vim
 source $HOME/.config/nvim/vimrc/plugins/telescope.vim
 source $HOME/.config/nvim/vimrc/plugins/vim-treesitter.vim
 source $HOME/.config/nvim/vimrc/plugins/vim-terraform.vim

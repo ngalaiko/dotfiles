@@ -47,4 +47,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/tpope/vim-dispatch'
     Plug 'https://github.com/clojure-vim/vim-jack-in'
     Plug 'https://github.com/radenling/vim-dispatch-neovim'
+    " tag viewer
+    Plug 'https://github.com/preservim/tagbar'
 call plug#end()
