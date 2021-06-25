@@ -7,7 +7,7 @@
     append = commit --amend --no-edit
 
     # force update current branch
-    update = !"git push -f origin $(git rev-parse --abbrev-ref HEAD)"
+    update = !"git push --force-with-lease origin $(git rev-parse --abbrev-ref HEAD)"
 
 	# View the current working tree status using the short format
 	s = status -s
