@@ -1,18 +1,9 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 export LANG="en_US.UTF-8"
 
 # gpg suite
-
 export GPG_TTY=$(tty)
 
 # homebrew
-
 export PATH="/opt/homebrew/bin:/opt/homebrew/opt:$PATH"
 
 # golang stuff
@@ -46,8 +37,5 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="none"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f "$HOME/.p10k.zsh" ]] || source "$HOME/.p10k.zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Enable starship prompt. Keep at the end.
+eval "$(starship init zsh)"
