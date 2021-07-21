@@ -4,26 +4,26 @@ scan_timeout = 10
 # Disable the blank line at the start of the prompt
 add_newline = false
 
+[aws]
+symbol = "  "
+disabled = false
+
 [kubernetes]
 disabled = false
-format = '\[[$symbol$context( \($namespace\))]($style)\]'
 
 [golang]
 disabled = false
 symbol = " "
-format = '\[[$symbol($version)]($style)\]'
 
 [line_break]
 disabled = false
 
 [time]
 disabled = false
-format = '🕙[\[ $time \]]($style) '
 time_format = "%T"
 time_range = "10:00:00-14:00:00"
 
 [cmd_duration]
-format = "[⏱ $duration]($style)"
 min_time = 500
 
 [directory]
@@ -33,32 +33,17 @@ truncate_to_repo = false
 
 [docker_context]
 disabled = false
-format = '\[[$symbol$context]($style)\]'
 symbol = " "
-
-[git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
 
 [git_branch]
 symbol = " "
-format = '\[[$symbol$branch]($style)\]'
-
-[hg_branch]
-symbol = " "
-format = '\[[$symbol$branch]($style)\]'
 
 [java]
 disabled = false
 symbol = " "
-format = '\[[$symbol($version)]($style)\]'
 
 [memory_usage]
 symbol = " "
-format = '\[$symbol[$ram( | $swap)]($style)\]'
 
 [package]
 symbol = " "
-format = '\[[$symbol$version]($style)\]'
-
-[username]
-format = '\[[$user]($style)\]'
