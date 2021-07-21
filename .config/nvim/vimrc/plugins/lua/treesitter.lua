@@ -56,5 +56,9 @@ treesitter.setup{
                 goto_previous_usage = "<a-#>",
             },
         },
+    },
+    rainbow = {
+        enable = true,
+        extended_mode = true,
     }
 }
