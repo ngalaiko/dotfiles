@@ -11,4 +11,5 @@ let g:ale_fixers = {
 \   'dockerfile': ['hadolint'],
 \   'bash': ['shfmt'],
 \   'bzl': ['buildifier'],
+\   'vue': ['eslint'],
 \}
