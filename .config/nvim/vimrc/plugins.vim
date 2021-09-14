@@ -50,4 +50,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/radenling/vim-dispatch-neovim'
     " tag viewer
     Plug 'https://github.com/preservim/tagbar'
+    " golang
+    Plug 'https://github.com/fatih/vim-go'
 call plug#end()
