@@ -10,9 +10,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/kyazdani42/nvim-tree.lua'
     " icons for lsp hints
     Plug 'https://github.com/onsails/lspkind-nvim'
-    " treesitter (better understand ast)
-    " Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'https://github.com/ngalaiko/nvim-treesitter', {'do': ':TSUpdate'}
+   " treesitter (better understand ast)
+    Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " Plug 'https://github.com/ngalaiko/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter-refactor'
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects'
     Plug 'https://github.com/nvim-treesitter/playground'

@@ -13,3 +13,7 @@ let g:ale_fixers = {
 \   'bzl': ['buildifier'],
 \   'vue': ['eslint'],
 \}
+
+let g:ale_linters = {
+\   'vue': ['eslint'],
+\}

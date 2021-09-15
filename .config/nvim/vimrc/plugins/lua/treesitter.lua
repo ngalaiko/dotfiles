@@ -9,7 +9,7 @@ local languages = {
     "lua",
     "yaml",
     "clojure",
-    "gotmpl",
+    --"gotmpl",
     "vue"
 }
 
