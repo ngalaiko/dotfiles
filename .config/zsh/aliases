@@ -3,6 +3,9 @@
 # Shortcuts
 alias g="git"
 
+# use kitty ssh client
+alias ssh="kitty +kitten ssh"
+
 # editor
 alias vim="nvim"
 
