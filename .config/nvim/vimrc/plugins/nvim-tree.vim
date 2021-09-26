@@ -1,6 +1,3 @@
-let g:nvim_tree_auto_open = 1
-let g:nvim_tree_auto_close = 1
-let g:nvim_tree_follow = 1
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_add_trailing = 1
 let g:nvim_tree_group_empty = 1
@@ -38,3 +35,5 @@ let g:nvim_tree_icons = {
 nnoremap <leader>o :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>O :NvimTreeFindFile<CR>
+
+luafile $HOME/.config/nvim/vimrc/plugins/lua/nvim-tree.lua
