@@ -10,7 +10,8 @@ local languages = {
     "yaml",
     "clojure",
     --"gotmpl",
-    "vue"
+    "vue",
+    "graphql"
 }
 
 local treesitter = require'nvim-treesitter.configs'
