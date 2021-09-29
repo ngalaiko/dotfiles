@@ -12,8 +12,10 @@ let g:ale_fixers = {
 \   'bash': ['shfmt'],
 \   'bzl': ['buildifier'],
 \   'vue': ['eslint'],
+\   'typescript': ['eslint'],
 \}
 
 let g:ale_linters = {
 \   'vue': ['eslint'],
+\   'typescript': ['eslint'],
 \}
