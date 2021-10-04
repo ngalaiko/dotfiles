@@ -27,7 +27,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/windwp/nvim-autopairs'
     Plug 'https://github.com/tpope/vim-surround'
     " smart code commenting
-    Plug 'https://github.com/scrooloose/nerdcommenter'
+    Plug 'https://github.com/JoosepAlviste/nvim-ts-context-commentstring'
+    Plug 'https://github.com/tpope/vim-commentary'
     " lsp integration for nvim
     Plug 'https://github.com/neovim/nvim-lspconfig'
     " integrations with git(hub)
