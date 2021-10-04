@@ -12,11 +12,13 @@ let g:ale_fixers = {
 \   'bzl': ['buildifier'],
 \   'vue': ['eslint'],
 \   'typescript': ['eslint'],
+\   'javascript': ['eslint'],
 \   'json': ['jq'],
 \}
 
 let g:ale_linters = {
 \   'vue': ['eslint'],
 \   'typescript': ['eslint'],
+\   'javascript': ['eslint'],
 \   'dockerfile': ['hadolint'],
 \}
