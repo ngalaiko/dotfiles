@@ -24,6 +24,9 @@ kitty + complete setup zsh | source /dev/stdin
 # kubectl completion
 [[ -z $(command -v kubectl) ]] || source <(kubectl completion zsh)
 
+# aws cli completion
+[[ -z $(command -v aws_completer) ]] || complete -C 'aws_completer' aws
+
 # load aliases
 source "$HOME/.config/zsh/aliases"
 
