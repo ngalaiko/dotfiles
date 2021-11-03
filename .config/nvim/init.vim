@@ -8,10 +8,10 @@ source $HOME/.config/nvim/vimrc/visual.vim
 
 source $HOME/.config/nvim/vimrc/plugins/ale.vim
 source $HOME/.config/nvim/vimrc/plugins/conjure.vim
-source $HOME/.config/nvim/vimrc/plugins/nvim-compe.vim
 source $HOME/.config/nvim/vimrc/plugins/galaxyline.vim
 source $HOME/.config/nvim/vimrc/plugins/gruvbox.vim
-source $HOME/.config/nvim/vimrc/plugins/lspkind-nvim.vim
+source $HOME/.config/nvim/vimrc/plugins/nvim-autopairs.vim
+source $HOME/.config/nvim/vimrc/plugins/nvim-cmp.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-lspconfig.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-tree.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-ts-context-commentstring.vim

@@ -8,8 +8,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/kyazdani42/nvim-web-devicons'
     " file tree for the vim ui
     Plug 'https://github.com/kyazdani42/nvim-tree.lua'
-    " icons for lsp hints
-    Plug 'https://github.com/onsails/lspkind-nvim'
    " treesitter (better understand ast)
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " Plug 'https://github.com/ngalaiko/nvim-treesitter', {'do': ':TSUpdate'}
@@ -22,10 +20,16 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/nvim-lua/plenary.nvim'
     Plug 'https://github.com/nvim-telescope/telescope.nvim'
     " lua powered completion
-    Plug 'https://github.com/hrsh7th/nvim-compe'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'
+    " snippets
+    Plug 'hrsh7th/cmp-vsnip'
+    Plug 'hrsh7th/vim-vsnip'
     " better understanding of paired symbols like parentheses, brackets, quotes, etc.
     Plug 'https://github.com/windwp/nvim-autopairs'
-    Plug 'https://github.com/tpope/vim-surround'
     " smart code commenting
     Plug 'https://github.com/JoosepAlviste/nvim-ts-context-commentstring'
     Plug 'https://github.com/tpope/vim-commentary'
@@ -53,4 +57,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/preservim/tagbar'
     " golang
     Plug 'https://github.com/fatih/vim-go'
+    " github copilot
+    Plug 'https://github.com/github/copilot.vim'
 call plug#end()

@@ -1,46 +1,36 @@
 local nvim_lsp = require'lspconfig'
 local util = require'lspconfig/util'
 
-nvim_lsp.gopls.setup{
-    cmd = {"gopls", "serve"},
-    settings = {
-        gopls = {
-            analyses = {
-                unusedparams = true,
+local servers = {
+    gopls = {
+        cmd = {"gopls", "serve"},
+        settings = {
+            gopls = {
+                analyses = {
+                    unusedparams = true,
+                },
+                staticcheck = true,
             },
-            staticcheck = true,
         },
     },
+    terraformls = {},
+    html = {},
+    cssls = {},
+    bashls = {},
+    dockerls = {},
+    vimls = {},
+    clojure_lsp = {},
+    vuels = {},
+    tsserver = {},
 }
 
-nvim_lsp.terraformls.setup{}
+-- nvim-cmp source setup
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-nvim_lsp.html.setup{}
-
-nvim_lsp.cssls.setup{}
-
-nvim_lsp.bashls.setup{}
-
-nvim_lsp.dockerls.setup{}
-
-nvim_lsp.vimls.setup{}
-
-nvim_lsp.clojure_lsp.setup{}
-
-nvim_lsp.vuels.setup{}
-
-nvim_lsp.tsserver.setup{}
-
-nvim_lsp.java_language_server.setup{
-    cmd = {"/Users/nikita.galaiko/code/java-language-server/dist/lang_server_mac.sh"},
-    root_dir = function(fname)
-        for _, patterns in ipairs({{'*.bazelproject'}, {'WORKSPACE'}}) do
-            local root = util.root_pattern(unpack(patterns))(fname)
-            if root then return root end
-        end
-        return util.find_git_ancestor(fname) or vim.loop.os_homedir()
-    end
-}
+for server, value in pairs(servers) do
+    value.capabilities = capabilities
+    nvim_lsp[server].setup(value)
+end
 
 -- replace the default lsp diagnostic letters with prettier symbols
 vim.fn.sign_define("LspDiagnosticsSignError", {text = "", numhl = "LspDiagnosticsDefaultError"})
