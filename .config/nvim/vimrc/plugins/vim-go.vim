@@ -9,3 +9,4 @@ let g:go_debug_windows = {
     \'out':        'botright  20new',
 \}
 let g:go_debug_preserve_layout = 1
+let g:go_gopls_enabled = 0
