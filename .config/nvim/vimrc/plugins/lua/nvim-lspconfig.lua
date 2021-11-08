@@ -22,6 +22,7 @@ local servers = {
     clojure_lsp = {},
     vuels = {},
     tsserver = {},
+    svelte = {},
 }
 
 -- nvim-cmp source setup

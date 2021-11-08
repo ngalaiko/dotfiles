@@ -5,6 +5,7 @@ local languages = {
     "html",
     "java",
     "javascript",
+    "svelte",
     "json",
     "lua",
     "yaml",
