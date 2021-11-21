@@ -20,14 +20,14 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/nvim-lua/plenary.nvim'
     Plug 'https://github.com/nvim-telescope/telescope.nvim'
     " lua powered completion
-    Plug 'hrsh7th/cmp-nvim-lsp'
-    Plug 'hrsh7th/cmp-buffer'
-    Plug 'hrsh7th/cmp-path'
-    Plug 'hrsh7th/cmp-cmdline'
-    Plug 'hrsh7th/nvim-cmp'
+    Plug 'https://github.com/hrsh7th/cmp-nvim-lsp'
+    Plug 'https://github.com/hrsh7th/cmp-buffer'
+    Plug 'https://github.com/hrsh7th/cmp-path'
+    Plug 'https://github.com/hrsh7th/cmp-cmdline'
+    Plug 'https://github.com/hrsh7th/nvim-cmp'
     " snippets
-    Plug 'hrsh7th/cmp-vsnip'
-    Plug 'hrsh7th/vim-vsnip'
+    Plug 'https://github.com/hrsh7th/cmp-vsnip'
+    Plug 'https://github.com/hrsh7th/vim-vsnip'
     " better understanding of paired symbols like parentheses, brackets, quotes, etc.
     Plug 'https://github.com/windwp/nvim-autopairs'
     " smart code commenting
