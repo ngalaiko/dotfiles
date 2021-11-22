@@ -3,12 +3,12 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/rktjmp/lush.nvim'
     Plug 'https://github.com/npxbr/gruvbox.nvim'
     " fancy status bar
-    Plug 'https://github.com/glepnir/galaxyline.nvim' , {'branch': 'main'}
+    Plug 'https://github.com/nvim-lualine/lualine.nvim'
     " fancy icons
     Plug 'https://github.com/kyazdani42/nvim-web-devicons'
     " file tree for the vim ui
     Plug 'https://github.com/kyazdani42/nvim-tree.lua'
-   " treesitter (better understand ast)
+    " treesitter (better understand ast)
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " Plug 'https://github.com/ngalaiko/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter-refactor'
