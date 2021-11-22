@@ -50,7 +50,24 @@ local luafmt =
       go = {goimports},
       lua = {luafmt},
       terraform = {terraform},
-      bash = {shfmt}
+      bash = {shfmt},
+      sh = {shfmt},
     }
   }
+)
+
+vim.api.nvim_exec(
+  [[
+augroup FormatAutogroup
+  autocmd FileType bash autocmd BufWritePost <buffer> FormatWrite
+  autocmd FileType lua autocmd BufWritePost <buffer> FormatWrite
+  autocmd FileType javascript autocmd BufWritePost <buffer> FormatWrite
+  autocmd FileType typescript autocmd BufWritePost <buffer> FormatWrite
+  autocmd FileType sh autocmd BufWritePost <buffer> FormatWrite
+  autocmd FileType go autocmd BufWritePost <buffer> FormatWrite
+  autocmd FileType vue autocmd BufWritePost <buffer> FormatWrite
+  autocmd FileType terraform autocmd BufWritePost <buffer> FormatWrite
+augroup END
+]],
+  true
 )
