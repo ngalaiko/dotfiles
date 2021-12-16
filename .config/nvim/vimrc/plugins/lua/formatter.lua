@@ -53,10 +53,10 @@ local luafmt =
   formatter.setup(
   {
     filetype = {
-      javascript = {eslint},
-      typescript = {eslint},
-      vue = {eslint},
-      svelte = {eslint},
+      javascript = {eslint, prettier},
+      typescript = {eslint, prettier},
+      vue = {eslint, prettier},
+      svelte = {eslint, prettier},
       go = {goimports},
       lua = {luafmt},
       terraform = {terraform},
