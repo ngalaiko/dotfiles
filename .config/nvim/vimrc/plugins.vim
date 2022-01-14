@@ -14,7 +14,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter-refactor'
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects'
     Plug 'https://github.com/nvim-treesitter/playground'
-    Plug 'https://github.com/p00f/nvim-ts-rainbow'
     " telescope (lua powered searching)
     Plug 'https://github.com/nvim-lua/popup.nvim'
     Plug 'https://github.com/nvim-lua/plenary.nvim'

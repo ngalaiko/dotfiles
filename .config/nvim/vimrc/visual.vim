@@ -33,5 +33,3 @@ endfunction
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv
-
-

@@ -2,7 +2,7 @@
 set so=999
 
 " add vertical lines on columns
-set colorcolumn=114
+set colorcolumn=120
 
 " Set command-line completion mode
 set wildmode=list:longest,full
