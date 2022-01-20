@@ -3,7 +3,7 @@ local formatter = require("formatter")
 local eslint = function()
   return {
     exe = "prettier-eslint",
-    args = {"--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0)},
+    args = {"--stdin", "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--fix-to-stdout"},
     stdin = true,
     cwd = vim.fn.expand("%:p:h") -- use cwd of the file
   }
@@ -54,7 +54,7 @@ local luafmt =
   {
     filetype = {
       javascript = {eslint, prettier},
-      typescript = {eslint, prettier},
+      typescript = {prettier},
       vue = {eslint, prettier},
       svelte = {eslint, prettier},
       go = {goimports},
