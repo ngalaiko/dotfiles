@@ -4,7 +4,7 @@ null_ls.setup(
   {
     sources = {
       null_ls.builtins.formatting.stylua,
-      null_ls.builtins.formatting.eslint.with(
+      null_ls.builtins.formatting.eslint_d.with(
         {
           extra_filetypes = {"svelte"}
         }
@@ -15,14 +15,14 @@ null_ls.setup(
         }
       ),
       null_ls.builtins.formatting.sqlformat,
-      null_ls.builtins.formatting.prettier.with(
+      null_ls.builtins.formatting.prettierd.with(
         {
           extra_filetypes = {"svelte"}
         }
       ),
       null_ls.builtins.formatting.terraform_fmt,
       null_ls.builtins.diagnostics.hadolint,
-      null_ls.builtins.code_actions.eslint.with(
+      null_ls.builtins.code_actions.eslint_d.with(
         {
           extra_filetypes = {"svelte"}
         }
