@@ -20,19 +20,13 @@ local servers = {
   dockerls = {},
   vimls = {},
   clojure_lsp = {},
-  vuels = {
-    -- settings = {
-      -- vetur = {
-      --   experimental = {
-      --     templateInterpolationService = true
-      --   },
-      --   validation = {
-      --     templateProps = true
-      --   }
-      -- }
-    -- }
+  vuels = {},
+  tsserver = {
+    on_attach = function(client)
+      client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
+    end
   },
-  tsserver = {},
   svelte = {}
 }
 

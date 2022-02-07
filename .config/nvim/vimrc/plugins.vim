@@ -39,9 +39,10 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/tpope/vim-rhubarb'
     Plug 'https://github.com/lewis6991/gitsigns.nvim'
     " linters
-    Plug 'https://github.com/mfussenegger/nvim-lint'
     " formatters
-    Plug 'https://github.com/mhartington/formatter.nvim'
+    " Plug 'https://github.com/mfussenegger/nvim-lint'
+    " Plug 'https://github.com/mhartington/formatter.nvim'
+    Plug 'https://github.com/jose-elias-alvarez/null-ls.nvim'
     " nvim - kitty navigation
     Plug 'https://github.com/knubie/vim-kitty-navigator'
     " terraform
