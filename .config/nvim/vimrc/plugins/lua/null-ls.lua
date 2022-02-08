@@ -4,18 +4,19 @@ null_ls.setup(
   {
     sources = {
       null_ls.builtins.formatting.stylua,
-      null_ls.builtins.formatting.eslint_d.with(
-        {
-          extra_filetypes = {"svelte"}
-        }
-      ),
+      null_ls.builtins.formatting.goimports,
+      -- null_ls.builtins.formatting.eslint.with(
+      --   {
+      --     extra_filetypes = {"svelte"}
+      --   }
+      -- ),
       null_ls.builtins.formatting.shfmt.with(
         {
           extra_filetypes = {"bash"}
         }
       ),
       null_ls.builtins.formatting.sqlformat,
-      null_ls.builtins.formatting.prettierd.with(
+      null_ls.builtins.formatting.prettier.with(
         {
           extra_filetypes = {"svelte"}
         }
@@ -42,3 +43,5 @@ null_ls.setup(
     end
   }
 )
+
+vim.lsp.buf.formatting_sync(nil, 2000)
