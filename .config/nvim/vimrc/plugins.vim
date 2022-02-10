@@ -53,7 +53,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/clojure-vim/vim-jack-in'
     Plug 'https://github.com/radenling/vim-dispatch-neovim'
     " tag viewer
-    Plug 'https://github.com/preservim/tagbar'
+    Plug 'https://github.com/simrat39/symbols-outline.nvim'
     " golang
     Plug 'https://github.com/fatih/vim-go'
     " github copilot
