@@ -1,10 +1,8 @@
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_add_trailing = 1
 let g:nvim_tree_group_empty = 1
-let g:nvim_tree_disable_window_picker = 1
 let g:nvim_tree_special_files = []
 let g:nvim_tree_group_empty = 1
-let g:nvim_tree_disable_window_picker = 1
 let g:nvim_tree_show_icons = {
     \ 'git': 0,
     \ 'folders': 1,
