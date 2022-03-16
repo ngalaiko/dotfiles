@@ -37,6 +37,7 @@ local servers = {
 		end,
 	},
 	svelte = {},
+	pylsp = {},
 }
 
 -- prefix/character preceding the diagnostics' virtual text
