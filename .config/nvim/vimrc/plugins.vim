@@ -23,6 +23,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/hrsh7th/cmp-buffer'
     Plug 'https://github.com/hrsh7th/cmp-path'
     Plug 'https://github.com/hrsh7th/cmp-cmdline'
+    Plug 'https://github.com/hrsh7th/cmp-omni'
     Plug 'https://github.com/hrsh7th/nvim-cmp'
     " snippets
     Plug 'https://github.com/hrsh7th/cmp-vsnip'
@@ -58,4 +59,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/fatih/vim-go'
     " github copilot
     Plug 'https://github.com/github/copilot.vim'
+    " ledger
+    Plug 'https://github.com/ledger/vim-ledger'
 call plug#end()
