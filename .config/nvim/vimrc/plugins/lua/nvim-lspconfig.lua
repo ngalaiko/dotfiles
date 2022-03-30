@@ -29,7 +29,13 @@ local servers = {
 	dockerls = {},
 	vimls = {},
 	clojure_lsp = {},
-	vuels = {},
+	volar = {
+		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+		on_attach = function(client)
+			client.resolved_capabilities.document_formatting = false
+			client.resolved_capabilities.document_range_formatting = false
+		end,
+	},
 	tsserver = {
 		on_attach = function(client)
 			client.resolved_capabilities.document_formatting = false
