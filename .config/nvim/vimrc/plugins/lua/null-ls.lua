@@ -2,19 +2,46 @@ local null_ls = require("null-ls")
 
 null_ls.setup({
 	sources = {
-		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.goimports,
+		null_ls.builtins.formatting.stylua.with({
+			filetypes = { "lua" },
+		}),
+		null_ls.builtins.formatting.goimports.with({
+			filetypes = { "go" },
+		}),
 		null_ls.builtins.formatting.shfmt.with({
-			extra_filetypes = { "bash" },
+			filetypes = { "sh", "bash" },
 		}),
-		null_ls.builtins.formatting.sqlformat,
+		null_ls.builtins.formatting.sqlformat.with({
+			filetypes = { "sql" },
+		}),
+		null_ls.builtins.formatting.terraform_fmt.with({
+			filetypes = { "tf", "tfvars", "hcl", "terraform" },
+		}),
 		null_ls.builtins.formatting.prettier.with({
-			-- extra_filetypes = { "svelte" },
+			filetypes = {
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"vue",
+				"css",
+				"scss",
+				"less",
+				"html",
+				"json",
+				"jsonc",
+				"yaml",
+				"markdown",
+				"graphql",
+				"handlebars",
+			},
 		}),
-		null_ls.builtins.formatting.terraform_fmt,
-		null_ls.builtins.diagnostics.hadolint,
-		null_ls.builtins.code_actions.eslint_d.with({
-			-- extra_filetypes = { "svelte" },
+
+		null_ls.builtins.diagnostics.hadolint.with({
+			filetypes = { "dockerfile" },
+		}),
+		null_ls.builtins.diagnostics.golangci_lint.with({
+			filetypes = { "go" },
 		}),
 	},
 	on_attach = function(client)
