@@ -11,8 +11,8 @@ null_ls.setup({
 		null_ls.builtins.formatting.shfmt.with({
 			filetypes = { "sh", "bash" },
 		}),
-		null_ls.builtins.formatting.sqlformat.with({
-			filetypes = { "sql" },
+		null_ls.builtins.formatting.pg_format.with({
+			filetypes = { "sql", "pgsql" },
 		}),
 		null_ls.builtins.formatting.terraform_fmt.with({
 			filetypes = { "tf", "tfvars", "hcl", "terraform" },
