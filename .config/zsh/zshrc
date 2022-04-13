@@ -19,7 +19,8 @@ source <(antibody init)
 antibody bundle < "$HOME/.config/zsh/plugins.txt"
 
 # load autocomplition
-autoload -U compinit && compinit
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
