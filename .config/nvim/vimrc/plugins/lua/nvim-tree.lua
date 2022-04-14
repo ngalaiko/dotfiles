@@ -4,6 +4,16 @@ require("nvim-tree").setup({
 	view = {
 		auto_resize = true,
 	},
+	renderer = {
+		indent_markers = {
+			enable = true,
+			icons = {
+				corner = "└ ",
+				edge = "│ ",
+				none = "  ",
+			},
+		},
+	},
 	actions = {
 		open_file = {
 			window_picker = {

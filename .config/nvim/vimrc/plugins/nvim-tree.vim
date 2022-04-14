@@ -1,4 +1,3 @@
-let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_add_trailing = 1
 let g:nvim_tree_group_empty = 1
 let g:nvim_tree_special_files = []
