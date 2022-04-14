@@ -13,6 +13,19 @@ cmp.setup({
 			c = cmp.mapping.close(),
 		}),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		["<Tab>"] = {
+			i = cmp.mapping.select_next_item(),
+		},
+		["<UP>"] = {
+			i = cmp.mapping.select_prev_item(),
+		},
+		["<DOWN>"] = {
+			i = cmp.mapping.select_next_item(),
+		},
+	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
