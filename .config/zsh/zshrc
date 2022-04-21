@@ -9,6 +9,9 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/opt:$PATH"
 # python3
 export PATH="$PATH:/System/Volumes/Data/Users/nikita.galaiko/Library/Python/3.8/bin"
 
+# yarn
+export PATH="$PATH:$HOME/.yarn/bin"
+
 # golang stuff
 GOPATH="$HOME/go"
 GOBIN="$GOPATH/bin"
