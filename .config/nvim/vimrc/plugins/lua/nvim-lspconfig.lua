@@ -1,6 +1,5 @@
 local nvim_lsp = require("lspconfig")
 local util = require("lspconfig/util")
-
 local servers = {
 	gopls = {
 		cmd = { "gopls", "serve" },
@@ -43,7 +42,12 @@ local servers = {
 		end,
 	},
 	svelte = {},
-	pylsp = {},
+	pylsp = {
+		on_attach = function(client)
+			client.resolved_capabilities.document_formatting = false
+			client.resolved_capabilities.document_range_formatting = false
+		end,
+	},
 }
 
 -- prefix/character preceding the diagnostics' virtual text

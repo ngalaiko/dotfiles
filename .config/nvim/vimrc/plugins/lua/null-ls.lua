@@ -11,6 +11,9 @@ null_ls.setup({
 		null_ls.builtins.formatting.shfmt.with({
 			filetypes = { "sh", "bash" },
 		}),
+		null_ls.builtins.formatting.autopep8.with({
+			filetypes = { "python" },
+		}),
 		null_ls.builtins.formatting.pg_format.with({
 			filetypes = { "sql", "pgsql" },
 		}),
