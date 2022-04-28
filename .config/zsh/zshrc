@@ -34,6 +34,11 @@ kitty + complete setup zsh | source /dev/stdin
 # aws cli completion
 [[ -z $(command -v aws_completer) ]] || complete -C 'aws_completer' aws
 
+# nvim config
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 # load aliases
 source "$HOME/.config/zsh/aliases"
 
