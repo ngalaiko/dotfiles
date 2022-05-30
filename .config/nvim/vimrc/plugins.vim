@@ -61,4 +61,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/github/copilot.vim'
     " ledger
     Plug 'https://github.com/ledger/vim-ledger'
+    " cooklang highlighting
+    Plug 'https://github.com/luizribeiro/vim-cooklang', { 'for': 'cook' }
 call plug#end()
