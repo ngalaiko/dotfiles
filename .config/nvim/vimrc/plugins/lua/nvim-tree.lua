@@ -42,7 +42,7 @@ require("nvim-tree").setup({
 				},
 			},
 		},
-		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+		special_files = {},
 	},
 	actions = {
 		open_file = {
