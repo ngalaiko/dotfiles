@@ -1,4 +1,4 @@
-luafile $HOME/.config/nvim/vimrc/plugins/lua/nvim-lspconfig.lua
+luafile $HOME/.config/nvim/vimrc/plugins/nvim-lspconfig.lua
 
 nnoremap gd <cmd>lua vim.lsp.buf.definition()<cr>
 " nnoremap gi <cmd>lua vim.lsp.buf.implementation()<cr>

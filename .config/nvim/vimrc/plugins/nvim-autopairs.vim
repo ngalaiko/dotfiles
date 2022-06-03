@@ -1,1 +1,1 @@
-luafile $HOME/.config/nvim/vimrc/plugins/lua/nvim-autopairs.lua
+luafile $HOME/.config/nvim/vimrc/plugins/nvim-autopairs.lua

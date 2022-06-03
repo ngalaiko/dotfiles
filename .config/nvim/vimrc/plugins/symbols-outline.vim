@@ -1,3 +1,3 @@
-luafile $HOME/.config/nvim/vimrc/plugins/lua/symbols-outline.lua
+luafile $HOME/.config/nvim/vimrc/plugins/symbols-outline.lua
 
 nmap <Leader>tt :SymbolsOutline<CR>

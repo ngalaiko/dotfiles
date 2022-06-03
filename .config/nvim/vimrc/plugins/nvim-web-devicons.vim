@@ -1,1 +1,1 @@
-luafile $HOME/.config/nvim/vimrc/plugins/lua/nvim-web-devicons.lua
+luafile $HOME/.config/nvim/vimrc/plugins/nvim-web-devicons.lua

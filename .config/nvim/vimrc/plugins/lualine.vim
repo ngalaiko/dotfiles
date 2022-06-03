@@ -1,1 +1,1 @@
-luafile $HOME/.config/nvim/vimrc/plugins/lua/lualine.lua
+luafile $HOME/.config/nvim/vimrc/plugins/lualine.lua
