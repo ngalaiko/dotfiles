@@ -1,3 +1,1 @@
-let g:gruvbox_contrast_dark = "soft"
-let g:gruvbox_contrast_light = "soft"
-let g:gruvbox_bold = 0
+luafile $HOME/.config/nvim/vimrc/plugins/gruvbox.lua
