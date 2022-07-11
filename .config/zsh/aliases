@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Use bat instead of cat
-[[ -z $(command -v bat) ]] || alias cat="bat"
-
 # Shortcuts
 alias g="git"
 
