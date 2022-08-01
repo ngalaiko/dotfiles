@@ -6,6 +6,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/nvim-lualine/lualine.nvim'
     " fancy icons
     Plug 'https://github.com/kyazdani42/nvim-web-devicons'
+    Plug 'https://github.com/onsails/lspkind.nvim'
     " file tree for the vim ui
     Plug 'https://github.com/kyazdani42/nvim-tree.lua'
     " treesitter (better understand ast)
@@ -25,6 +26,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/hrsh7th/cmp-cmdline'
     Plug 'https://github.com/hrsh7th/cmp-omni'
     Plug 'https://github.com/hrsh7th/nvim-cmp'
+    Plug 'https://github.com/zbirenbaum/copilot-cmp'
     " snippets
     Plug 'https://github.com/hrsh7th/cmp-vsnip'
     Plug 'https://github.com/hrsh7th/vim-vsnip'
@@ -59,6 +61,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/fatih/vim-go'
     " github copilot
     Plug 'https://github.com/github/copilot.vim'
+    Plug 'https://github.com/zbirenbaum/copilot.lua'
     " ledger
     Plug 'https://github.com/ledger/vim-ledger'
     " cooklang highlighting
