@@ -9,26 +9,6 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#32302f",
-          "foreground": "#fb4934",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}red{{ end }}"
-          ],
-          "properties": {
-            "always_enabled": false
-          },
-          "style": "powerline",
-          "template": " {{ if gt .Code 0 }}\uf7d3{{ else }}\uf42e{{ end }} ",
-          "type": "exit"
-        },
-        {
-          "background": "#32302f",
-          "foreground": "#fbf1c7",
-          "style": "powerline",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
-          "type": "os"
-        },
-        {
           "background": "#83a598",
           "foreground": "#32302f",
           "powerline_symbol": "\ue0b0",
@@ -100,16 +80,7 @@
           "foreground": "#32302f",
           "background": "#83a598",
           "template": " \uFCD1 {{ .Full }} "
-        },
-        {
-          "background": "#32302f",
-          "foreground": "#fbf1c7",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "style": "powerline",
-          "template": "<#fff> \uf64f </>{{ .CurrentDate | date .Format }} ",
-          "type": "time"
-        }
+        } 
       ],
       "type": "prompt"
     },
