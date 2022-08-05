@@ -41,20 +41,12 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/tpope/vim-fugitive'
     Plug 'https://github.com/tpope/vim-rhubarb'
     Plug 'https://github.com/lewis6991/gitsigns.nvim'
-    " linters
-    " formatters
-    " Plug 'https://github.com/mfussenegger/nvim-lint'
-    " Plug 'https://github.com/mhartington/formatter.nvim'
+    " linters, formatters
     Plug 'https://github.com/jose-elias-alvarez/null-ls.nvim'
     " nvim - kitty navigation
     Plug 'https://github.com/knubie/vim-kitty-navigator'
     " terraform
     Plug 'https://github.com/hashivim/vim-terraform'
-    " clojure
-    Plug 'https://github.com/Olical/conjure', {'tag': 'v4.19.0'}
-    Plug 'https://github.com/tpope/vim-dispatch'
-    Plug 'https://github.com/clojure-vim/vim-jack-in'
-    Plug 'https://github.com/radenling/vim-dispatch-neovim'
     " tag viewer
     Plug 'https://github.com/simrat39/symbols-outline.nvim'
     " golang
@@ -64,6 +56,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/zbirenbaum/copilot.lua'
     " ledger
     Plug 'https://github.com/ledger/vim-ledger'
-    " cooklang highlighting
+    " cooklang
     Plug 'https://github.com/luizribeiro/vim-cooklang', { 'for': 'cook' }
 call plug#end()
