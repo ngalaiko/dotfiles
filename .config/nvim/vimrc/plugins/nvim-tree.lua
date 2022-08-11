@@ -13,7 +13,7 @@ require("nvim-tree").setup({
 			},
 		},
 		icons = {
-			webdev_colors = true,
+			webdev_colors = false,
 			show = {
 				git = false,
 				folder = true,

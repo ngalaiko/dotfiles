@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "terminal_background": "#32302f",
+  "terminal_background": "#191919",
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
   "final_space": true,
   "version": 2,
@@ -9,9 +9,8 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#83a598",
-          "foreground": "#32302f",
-          "powerline_symbol": "\ue0b0",
+          "background": "#191919",
+          "foreground": "#BBBBBB",
           "properties": {
             "folder_separator_icon": "/",
             "style": "full"
@@ -21,29 +20,25 @@
           "type": "path"
         },
         {
-          "background": "#b8bb26",
-          "foreground": "#32302f",
-          "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}"
-          ],
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "branch_ahead_icon": "\u2191",
-            "branch_behind_icon": "\u2193",
-            "branch_gone": "\u2262",
-            "branch_icon": "\ue0a0 ",
-            "branch_identical_icon": "\u2261",
-            "cherry_pick_icon": "\u2713 ",
-            "commit_icon": "\u25b7 ",
-            "merge_icon": "\u25f4 ",
-            "no_commits_icon": "[no commits]",
-            "rebase_icon": "\u2c62 ",
-            "tag_icon": "\u25b6 "
-          },
-          "style": "powerline",
-          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} \u2502{{ end }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}}{{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
-          "type": "git"
-        }
+            "background": "#191919",
+           "foreground": "#BBBBBB",
+           "properties": {
+             "branch_ahead_icon": "",
+             "branch_behind_icon": "",
+             "branch_gone": "",
+             "branch_icon": "",
+             "branch_identical_icon": "",
+             "cherry_pick_icon": "",
+             "commit_icon": "",
+             "merge_icon": "\u25f4 ",
+             "no_commits_icon": "",
+             "rebase_icon": "\u2c62 ",
+             "tag_icon": ""
+           },
+           "style": "powerline",
+           "template": "@ {{ .HEAD }} {{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} \u2502{{ end }}{{ if .Staging.Changed }}{{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}}{{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+           "type": "git"
+         }
       ],
       "type": "prompt",
       "vertical_offset": 1
@@ -52,33 +47,17 @@
       "alignment": "right",
       "segments": [
         {
-          "foreground": "#32302f",
-          "background": "#d3869b",
-          "type": "executiontime",
-          "style": "powerline",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "properties": {
-            "threshold": 500,
-            "style": "austin"
-          }
-        },
-        {
           "type": "node",
           "style": "powerline",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "foreground": "#32302f",
-          "background": "#b8bb26",
+          "foreground": "#BBBBBB",
+          "background": "#191919",
           "template": " \uE718 {{ .Full }} "
         },
         {
           "type": "go",
           "style": "powerline",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "foreground": "#32302f",
-          "background": "#83a598",
+          "foreground": "#BBBBBB",
+          "background": "#191919",
           "template": " \uFCD1 {{ .Full }} "
         } 
       ],
