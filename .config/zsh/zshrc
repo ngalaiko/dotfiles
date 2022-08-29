@@ -34,7 +34,7 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+[[ -z $(command -v kitty) ]] || source <(kitty + complete setup zsh)
 
 # kubectl completion
 [[ -z $(command -v kubectl) ]] || source <(kubectl completion zsh)
