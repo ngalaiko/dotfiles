@@ -63,5 +63,13 @@ bindkey '^[[B' history-substring-search-down
 # zsh autosuggest highlight style
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#686868"
 
+# kitty integration
+if test -n "$KITTY_INSTALLATION_DIR"; then
+    export KITTY_SHELL_INTEGRATION="enabled"
+    autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+    kitty-integration
+    unfunction kitty-integration
+fi
+
 # Enable Oh My Posh prompt. Keep at the end.
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.json)"
