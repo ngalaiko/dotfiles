@@ -12,15 +12,15 @@ local servers = {
 			},
 		},
 		on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
-			client.resolved_capabilities.document_range_formatting = false
+			client.server_capabilities.document_formatting = false
+			client.server_capabilities.document_range_formatting = false
 		end,
 	},
 	terraformls = {},
 	html = {
 		on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
-			client.resolved_capabilities.document_range_formatting = false
+			client.server_capabilities.document_formatting = false
+			client.server_capabilities.document_range_formatting = false
 		end,
 	},
 	cssls = {},
@@ -31,22 +31,22 @@ local servers = {
 	volar = {
 		filetypes = { "vue" },
 		on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
-			client.resolved_capabilities.document_range_formatting = false
+			client.server_capabilities.document_formatting = false
+			client.server_capabilities.document_range_formatting = false
 		end,
 	},
 	tsserver = {
 		on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
-			client.resolved_capabilities.document_range_formatting = false
+			client.server_capabilities.document_formatting = false
+			client.server_capabilities.document_range_formatting = false
 		end,
 	},
 	tailwindcss = {},
 	svelte = {},
 	pylsp = {
 		on_attach = function(client)
-			client.resolved_capabilities.document_formatting = false
-			client.resolved_capabilities.document_range_formatting = false
+			client.server_capabilities.document_formatting = false
+			client.server_capabilities.document_range_formatting = false
 		end,
 	},
 }
