@@ -34,13 +34,13 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 # Completion for kitty
-[[ -z $(command -v kitty) ]] || source <(kitty + complete setup zsh)
+[[ -z $(command -v kitty) ]] || source "$HOME/.config/zsh/plugins/_kitty"
 
 # kubectl completion
-[[ -z $(command -v kubectl) ]] || source <(kubectl completion zsh)
+[[ -z $(command -v kubectl) ]] || source "$HOME/.config/zsh/plugins/_kubectl"
 
 # aws cli completion
-[[ -z $(command -v aws_completer) ]] || complete -C 'aws_completer' aws
+[[ -z $(command -v aws_completer) ]] || source "$HOME/.config/zsh/plugins/_aws"
 
 # nvim config
 export NVM_DIR="$HOME/.nvm"
