@@ -49,6 +49,7 @@ local servers = {
 			client.server_capabilities.document_range_formatting = false
 		end,
 	},
+	hls = {},
 }
 
 -- prefix/character preceding the diagnostics' virtual text
