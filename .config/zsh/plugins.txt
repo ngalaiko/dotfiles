@@ -1,3 +1,6 @@
+# run this when updating the file:
+# $ antibody bundle < "$HOME/.config/zsh/plugins.txt" > "$HOME/.config/zsh/plugins.sh"
+
 djui/alias-tips
 
 zsh-users/zsh-completions

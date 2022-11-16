@@ -26,12 +26,15 @@ GOBIN="$GOPATH/bin"
 PATH="$PATH:$GOBIN"
 
 # load plugins via antigen
-source <(antibody init)
-antibody bundle < "$HOME/.config/zsh/plugins.txt"
+source "$HOME/.config/zsh/plugins.sh"
 
 # load autocomplition
 autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 # Completion for kitty
 [[ -z $(command -v kitty) ]] || source "$HOME/.config/zsh/plugins/_kitty"
@@ -44,7 +47,6 @@ autoload -Uz compinit && compinit
 
 # nvim config
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # load aliases
