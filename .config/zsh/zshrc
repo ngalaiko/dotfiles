@@ -25,6 +25,11 @@ GOPATH="$HOME/go"
 GOBIN="$GOPATH/bin"
 PATH="$PATH:$GOBIN"
 
+# nvm stuff
+export NVM_DIR="$HOME/.nvm"
+export NVM_COMPLETION=true
+export NVM_LAZY_LOAD=true
+
 # load plugins via antigen
 source "$HOME/.config/zsh/plugins.sh"
 
@@ -44,10 +49,6 @@ compinit -C
 
 # aws cli completion
 [[ -z $(command -v aws_completer) ]] || source "$HOME/.config/zsh/plugins/_aws"
-
-# nvim config
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # load aliases
 source "$HOME/.config/zsh/aliases"

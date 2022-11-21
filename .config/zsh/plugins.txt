@@ -9,3 +9,4 @@ zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 
 joshskidmore/zsh-fzf-history-search
+lukechilds/zsh-nvm
