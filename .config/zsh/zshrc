@@ -1,5 +1,8 @@
 export LANG="en_US.UTF-8"
 
+# hledger
+export LEDGER_FILE="/Users/nikita.galaiko/Documents/ledger/main.ledger"
+
 # gpg suite
 export GPG_TTY=$(tty)
 
