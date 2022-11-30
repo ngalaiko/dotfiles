@@ -32,6 +32,7 @@ cmp.setup({
 		{ name = "nvim_lua" },
 		{ name = "vsnip" },
 		{ name = "omni" },
+		{ name = "conjure" },
 	}, {
 		{ name = "buffer" },
 		{ name = "path" },

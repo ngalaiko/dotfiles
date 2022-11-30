@@ -56,4 +56,10 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/ledger/vim-ledger'
     " cooklang
     Plug 'https://github.com/luizribeiro/vim-cooklang', { 'for': 'cook' }
+    " clojure
+    Plug 'https://github.com/Olical/conjure', { 'for': 'clojure' }
+    Plug 'https://github.com/PaterJason/cmp-conjure', { 'for': 'clojure' }
+    Plug 'https://github.com/tpope/vim-dispatch', { 'for': 'clojure' }
+    Plug 'https://github.com/clojure-vim/vim-jack-in', { 'for': 'clojure' }
+    Plug 'https://github.com/clojure-vim/vim-jack-in', { 'for': 'clojure' }
 call plug#end()
