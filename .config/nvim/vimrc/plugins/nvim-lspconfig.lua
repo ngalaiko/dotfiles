@@ -24,7 +24,12 @@ local servers = {
 		end,
 	},
 	cssls = {},
-	bashls = {},
+	bashls = {
+		on_attach = function(client)
+			client.server_capabilities.document_formatting = false
+			client.server_capabilities.document_range_formatting = false
+		end,
+	},
 	dockerls = {},
 	vimls = {},
 	clojure_lsp = {},
@@ -50,6 +55,7 @@ local servers = {
 		end,
 	},
 	hls = {},
+	rust_analyzer = {},
 }
 
 -- prefix/character preceding the diagnostics' virtual text
