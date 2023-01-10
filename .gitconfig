@@ -78,7 +78,7 @@
 [diff]
 	# Detect copies as well as renames
 	renames = copies
-	external = difft
+	; external = difft
 
 [diff "bin"]
 
