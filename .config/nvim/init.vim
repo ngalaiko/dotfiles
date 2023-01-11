@@ -19,6 +19,7 @@ source $HOME/.config/nvim/vimrc/plugins/nvim-ts-context-commentstring.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-web-devicons.vim
 source $HOME/.config/nvim/vimrc/plugins/symbols-outline.vim
 source $HOME/.config/nvim/vimrc/plugins/telescope.vim
+source $HOME/.config/nvim/vimrc/plugins/trouble.vim
 source $HOME/.config/nvim/vimrc/plugins/vim-go.vim
 source $HOME/.config/nvim/vimrc/plugins/vim-treesitter.vim
 source $HOME/.config/nvim/vimrc/plugins/vim-terraform.vim

@@ -43,8 +43,8 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.hadolint.with({
 			filetypes = { "dockerfile" },
 		}),
-		null_ls.builtins.diagnostics.golangci_lint.with({
-			filetypes = { "go" },
-		}),
+		-- null_ls.builtins.diagnostics.golangci_lint.with({
+		-- 	filetypes = { "go" },
+		-- }),
 	},
 })

@@ -26,6 +26,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/hrsh7th/cmp-cmdline'
     Plug 'https://github.com/hrsh7th/cmp-omni'
     Plug 'https://github.com/hrsh7th/nvim-cmp'
+    " menu to show diagnostic issues and stuff like that
+    Plug 'https://github.com/folke/trouble.nvim'
     " snippets
     Plug 'https://github.com/hrsh7th/cmp-vsnip'
     Plug 'https://github.com/hrsh7th/vim-vsnip'
