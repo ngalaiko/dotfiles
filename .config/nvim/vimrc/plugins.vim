@@ -53,7 +53,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     " golang
     Plug 'https://github.com/fatih/vim-go'
     " github copilot
-    " Plug 'https://github.com/github/copilot.vim'
+    Plug 'https://github.com/github/copilot.vim'
     " ledger
     Plug 'https://github.com/ledger/vim-ledger'
     " cooklang
