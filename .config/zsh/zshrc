@@ -1,8 +1,5 @@
 export LANG="en_US.UTF-8"
 
-# ruby
-export PATH="/opt/homebrew/opt/ruby/bin:/usr/local/lib/ruby/gems/3.1.0/bin:$PATH"
-
 # rust
 source "$HOME/.cargo/env"
 export PATH="$PATH:$HOME/.cargo/bin"
