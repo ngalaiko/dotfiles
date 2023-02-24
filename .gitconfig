@@ -96,7 +96,8 @@
 	log = true
 
 [push]
-
+    # when pushing from a new branch, create the same branch on the remote
+    autoSetupRemote = true
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
