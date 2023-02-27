@@ -20,6 +20,26 @@ null_ls.setup({
 		null_ls.builtins.formatting.terraform_fmt.with({
 			filetypes = { "tf", "tfvars", "hcl", "terraform" },
 		}),
+		null_ls.builtins.formatting.eslint.with({
+			filetypes = {
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"vue",
+				"css",
+				"scss",
+				"less",
+				"html",
+				"json",
+				"jsonc",
+				"yaml",
+				"markdown",
+				"graphql",
+				"handlebars",
+				"svelte",
+			},
+		}),
 		null_ls.builtins.formatting.prettier.with({
 			filetypes = {
 				"javascript",
@@ -37,14 +57,11 @@ null_ls.setup({
 				"markdown",
 				"graphql",
 				"handlebars",
+				"svelte",
 			},
 		}),
-
 		null_ls.builtins.diagnostics.hadolint.with({
 			filetypes = { "dockerfile" },
 		}),
-		-- null_ls.builtins.diagnostics.golangci_lint.with({
-		-- 	filetypes = { "go" },
-		-- }),
 	},
 })

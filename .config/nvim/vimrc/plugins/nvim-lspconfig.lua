@@ -47,7 +47,12 @@ local servers = {
 		end,
 	},
 	tailwindcss = {},
-	svelte = {},
+	svelte = {
+		on_attach = function(client)
+			client.server_capabilities.document_formatting = false
+			client.server_capabilities.document_range_formatting = false
+		end,
+	},
 	pylsp = {
 		on_attach = function(client)
 			client.server_capabilities.document_formatting = false
