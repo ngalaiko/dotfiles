@@ -20,7 +20,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.terraform_fmt.with({
 			filetypes = { "tf", "tfvars", "hcl", "terraform" },
 		}),
-		null_ls.builtins.formatting.eslint.with({
+		null_ls.builtins.formatting.eslint_d.with({
 			filetypes = {
 				"javascript",
 				"javascriptreact",
@@ -40,7 +40,7 @@ null_ls.setup({
 				"svelte",
 			},
 		}),
-		null_ls.builtins.formatting.prettier.with({
+		null_ls.builtins.formatting.prettierd.with({
 			filetypes = {
 				"javascript",
 				"javascriptreact",
@@ -60,8 +60,12 @@ null_ls.setup({
 				"svelte",
 			},
 		}),
+
 		null_ls.builtins.diagnostics.hadolint.with({
 			filetypes = { "dockerfile" },
 		}),
+        null_ls.builtins.diagnostics.eslint_d.with({
+            filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" }
+        }),
 	},
 })
