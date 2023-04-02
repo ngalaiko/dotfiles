@@ -136,3 +136,26 @@
 
 [init]
 	defaultBranch = master
+[safe]
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
+	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client

@@ -10,7 +10,6 @@ source $HOME/.config/nvim/vimrc/plugins/conjure.vim
 source $HOME/.config/nvim/vimrc/plugins/copilot.vim
 source $HOME/.config/nvim/vimrc/plugins/lualine.vim
 source $HOME/.config/nvim/vimrc/plugins/null-ls.vim
-source $HOME/.config/nvim/vimrc/plugins/gruvbox.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-autopairs.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-cmp.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-lspconfig.vim

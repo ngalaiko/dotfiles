@@ -1,7 +1,6 @@
 call plug#begin('$HOME/.config/nvim/plugged')
     " colors
     Plug 'https://github.com/rktjmp/lush.nvim'
-    Plug 'https://github.com/npxbr/gruvbox.nvim'
     Plug 'https://github.com/mcchrish/zenbones.nvim'
     " fancy status bar
     Plug 'https://github.com/nvim-lualine/lualine.nvim'
