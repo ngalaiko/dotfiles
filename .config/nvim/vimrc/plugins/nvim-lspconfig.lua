@@ -11,54 +11,21 @@ local servers = {
 				staticcheck = true,
 			},
 		},
-		on_attach = function(client)
-			client.server_capabilities.document_formatting = false
-			client.server_capabilities.document_range_formatting = false
-		end,
 	},
 	terraformls = {},
-	html = {
-		on_attach = function(client)
-			client.server_capabilities.document_formatting = false
-			client.server_capabilities.document_range_formatting = false
-		end,
-	},
+	html = {},
 	cssls = {},
-	bashls = {
-		on_attach = function(client)
-			client.server_capabilities.document_formatting = false
-			client.server_capabilities.document_range_formatting = false
-		end,
-	},
+	bashls = {},
 	dockerls = {},
 	vimls = {},
 	clojure_lsp = {},
 	volar = {
 		filetypes = { "vue" },
-		on_attach = function(client)
-			client.server_capabilities.document_formatting = false
-			client.server_capabilities.document_range_formatting = false
-		end,
 	},
-	tsserver = {
-		on_attach = function(client)
-			client.server_capabilities.document_formatting = false
-			client.server_capabilities.document_range_formatting = false
-		end,
-	},
+	tsserver = {},
 	tailwindcss = {},
-	svelte = {
-		on_attach = function(client)
-			client.server_capabilities.document_formatting = false
-			client.server_capabilities.document_range_formatting = false
-		end,
-	},
-	pylsp = {
-		on_attach = function(client)
-			client.server_capabilities.document_formatting = false
-			client.server_capabilities.document_range_formatting = false
-		end,
-	},
+	svelte = {},
+	pylsp = {},
 	hls = {},
 	rust_analyzer = {},
 }
