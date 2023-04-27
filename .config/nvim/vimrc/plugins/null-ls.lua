@@ -2,6 +2,9 @@ local null_ls = require("null-ls")
 
 null_ls.setup({
 	sources = {
+		null_ls.builtins.formatting.rustfmt.with({
+			filetypes = { "rust" },
+		}),
 		null_ls.builtins.formatting.stylua.with({
 			filetypes = { "lua" },
 		}),
@@ -64,8 +67,8 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.hadolint.with({
 			filetypes = { "dockerfile" },
 		}),
-        null_ls.builtins.diagnostics.eslint_d.with({
-            filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" }
-        }),
+		null_ls.builtins.diagnostics.eslint_d.with({
+			filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" },
+		}),
 	},
 })
