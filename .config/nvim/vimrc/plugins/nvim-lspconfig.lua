@@ -27,7 +27,25 @@ local servers = {
 	svelte = {},
 	pylsp = {},
 	hls = {},
-	rust_analyzer = {},
+	rust_analyzer = {
+		settings = {
+			["rust-analyzer"] = {
+				assist = {
+					importMergeBehavior = "last",
+					importPrefix = "by_self",
+				},
+				cargo = {
+					loadOutDirsFromCheck = true,
+				},
+				procMacro = {
+					enable = true,
+				},
+				checkOnSave = {
+					command = "clippy",
+				},
+			},
+		},
+	},
 }
 
 -- prefix/character preceding the diagnostics' virtual text
