@@ -2,7 +2,6 @@ export LANG="en_US.UTF-8"
 
 # rust
 source "$HOME/.cargo/env"
-export PATH="$PATH:$HOME/.cargo/bin"
 
 # hledger
 export LEDGER_FILE="/Users/nikita.galaiko/Documents/ledger/main.ledger"
