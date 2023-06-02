@@ -3,11 +3,11 @@
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-    # append this changes to previous commit
-    append = commit --amend --no-edit
+	# append this changes to previous commit
+	append = commit --amend --no-edit
 
-    # force update current branch
-    update = !"git push --force-with-lease origin $(git rev-parse --abbrev-ref HEAD)"
+	# force update current branch
+	update = !"git push --force-with-lease origin $(git rev-parse --abbrev-ref HEAD)"
 
 	# View the current working tree status using the short format
 	s = status -s
@@ -21,10 +21,6 @@
 	whitespace = fix
 
 [core]
-
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -96,8 +92,9 @@
 	log = true
 
 [push]
-    # when pushing from a new branch, create the same branch on the remote
-    autoSetupRemote = true
+
+	# when pushing from a new branch, create the same branch on the remote
+	autoSetupRemote = true
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
@@ -105,8 +102,8 @@
 
 [user]
 
-    name = Nikita Galaiko
-    email = nikita@galaiko.rocks
+	name = Nikita Galaiko
+	email = nikita@galaiko.rocks
 
 [hub]
 	protocol = ssh
@@ -136,26 +133,3 @@
 
 [init]
 	defaultBranch = master
-[safe]
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
-	directory = /Users/nikita.galaiko/actions-runner/_work/gitbutler-client/gitbutler-client
