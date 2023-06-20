@@ -12,4 +12,11 @@ ln -sf $(pwd)/.config/nvim "$HOME/.config/"
 ln -sf $(pwd)/.config/kitty "$HOME/.config/"
 ln -sf $(pwd)/.config/zsh "$HOME/.config/"
 
+# gpg
+mkdir -p "$HOME/.gnupg"
+chmod 700 "$HOME/.gnupg"
+ln -sf $(pwd)/.gnupg/dirmngr.conf "$HOME/.gnupg/"
+ln -sf $(pwd)/.gnupg/gpg-agent.conf "$HOME/.gnupg/"
+ln -sf $(pwd)/.gnupg/gpg.conf "$HOME/.gnupg/"
+
 brew bundle install
