@@ -1,11 +1,6 @@
 local cmp = require("cmp")
 
 cmp.setup({
-	snippet = {
-		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body)
-		end,
-	},
 	mapping = {
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		["<C-e>"] = cmp.mapping({
@@ -30,10 +25,7 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
-		{ name = "vsnip" },
-		-- { name = "omni" },
 		{ name = "conjure" },
-	}, {
 		{ name = "buffer" },
 		{ name = "path" },
 	}),
