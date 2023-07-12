@@ -54,9 +54,14 @@ compinit -C
 # load aliases
 source "$HOME/.config/zsh/aliases"
 
-
 # atuin search
-[[ -z $(command -v atuin) ]] || eval "$(atuin init zsh)"
+[[ -z $(command -v atuin) ]] || source "$HOME/.config/zsh/atuin"
+
+# up/down arrow history search
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="none"
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="none"
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # option navigation
 bindkey "\e[1;3D" backward-word # ⌥←
