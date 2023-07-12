@@ -1,6 +1,9 @@
 local cmp = require("cmp")
 
 cmp.setup({
+	view = {
+		entries = { name = "custom", selection_order = "near_cursor" },
+	},
 	mapping = {
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		["<C-e>"] = cmp.mapping({
