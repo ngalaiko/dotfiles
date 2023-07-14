@@ -38,7 +38,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     " tag viewer
     Plug 'https://github.com/simrat39/symbols-outline.nvim'
     " github copilot
-    Plug 'https://github.com/github/copilot.vim'
+    Plug 'https://github.com/zbirenbaum/copilot.lua'
     " ledger
     Plug 'https://github.com/ledger/vim-ledger'
 call plug#end()
