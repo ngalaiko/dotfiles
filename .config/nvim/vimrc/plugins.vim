@@ -10,6 +10,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/kyazdani42/nvim-tree.lua'
     " treesitter (better understand ast)
     Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'https://github.com/nvim-treesitter/nvim-treesitter-context'
     " telescope (lua powered searching)
     Plug 'https://github.com/nvim-lua/popup.nvim'
     Plug 'https://github.com/nvim-lua/plenary.nvim'

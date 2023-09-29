@@ -10,6 +10,7 @@ local languages = {
   "lua",
   "yaml",
   "clojure",
+  "rust",
   --"gotmpl",
   "vue",
   "graphql",
