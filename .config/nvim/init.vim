@@ -7,6 +7,7 @@ source $HOME/.config/nvim/vimrc/ui.vim
 source $HOME/.config/nvim/vimrc/visual.vim
 
 source $HOME/.config/nvim/vimrc/plugins/copilot.lua.vim
+source $HOME/.config/nvim/vimrc/plugins/gitsigns.vim
 source $HOME/.config/nvim/vimrc/plugins/lualine.vim
 source $HOME/.config/nvim/vimrc/plugins/null-ls.vim
 source $HOME/.config/nvim/vimrc/plugins/nvim-autopairs.vim

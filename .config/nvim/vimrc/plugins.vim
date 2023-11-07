@@ -30,6 +30,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     " lsp integration for nvim
     Plug 'https://github.com/neovim/nvim-lspconfig'
     " integrations with git(hub)
+    Plug 'https://github.com/lewis6991/gitsigns.nvim'
     Plug 'https://github.com/tpope/vim-fugitive'
     Plug 'https://github.com/tpope/vim-rhubarb'
     " linters, formatters
