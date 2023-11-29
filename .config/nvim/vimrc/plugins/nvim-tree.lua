@@ -1,16 +1,9 @@
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require("nvim-tree").setup({
-	hijack_cursor = true,
 	renderer = {
-		group_empty = true,
-		add_trailing = true,
-		indent_markers = {
-			enable = true,
-			icons = {
-				corner = "└",
-				edge = "│",
-				none = " ",
-			},
-		},
 		icons = {
 			webdev_colors = false,
 			show = {
@@ -18,27 +11,6 @@ require("nvim-tree").setup({
 				folder = true,
 				file = true,
 				folder_arrow = true,
-			},
-			glyphs = {
-				default = "",
-				symlink = "",
-				git = {
-					unstaged = "✗",
-					staged = "✓",
-					unmerged = "",
-					renamed = "➜",
-					untracked = "★",
-					deleted = "",
-					ignored = "◌",
-				},
-				folder = {
-					default = "",
-					open = "",
-					empty = "",
-					empty_open = "",
-					symlink = "",
-					symlink_open = "",
-				},
 			},
 		},
 		special_files = {},
