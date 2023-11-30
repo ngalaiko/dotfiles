@@ -8,7 +8,7 @@ require("nvim-tree").setup({
 			webdev_colors = false,
 			show = {
 				git = false,
-				folder = true,
+				folder = false,
 				file = true,
 				folder_arrow = true,
 			},
