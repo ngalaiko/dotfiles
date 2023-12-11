@@ -9,7 +9,7 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#191919",
+          "background": "transparent",
           "foreground": "#BBBBBB",
           "properties": {
             "folder_separator_icon": "/",
@@ -20,7 +20,7 @@
           "type": "path"
         },
         {
-            "background": "#191919",
+           "background": "transparent",
            "foreground": "#BBBBBB",
            "properties": {
              "branch_ahead_icon": "",
@@ -50,14 +50,14 @@
           "type": "node",
           "style": "powerline",
           "foreground": "#BBBBBB",
-          "background": "#191919",
+          "background": "transparent",
           "template": " \uE718 {{ .Full }} "
         },
         {
           "type": "go",
           "style": "powerline",
           "foreground": "#BBBBBB",
-          "background": "#191919",
+          "background": "transparent",
           "template": " \uFCD1 {{ .Full }} "
         } 
       ],
