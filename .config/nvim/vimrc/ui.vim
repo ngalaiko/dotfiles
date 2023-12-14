@@ -60,3 +60,6 @@ set tm=500
 
 " Enable Ctrl-A/Ctrl-X to work on octal and hex numbers, as well as characters
 set nrformats=octal,hex,alpha
+
+" hide tabline
+set showtabline=0
