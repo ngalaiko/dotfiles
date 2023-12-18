@@ -36,6 +36,10 @@ local servers = {
 				},
 				cargo = {
 					loadOutDirsFromCheck = true,
+					features = "all",
+				},
+				check = {
+					features = "all",
 				},
 				procMacro = {
 					enable = true,
@@ -66,7 +70,7 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 for server, value in pairs(servers) do
 	value.capabilities = capabilities
-    value.capabilities.textDocument.completion.completionItem.snippetSupport = false
+	value.capabilities.textDocument.completion.completionItem.snippetSupport = false
 end
 
 -- change diagnostic signs
