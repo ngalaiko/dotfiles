@@ -26,11 +26,6 @@ export PATH="$PATH:/System/Volumes/Data/Users/nikita.galaiko/Library/Python/3.8/
 # yarn
 export PATH="$PATH:$HOME/.yarn/bin"
 
-# golang stuff
-GOPATH="$HOME/go"
-GOBIN="$GOPATH/bin"
-PATH="$PATH:$GOBIN"
-
 # load plugins via antigen
 source "$HOME/.config/zsh/plugins.sh"
 
