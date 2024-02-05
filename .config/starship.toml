@@ -5,6 +5,8 @@ $directory\
 $git_branch\
 $line_break$character"""
 
+add_newline = false
+
 palette = 'zenwritten_dark'
 
 [palettes.zenwritten_dark]
