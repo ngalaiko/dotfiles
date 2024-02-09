@@ -37,6 +37,9 @@ local servers = {
 				cargo = {
 					loadOutDirsFromCheck = true,
 					features = "all",
+					buildScripts = {
+						enable = false,
+					},
 				},
 				check = {
 					features = "all",
