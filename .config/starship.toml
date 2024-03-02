@@ -20,17 +20,16 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-symbol = ""
 style = "bg:color_bg1"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_bg0)]($style)'
+format = '[[ $branch ](fg:color_fg0 bg:color_bg0)]($style)'
 
 [line_break]
 disabled = false
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:color_fg0)'
-error_symbol = '[](bold fg:color_fg0)'
+success_symbol = '[❯](bold fg:color_fg0)'
+error_symbol = '[❯](bold fg:color_fg0)'
 vimcmd_symbol = '[❮](bold fg:color_fg0)'
 vimcmd_replace_one_symbol = '[❮](bold fg:color_fg0)'
 vimcmd_replace_symbol = '[❮](bold fg:color_fg0)'
