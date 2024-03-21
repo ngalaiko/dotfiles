@@ -3,6 +3,10 @@ export LANG="en_US.UTF-8"
 # rust
 source "$HOME/.cargo/env"
 
+# ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+
 # hledger
 export LEDGER_FILE="/Users/nikita.galaiko/Documents/ledger/main.ledger"
 
