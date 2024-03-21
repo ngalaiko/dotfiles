@@ -5,11 +5,11 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua.with({
 			filetypes = { "lua" },
 		}),
-		null_ls.builtins.diagnostics.reek.with({
+		null_ls.builtins.formatting.rufo.with({
 			filetypes = { "ruby" },
 		}),
-        null_ls.builtins.diagnostics.rubocop.with({
-			filetypes = { "ruby" },
+		null_ls.builtins.formatting.erb_format.with({
+			filetypes = { "eruby" },
 		}),
 		null_ls.builtins.formatting.goimports.with({
 			filetypes = { "go" },
@@ -42,6 +42,10 @@ null_ls.setup({
 				"handlebars",
 				"svelte",
 			},
+		}),
+
+		null_ls.builtins.diagnostics.reek.with({
+			filetypes = { "ruby" },
 		}),
 		null_ls.builtins.diagnostics.hadolint.with({
 			filetypes = { "dockerfile" },
