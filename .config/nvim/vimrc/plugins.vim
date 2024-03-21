@@ -34,7 +34,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/tpope/vim-fugitive'
     Plug 'https://github.com/tpope/vim-rhubarb'
     " linters, formatters
-    Plug 'https://github.com/jose-elias-alvarez/null-ls.nvim'
+    Plug 'https://github.com/nvimtools/none-ls.nvim'
     " nvim - kitty navigation
     Plug 'https://github.com/knubie/vim-kitty-navigator'
     " tag viewer

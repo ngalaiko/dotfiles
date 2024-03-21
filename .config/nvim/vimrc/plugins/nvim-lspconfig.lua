@@ -12,6 +12,7 @@ local servers = {
 			},
 		},
 	},
+    ruby_ls = {},
 	terraformls = {},
 	html = {},
 	cssls = {},
