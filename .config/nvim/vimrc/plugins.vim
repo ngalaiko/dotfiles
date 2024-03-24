@@ -36,7 +36,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
     " linters, formatters
     Plug 'https://github.com/nvimtools/none-ls.nvim'
     " nvim - kitty navigation
-    Plug 'https://github.com/knubie/vim-kitty-navigator'
+    " Plug 'https://github.com/knubie/vim-kitty-navigator'
+    Plug 'https://github.com/numToStr/Navigator.nvim'
     " tag viewer
     Plug 'https://github.com/simrat39/symbols-outline.nvim'
     " github copilot
