@@ -43,9 +43,6 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
-# Completion for kitty
-[[ -z $(command -v kitty) ]] || source "$HOME/.config/zsh/plugins/_kitty"
-
 # atuin search
 [[ -z $(command -v atuin) ]] || source "$HOME/.config/zsh/plugins/_atuin"
 
@@ -64,14 +61,6 @@ bindkey "\e[1;3C" forward-word # ⌥→
 
 # zsh autosuggest highlight style
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#686868"
-
-# kitty integration
-if test -n "$KITTY_INSTALLATION_DIR"; then
-    export KITTY_SHELL_INTEGRATION="enabled"
-    autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
-    kitty-integration
-    unfunction kitty-integration
-fi
 
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.json)"
 eval "$(starship init zsh)"
