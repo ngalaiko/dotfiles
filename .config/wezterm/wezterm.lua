@@ -36,6 +36,12 @@ config.font = wezterm.font_with_fallback({
 	"Berkeley Mono",
 	"Symbols Nerd Font Mono",
 })
+config.use_dead_keys = false
+config.scrollback_lines = 5000
+
+config.window_frame = {
+	font = wezterm.font({ family = "Berkeley Mono", weight = "Bold" }),
+}
 
 config.font_size = 15.0
 
@@ -51,7 +57,15 @@ config.key_tables = {
 	},
 }
 
+config.adjust_window_size_when_changing_font_size = false
+
 config.keys = {
+	-- font size
+	{ key = "=", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
+	{ key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
+	{ key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
+
+	-- search mode
 	{
 		key = "f",
 		mods = "CTRL|ALT",
@@ -101,17 +115,17 @@ config.keys = {
 	-- tab management
 	{
 		key = "w",
-		mods = "CTRL",
+		mods = "CMD",
 		action = wezterm.action({ CloseCurrentPane = { confirm = false } }),
 	},
 	{
 		key = "t",
-		mods = "CTRL",
+		mods = "CMD",
 		action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }),
 	},
 	{
 		key = "r",
-		mods = "CTRL|ALT",
+		mods = "CMD|ALT",
 		action = wezterm.action.PromptInputLine({
 			description = "Enter new name for tab",
 			action = wezterm.action_callback(function(window, _, line)
@@ -126,7 +140,7 @@ config.keys = {
 	},
 	{
 		key = "Tab",
-		mods = "CTRL",
+		mods = "CMD",
 		action = wezterm.action({ ActivateTabRelative = 1 }),
 	},
 
