@@ -68,5 +68,4 @@ bindkey "\e[1;3C" forward-word # ⌥→
 # zsh autosuggest highlight style
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#686868"
 
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.json)"
 eval "$(starship init zsh)"
