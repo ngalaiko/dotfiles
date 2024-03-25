@@ -2,6 +2,13 @@ export LANG="en_US.UTF-8"
 
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
+# pnpm
+export PNPM_HOME="/Users/nikita.galaiko/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # go
 export GOPATH="/usr/local/go"
 
@@ -21,10 +28,6 @@ export GPG_TTY=$(tty)
 # cabal
 export CABAL_BIN="/Users/nikita.galaiko/.cabal/bin"
 export PATH="$CABAL_BIN:$PATH"
-
-# pnpm
-export PNPM_HOME="/Users/nikita.galaiko/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 
 # homebrew
 export PATH="/opt/homebrew/bin:/opt/homebrew/opt:$PATH"
