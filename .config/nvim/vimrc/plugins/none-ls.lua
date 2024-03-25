@@ -8,6 +8,9 @@ null_ls.setup({
 		null_ls.builtins.formatting.rufo.with({
 			filetypes = { "ruby" },
 		}),
+		null_ls.builtins.formatting.black.with({
+			filetypes = { "python" },
+		}),
 		null_ls.builtins.formatting.erb_format.with({
 			filetypes = { "eruby" },
 		}),
