@@ -138,10 +138,17 @@ config.keys = {
 			end),
 		}),
 	},
+
+	-- tab navigation
 	{
-		key = "Tab",
-		mods = "CMD",
+		key = "l",
+		mods = "CTRL|ALT",
 		action = wezterm.action({ ActivateTabRelative = 1 }),
+	},
+	{
+		key = "h",
+		mods = "CTRL|ALT",
+		action = wezterm.action({ ActivateTabRelative = -1 }),
 	},
 
 	-- clipboard
