@@ -2,6 +2,9 @@ export LANG="en_US.UTF-8"
 
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
+# go
+export GOPATH="/usr/local/go"
+
 # rust
 source "$HOME/.cargo/env"
 
