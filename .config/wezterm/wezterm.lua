@@ -61,9 +61,9 @@ config.adjust_window_size_when_changing_font_size = false
 
 config.keys = {
 	-- font size
-	{ key = "=", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
-	{ key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
-	{ key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
+    { key = "=", mods = "CMD", action = wezterm.action.IncreaseFontSize },
+	{ key = "0", mods = "CMD", action = wezterm.action.ResetFontSize },
+	{ key = "-", mods = "CMD", action = wezterm.action.DecreaseFontSize },
 
 	-- search mode
 	{
