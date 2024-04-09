@@ -61,7 +61,7 @@ config.adjust_window_size_when_changing_font_size = false
 
 config.keys = {
 	-- font size
-    { key = "=", mods = "CMD", action = wezterm.action.IncreaseFontSize },
+	{ key = "=", mods = "CMD", action = wezterm.action.IncreaseFontSize },
 	{ key = "0", mods = "CMD", action = wezterm.action.ResetFontSize },
 	{ key = "-", mods = "CMD", action = wezterm.action.DecreaseFontSize },
 
@@ -141,14 +141,49 @@ config.keys = {
 
 	-- tab navigation
 	{
-		key = "l",
-		mods = "CTRL|ALT",
-		action = wezterm.action({ ActivateTabRelative = 1 }),
+		key = "1",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 0 }),
 	},
 	{
-		key = "h",
-		mods = "CTRL|ALT",
-		action = wezterm.action({ ActivateTabRelative = -1 }),
+		key = "2",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 1 }),
+	},
+	{
+		key = "3",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 2 }),
+	},
+	{
+		key = "4",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 3 }),
+	},
+	{
+		key = "5",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 4 }),
+	},
+	{
+		key = "6",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 5 }),
+	},
+	{
+		key = "7",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 6 }),
+	},
+	{
+		key = "8",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 7 }),
+	},
+	{
+		key = "9",
+		mods = "CMD",
+		action = wezterm.action({ ActivateTab = 8 }),
 	},
 
 	-- clipboard
