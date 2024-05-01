@@ -6,6 +6,8 @@ local function isViProcess(pane)
 	return pane:get_foreground_process_name():find("n?vim") ~= nil
 end
 
+config.audible_bell = "Disabled"
+
 local function conditionalActivatePane(window, pane, pane_direction, vim_direction)
 	if isViProcess(pane) then
 		window:perform_action(
