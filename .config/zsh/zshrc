@@ -2,6 +2,10 @@ export LANG="en_US.UTF-8"
 
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
+# antidote
+source "$HOME/.antidote/antidote.zsh"
+source "$HOME/.config/zsh/plugins.sh"
+
 # pnpm
 export PNPM_HOME="/Users/nikita.galaiko/Library/pnpm"
 case ":$PATH:" in
@@ -37,9 +41,6 @@ export PATH="$PATH:/System/Volumes/Data/Users/nikita.galaiko/Library/Python/3.8/
 
 # yarn
 export PATH="$PATH:$HOME/.yarn/bin"
-
-# load plugins via antigen
-source "$HOME/.config/zsh/plugins.sh"
 
 # load autocomplition
 autoload bashcompinit && bashcompinit
