@@ -13,7 +13,7 @@ esac
 export GOPATH="/usr/local/go"
 
 # rust
-source "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
