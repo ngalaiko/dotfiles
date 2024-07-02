@@ -14,7 +14,7 @@ case ":$PATH:" in
 esac
 
 # go
-export GOPATH="/usr/local/go"
+export GOPATH="/opt/go"
 
 # rust
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
