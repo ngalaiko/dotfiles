@@ -4,6 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
 	renderer = {
+		group_empty = true,
 		icons = {
 			webdev_colors = false,
 			show = {
