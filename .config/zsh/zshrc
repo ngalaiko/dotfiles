@@ -15,6 +15,7 @@ esac
 
 # go
 export GOPATH="/opt/go"
+export PATH="${GOPATH}/bin:${PATH}"
 
 # rust
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
