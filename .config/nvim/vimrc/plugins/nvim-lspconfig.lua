@@ -1,6 +1,7 @@
 local nvim_lsp = require("lspconfig")
 local util = require("lspconfig/util")
 local servers = {
+	bufls = {},
 	gopls = {
 		cmd = { "gopls", "serve" },
 		settings = {
