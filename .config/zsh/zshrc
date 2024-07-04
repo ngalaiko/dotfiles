@@ -14,6 +14,7 @@ case ":$PATH:" in
 esac
 
 # go
+export GOPRIVATE="github.com/einride/*,go.einride.tech"
 export GOPATH="/opt/go"
 export PATH="${GOPATH}/bin:${PATH}"
 
