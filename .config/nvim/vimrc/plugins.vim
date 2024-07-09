@@ -34,6 +34,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'https://github.com/tpope/vim-fugitive'
     Plug 'https://github.com/tpope/vim-rhubarb'
     " linters, formatters
+    Plug 'https://github.com/mfussenegger/nvim-lint'
     Plug 'https://github.com/stevearc/conform.nvim'
     " nvim - multiplexer navigation
     Plug 'https://github.com/numToStr/Navigator.nvim'
