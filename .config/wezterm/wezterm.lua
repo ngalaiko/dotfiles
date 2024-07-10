@@ -143,9 +143,19 @@ config.keys = {
 
 	-- tab navigation
 	{
+		key = "l",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action({ ActivateTabRelative = 1 }),
+	},
+	{
+		key = "h",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action({ ActivateTabRelative = -1 }),
+	},
+	{
 		key = "1",
-		mods = "CMD",
-		action = wezterm.action({ ActivateTab = 0 }),
+		mods = "CMD|SHIFT",
+		action = wezterm.action({ ActivateTab = 1 }),
 	},
 	{
 		key = "2",
