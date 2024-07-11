@@ -52,6 +52,9 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
+# github cli
+[[ -z $(command -v gh) ]] || source "$HOME/.config/zsh/plugins/_gh"
+
 # atuin search
 [[ -z $(command -v atuin) ]] || source "$HOME/.config/zsh/plugins/_atuin"
 
