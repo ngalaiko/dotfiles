@@ -1,20 +1,20 @@
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 
-vim.o.relativenumber = true
-vim.o.number = true
+vim.opt.relativenumber = true
+vim.opt.number = true
 
-vim.o.infercase = true
-vim.o.ignorecase = true
+vim.opt.infercase = true
+vim.opt.ignorecase = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
