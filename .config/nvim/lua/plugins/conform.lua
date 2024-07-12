@@ -11,7 +11,7 @@ return {
 				typescriptreact = { { "prettierd", "prettier" } },
 				go = { "gofumpt", "gci", "goimports" },
 				python = { "black" },
-				terraform_fmt = { "tf", "tfvars", "hcl", "terraform" },
+				terraform_fmt = { "terraform", "terraform-vars" },
 				["_"] = { "trim_whitespace" },
 			},
 		})

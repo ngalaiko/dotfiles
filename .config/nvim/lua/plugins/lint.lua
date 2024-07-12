@@ -19,7 +19,6 @@ return {
 		local use_golangci_config_if_available = function()
 			local config_file = find_file(".golangci.yml")
 			if config_file then
-				print("Using golangci-lint config: " .. config_file)
 				return {
 					"run",
 					"--out-format",
@@ -42,12 +41,31 @@ return {
 			javascript = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			go = { "golangcilint" },
+			terraform = { "tflint", "tfsec" },
+			terraform = { "tflint", "tfsec" },
 		}
+
+		function debounce(ms, fn)
+			local timer = vim.uv.new_timer()
+			return function(...)
+				local argv = { ... }
+				timer:start(ms, 0, function()
+					timer:stop()
+					vim.schedule_wrap(fn)(unpack(argv))
+				end)
+			end
+		end
 
 		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 			callback = function()
 				require("lint").try_lint()
 			end,
+		})
+		vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
+			group = vim.api.nvim_create_augroup("nvim-lint", { clear = true }),
+			callback = debounce(100, function()
+				require("lint").try_lint()
+			end),
 		})
 	end,
 }
