@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 
 # antidote
-source "$HOME/.antidote/antidote.zsh"
+[ -f "$HOME/.antidote/antidote.zsh" ] && source "$HOME/.antidote/antidote.zsh"
 source "$HOME/.config/zsh/plugins.sh"
 
 # pnpm
