@@ -1,12 +1,12 @@
-source /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-djui-SLASH-alias-tips/alias-tips.plugin.zsh
-fpath+=( /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-djui-SLASH-alias-tips )
-source /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-completions/zsh-completions.plugin.zsh
-fpath+=( /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-completions )
-source /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-fpath+=( /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-autosuggestions )
-source /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-fpath+=( /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-syntax-highlighting )
-source /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-fpath+=( /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-history-substring-search )
-source /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-joshskidmore-SLASH-zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
-fpath+=( /Users/nikita.galaiko/Library/Caches/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-joshskidmore-SLASH-zsh-fzf-history-search )
+source "$HOME/.config/zsh/plugins/antibody/alias-tips/alias-tips.plugin.zsh"
+fpath+=( "$HOME/.config/zsh/plugins/antibody/alias-tips" )
+source "$HOME/.config/zsh/plugins/antibody/zsh-completions/zsh-completions.plugin.zsh"
+fpath+=( "$HOME/.config/zsh/plugins/antibody/zsh-completions" )
+source "$HOME/.config/zsh/plugins/antibody/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
+fpath+=( "$HOME/.config/zsh/plugins/antibody/zsh-autosuggestions" )
+source "$HOME/.config/zsh/plugins/antibody/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+fpath+=( "$HOME/.config/zsh/plugins/antibody/zsh-syntax-highlighting" )
+source "$HOME/.config/zsh/plugins/antibody/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh"
+fpath+=( "$HOME/.config/zsh/plugins/antibody/zsh-history-substring-search" )
+source "$HOME/.config/zsh/plugins/antibody/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh"
+fpath+=( "$HOME/.config/zsh/plugins/antibody/zsh-fzf-history-search" )
