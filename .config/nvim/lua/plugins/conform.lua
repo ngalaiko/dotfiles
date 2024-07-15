@@ -2,6 +2,7 @@ return {
 	"https://github.com/stevearc/conform.nvim",
 	config = function()
 		local conform = require("conform")
+
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
@@ -12,6 +13,8 @@ return {
 				go = { "gofumpt", "gci", "goimports" },
 				python = { "black" },
 				terraform = { "terraform_fmt" },
+				["terraform-vars"] = { "terraform_fmt" },
+				sql = { "sqlfmt" },
 				["_"] = { "trim_whitespace" },
 			},
 		})
