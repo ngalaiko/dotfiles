@@ -1,24 +1,20 @@
+local languages = require("languages")
+local formatters_by_ft = {}
+for _, language in ipairs(languages) do
+	for _, ft in ipairs(language.ft) do
+		formatters_by_ft[ft] = language.formatters or {}
+	end
+end
+
 return {
 	"https://github.com/stevearc/conform.nvim",
-	config = function()
+	opts = {
+		formatters_by_ft = formatters_by_ft,
+	},
+	config = function(_, opts)
 		local conform = require("conform")
 
-		conform.setup({
-			formatters_by_ft = {
-				lua = { "stylua" },
-				javascript = { "prettierd" },
-				javascriptreact = { "prettierd" },
-				typescript = { "prettierd" },
-				typescriptreact = { "prettierd" },
-				go = { "gofumpt", "gci", "goimports" },
-				python = { "black" },
-				terraform = { "terraform_fmt" },
-				["terraform-vars"] = { "terraform_fmt" },
-				sql = { "sqlfmt" },
-				json = { "prettierd" },
-				["_"] = { "trim_whitespace" },
-			},
-		})
+		conform.setup(opts)
 
 		vim.keymap.set("n", "<space>f", function()
 			conform.format()

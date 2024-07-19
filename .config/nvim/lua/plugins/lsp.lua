@@ -1,3 +1,14 @@
+local languages = require("languages")
+local servers = {}
+for _, language in ipairs(languages) do
+	local lsp = language.lsp
+	if lsp then
+		for name, opts in pairs(lsp) do
+			servers[name] = opts
+		end
+	end
+end
+
 return {
 	"https://github.com/neovim/nvim-lspconfig",
 	lazy = false,
@@ -9,62 +20,6 @@ return {
 	config = function()
 		local nvim_lsp = require("lspconfig")
 		local util = require("lspconfig/util")
-		local servers = {
-			bufls = {},
-			gopls = {
-				cmd = { "gopls", "serve" },
-				settings = {
-					gopls = {
-						analyses = {
-							unusedparams = true,
-						},
-						staticcheck = true,
-					},
-				},
-			},
-			terraformls = {},
-			solargraph = {},
-			html = {},
-			cssls = {},
-			bashls = {},
-			dockerls = {},
-			vimls = {},
-			clojure_lsp = {},
-			volar = {
-				filetypes = { "vue" },
-			},
-			tsserver = {},
-			tailwindcss = {},
-			svelte = {},
-			pylsp = {},
-			hls = {},
-			rust_analyzer = {
-				settings = {
-					["rust-analyzer"] = {
-						assist = {
-							importMergeBehavior = "last",
-							importPrefix = "by_self",
-						},
-						cargo = {
-							loadOutDirsFromCheck = true,
-							features = "all",
-							buildScripts = {
-								enable = false,
-							},
-						},
-						check = {
-							features = "all",
-						},
-						procMacro = {
-							enable = true,
-						},
-						checkOnSave = {
-							command = "clippy",
-						},
-					},
-				},
-			},
-		}
 
 		-- prefix/character preceding the diagnostics' virtual text
 		vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -80,7 +35,7 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 		end
 
-		-- -- nvim-cmp source setup
+		-- nvim-cmp source setup
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		for server, value in pairs(servers) do
 			value.capabilities = capabilities

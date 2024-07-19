@@ -1,9 +1,7 @@
 local languages = require("languages")
 local ensure_installed = {}
 for _, language in ipairs(languages) do
-	for _, ft in ipairs(language.ft) do
-		table.insert(ensure_installed, ft)
-	end
+	table.insert(ensure_installed, language.ft[1])
 end
 
 return {
@@ -11,7 +9,7 @@ return {
 	event = "VeryLazy",
 	build = ":TSUpdate",
 	opts = {
-		ensure_installed = languages,
+		ensure_installed = ensure_installed,
 		highlight = { enable = true },
 		indent = { enable = true },
 	},

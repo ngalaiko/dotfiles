@@ -1,14 +1,8 @@
 local languages = require("languages")
 local packages = {}
 for _, language in ipairs(languages) do
-	for _, linter in ipairs(language.linters or {}) do
-		table.insert(packages, linter)
-	end
-	for _, formatter in ipairs(language.formatters or {}) do
-		table.insert(packages, formatter)
-	end
-	for lsp in pairs(language.lsp or {}) do
-		table.insert(packages, lsp)
+	for _, package in ipairs(language.packages or {}) do
+		table.insert(packages, package)
 	end
 end
 
@@ -18,6 +12,7 @@ return {
 		require("mason").setup(opts)
 
 		local registry = require("mason-registry")
+		local all_package_names = registry.get_all_package_names()
 		registry.refresh(function()
 			for _, pkg_name in ipairs(packages) do
 				local pkg = registry.get_package(pkg_name)

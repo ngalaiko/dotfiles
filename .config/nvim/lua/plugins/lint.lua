@@ -1,3 +1,11 @@
+local languages = require("languages")
+local linters_by_ft = {}
+for _, language in ipairs(languages) do
+	for _, ft in ipairs(language.ft) do
+		linters_by_ft[ft] = language.linters or {}
+	end
+end
+
 return {
 	"https://github.com/mfussenegger/nvim-lint",
 	config = function()
@@ -42,15 +50,7 @@ return {
 		end
 
 		lint.linters.golangcilint.args = use_golangci_config_if_available()
-		lint.linters_by_ft = {
-			typescript = { "eslint_d" },
-			typescriptreact = { "eslint_d" },
-			javascript = { "eslint_d" },
-			javascriptreact = { "eslint_d" },
-			go = { "golangcilint" },
-			terraform = { "tflint", "tfsec" },
-			terraform = { "tflint", "tfsec" },
-		}
+		lint.linters_by_ft = linters_by_ft
 
 		function debounce(ms, fn)
 			local timer = vim.uv.new_timer()
