@@ -4,14 +4,21 @@ return {
 		local lint = require("lint")
 
 		function get_git_root()
-			local command = "git rev-parse --show-toplevel 2>/dev/null || echo -n"
+			local command = "git rev-parse --show-toplevel 2>/dev/null"
 			local file = io.popen(command):read("*l")
-			return file and file or vim.fn.getcwd()
+			return file and file or nil
 		end
 
 		function find_file(filename)
 			local git_root = get_git_root()
-			local command = "find -s " .. git_root .. " -name '" .. filename .. "' | head -n 1"
+			if not git_root then
+				return nil
+			end
+			local command = "find '"
+				.. git_root
+				.. "' -type d \\( -name 'node_modules' -o -name '.git' \\) -prune -o -type f -name '"
+				.. filename
+				.. "' -print | head -n 1"
 			local file = io.popen(command):read("*l")
 			return file and file or nil
 		end
@@ -34,7 +41,7 @@ return {
 			end
 		end
 
-		-- lint.linters.golangcilint.args = use_golangci_config_if_available()
+		lint.linters.golangcilint.args = use_golangci_config_if_available()
 		lint.linters_by_ft = {
 			typescript = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
