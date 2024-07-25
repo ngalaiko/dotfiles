@@ -1,10 +1,10 @@
 return {
 	"https://github.com/hrsh7th/nvim-cmp",
-	requires = {
-		{ "https://github.com/hrsh7th/cmp-nvim-lsp" },
-		{ "https://github.com/hrsh7th/cmp-buffer" },
-		{ "https://github.com/hrsh7th/cmp-path" },
-		{ "https://github.com/hrsh7th/cmp-cmdline" },
+	depencencies = {
+		"https://github.com/hrsh7th/cmp-nvim-lsp",
+		"https://github.com/hrsh7th/cmp-buffer",
+		"https://github.com/hrsh7th/cmp-path",
+		"https://github.com/hrsh7th/cmp-cmdline",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -44,8 +44,8 @@ return {
 		})
 
 		-- autopairs setup
-		-- local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-		-- cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
+		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
 
 		vim.opt.completeopt = { "menu", "menuone", "noselect" }
 

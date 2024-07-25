@@ -1,67 +1,51 @@
 return {
-	"https://github.com/kyazdani42/nvim-tree.lua",
-	requires = {
+	"https://github.com/nvim-neo-tree/neo-tree.nvim",
+	branch = "v3.x",
+	dependencies = {
+		"https://github.com/nvim-lua/plenary.nvim",
 		{
-			"https://github.com/kyazdani42/nvim-web-devicons",
-			config = function()
-				require("nvim-web-devicons").setup({
-					default = true,
-				})
+			"https://github.com/nvim-tree/nvim-web-devicons",
+			opts = {
+				color_icons = false,
+			},
+			config = function(_, opts)
+				require("nvim-web-devicons").setup(opts)
 			end,
 		},
+		"https://github.com/MunifTanjim/nui.nvim",
 	},
-	config = function()
-		require("nvim-tree").setup({
-			renderer = {
-				group_empty = true,
-				icons = {
-					webdev_colors = false,
-					show = {
-						git = false,
-						folder = false,
-						file = true,
-						folder_arrow = true,
-					},
-				},
-				special_files = {},
+	opts = {
+		close_if_last_window = true,
+		enable_git_status = false,
+		enable_diagnostics = false,
+		open_files_do_not_replace_types = { "trouble" },
+		default_component_configs = {
+			indent = {
+				highlight = "",
+				expander_highlight = "",
 			},
-			actions = {
-				open_file = {
-					window_picker = {
-						enable = false,
-					},
-				},
+			icon = {
+				highlight = "",
 			},
-		})
-
-		local function open_nvim_tree(data)
-			-- buffer is a directory
-			local directory = vim.fn.isdirectory(data.file) == 1
-
-			-- buffer is a [No Name]
-			local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
-
-			if not directory and not no_name then
-				return
-			end
-
-			if directory then
-				-- change to the directory
-				vim.cmd.cd(data.file)
-			end
-
-			-- open the tree
-			require("nvim-tree.api").tree.open()
-		end
-
-		vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
-		vim.keymap.set("n", "<leader>o", vim.cmd.NvimTreeToggle)
-		vim.keymap.set("n", "<leader>O", vim.cmd.NvimTreeFindFile)
-
-		-- disable highlighting
-		vim.api.nvim_set_hl(0, "NvimTreeExecFile", { link = "NONE" })
-		vim.api.nvim_set_hl(0, "NvimTreeSpecialFile", { link = "NONE" })
-		vim.api.nvim_set_hl(0, "NvimTreeImageFile", { link = "NONE" })
-		vim.api.nvim_set_hl(0, "NvimTreeSymlink", { link = "NONE" })
+			modified = {
+				highlight = "",
+			},
+			name = {
+				highlight = "",
+			},
+		},
+		nesting_rules = {},
+		filesystem = {
+			filtered_items = {
+				visible = true,
+				hide_dotfiles = false,
+				hide_gitignored = true,
+			},
+			group_empty_dirs = true,
+			use_libuv_file_watcher = true,
+		},
+	},
+	config = function(_, opts)
+		require("neo-tree").setup(opts)
 	end,
 }

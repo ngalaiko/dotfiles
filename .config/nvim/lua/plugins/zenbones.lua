@@ -1,6 +1,6 @@
 return {
 	"https://github.com/zenbones-theme/zenbones.nvim",
-	requires = "https://github.com/rktjmp/lush.nvim",
+	dependencies = { "https://github.com/rktjmp/lush.nvim" },
 	config = function()
 		vim.cmd.colorscheme("zenwritten")
 		-- Enable syntax highlighting
