@@ -1,7 +1,7 @@
 return {
 	"https://github.com/nvim-telescope/telescope.nvim",
-	tag = "0.1.8",
-	requires = { { "https://github.com/nvim-lua/plenary.nvim" } },
+	version = "0.1.8",
+	depencencies = { "https://github.com/nvim-lua/plenary.nvim" },
 	config = function()
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>pf", builtin.find_files, {})

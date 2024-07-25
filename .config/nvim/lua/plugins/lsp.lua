@@ -1,5 +1,11 @@
 return {
 	"https://github.com/neovim/nvim-lspconfig",
+	lazy = false,
+	dependencies = {
+		{
+			"https://github.com/hrsh7th/cmp-nvim-lsp",
+		},
+	},
 	config = function()
 		local nvim_lsp = require("lspconfig")
 		local util = require("lspconfig/util")
@@ -74,7 +80,7 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 		end
 
-		-- nvim-cmp source setup
+		-- -- nvim-cmp source setup
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		for server, value in pairs(servers) do
 			value.capabilities = capabilities
