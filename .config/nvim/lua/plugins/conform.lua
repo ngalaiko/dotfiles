@@ -6,15 +6,16 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { { "prettierd", "prettier" } },
-				javascriptreact = { { "prettierd", "prettier" } },
-				typescript = { { "prettierd", "prettier" } },
-				typescriptreact = { { "prettierd", "prettier" } },
+				javascript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescript = { "prettierd" },
+				typescriptreact = { "prettierd" },
 				go = { "gofumpt", "gci", "goimports" },
 				python = { "black" },
 				terraform = { "terraform_fmt" },
 				["terraform-vars"] = { "terraform_fmt" },
 				sql = { "sqlfmt" },
+				json = { "prettierd" },
 				["_"] = { "trim_whitespace" },
 			},
 		})
