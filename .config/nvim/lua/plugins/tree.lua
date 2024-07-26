@@ -34,10 +34,9 @@ return {
 				highlight = "",
 			},
 		},
-		nesting_rules = {},
 		filesystem = {
 			filtered_items = {
-				visible = true,
+				visible = false,
 				hide_dotfiles = false,
 				hide_gitignored = true,
 			},
