@@ -43,6 +43,11 @@ return {
 			group_empty_dirs = true,
 			use_libuv_file_watcher = true,
 		},
+		window = {
+			mappings = {
+				["/"] = "",
+			},
+		},
 	},
 	config = function(_, opts)
 		require("neo-tree").setup(opts)
