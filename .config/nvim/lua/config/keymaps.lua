@@ -9,7 +9,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "<leader>o", ":Neotree toggle<CR>")
-map("n", "<leader>O", ":Neotree focus<CR>")
+map("n", "<leader>O", ":Neotree reveal<CR>")
 
 map("n", "J", "mzJ'z")
 
