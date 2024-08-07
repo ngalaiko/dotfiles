@@ -24,7 +24,7 @@ return {
 			end
 			local command = "find '"
 				.. git_root
-				.. "' -type d \\( -name 'node_modules' -o -name '.git' \\) -prune -o -type f -name '"
+				.. "' -type d \\( -name 'node_modules' -o -name '.git' \\) -prune -o -L -type f -name '"
 				.. filename
 				.. "' -print | head -n 1"
 			local file = io.popen(command):read("*l")
