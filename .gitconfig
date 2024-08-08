@@ -139,3 +139,5 @@
 # force ssh
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
+[advice]
+	skippedCherryPicks = false
