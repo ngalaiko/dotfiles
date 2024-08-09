@@ -22,9 +22,9 @@ return {
 			if not git_root then
 				return nil
 			end
-			local command = "find '"
+			local command = "find -L '"
 				.. git_root
-				.. "' -type d \\( -name 'node_modules' -o -name '.git' \\) -prune -o -L -type f -name '"
+				.. "' -type d \\( -name 'node_modules' -o -name '.git' \\) -prune -o -type f -name '"
 				.. filename
 				.. "' -print | head -n 1"
 			local file = io.popen(command):read("*l")
