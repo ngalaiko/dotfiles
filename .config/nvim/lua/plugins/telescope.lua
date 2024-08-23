@@ -13,6 +13,7 @@ return {
 		require("telescope").setup(opts)
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<C-P>", builtin.find_files, {})
+		vim.keymap.set("n", "<C-T>", builtin.lsp_dynamic_workspace_symbols, {})
 		vim.keymap.set("n", "<leader>ps", function()
 			builtin.grep_string({ search = vim.fn.input("Grep > ") })
 		end)
