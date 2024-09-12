@@ -20,13 +20,14 @@ return {
 		ft = { "javascript", "javascriptreact" },
 		formatters = { "prettierd" },
 		linters = { "eslint_d" },
+		lsp = { ts_ls = {} },
 		packages = { "eslint_d", "prettierd" },
 	},
 	{
 		ft = { "typescript", "typescriptreact" },
 		formatters = { "prettierd" },
 		linters = { "eslint_d" },
-		lsp = { tsserver = {} },
+		lsp = { ts_ls = {} },
 		packages = { "eslint_d", "prettierd", "typescript-language-server" },
 	},
 	{
