@@ -103,6 +103,7 @@ return {
 	},
 	{
 		ft = { "rust" },
+		formatters = { "rustfmt" },
 		lsp = {
 			rust_analyzer = {
 				settings = {
