@@ -78,7 +78,7 @@ return {
 	{
 		ft = { "proto" },
 		linters = { "buf_lint" },
-		lsp = { bufls = {} },
+		lsp = { buf_ls = {} },
 		packages = { "buf", "buf-language-server" },
 	},
 	{
