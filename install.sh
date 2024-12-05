@@ -5,6 +5,7 @@ set -euo pipefail
 ln -sf $(pwd)/.zshrc "$HOME/"
 ln -sf $(pwd)/.aliases "$HOME/"
 ln -sf $(pwd)/.zsh_plugins.txt "$HOME/"
+ln -sf $(pwd)/.hushlogin "$HOME/"
 ln -sf $(pwd)/.config/nvim "$HOME/.config/"
 ln -sf $(pwd)/.config/zsh "$HOME/.config/"
 ln -sf $(pwd)/.config/git "$HOME/.config/"
