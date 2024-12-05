@@ -10,6 +10,7 @@ ln -sf $(pwd)/.config/zsh "$HOME/.config/"
 ln -sf $(pwd)/.config/git "$HOME/.config/"
 ln -sf $(pwd)/.config/wezterm "$HOME/.config/"
 ln -sf $(pwd)/.config/starship.toml "$HOME/.config/starship.toml"
+ln -sf $(pwd)/.config/ghostty "$HOME/.config/"
 
 # gpg
 mkdir -p "$HOME/.gnupg"
