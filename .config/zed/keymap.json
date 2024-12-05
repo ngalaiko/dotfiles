@@ -1,0 +1,21 @@
+[
+  {
+    "bindings": {
+      "f f": "file_finder::Toggle",
+      "f s": "project_symbols::Toggle",
+
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      ", s": "pane::SplitDown",
+      ", v": "pane::SplitRight",
+      ", o": "project_panel::ToggleFocus"
+    }
+  }
+]
