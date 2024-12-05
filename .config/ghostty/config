@@ -34,6 +34,8 @@ keybind = super+zero=reset_font_size
 
 # ui
 
+macos-titlebar-style = tabs
+
 ## cursor
 
 cursor-style = underline
