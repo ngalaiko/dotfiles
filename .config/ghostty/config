@@ -34,7 +34,10 @@ keybind = super+zero=reset_font_size
 
 # ui
 
+## cursor
+
 cursor-style = underline
+cursor-style-blink = true
 
 ## font
 
