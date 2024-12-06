@@ -11,19 +11,47 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		function exists(file)
+			local ok, err, code = os.rename(file, file)
+			if not ok then
+				if code == 13 then
+					-- Permission denied, but it exists
+					return true
+				end
+			end
+			return ok, err
+		end
+
+		--- Check if a directory exists in this path
+		function is_dir(path)
+			return exists(path .. "/")
+		end
+
 		function get_git_root()
 			local command = "git rev-parse --show-toplevel 2>/dev/null"
 			local file = io.popen(command):read("*l")
 			return file and file or nil
 		end
 
-		function find_file(filename)
+		function get_sage_root()
 			local git_root = get_git_root()
 			if not git_root then
 				return nil
 			end
+			local sage_root = git_root .. "/.sage"
+			if is_dir(sage_root) then
+				return sage_root
+			end
+			return nil
+		end
+
+		function find_file(filename)
+			local sage_root = get_sage_root()
+			if not sage_root then
+				return nil
+			end
 			local command = "find -L '"
-				.. git_root
+				.. sage_root
 				.. "' -type d \\( -name 'node_modules' -o -name '.git' \\) -prune -o -type f -name '"
 				.. filename
 				.. "' -print | head -n 1"
