@@ -1,14 +1,11 @@
 [include]
     path = ./global.config
 
-[includeIf "hasconfig:remote.*.url:https://github.com/einride/**"]
-    path = ./einride.config
+[includeIf "gitdir:/Users/nikita.galaiko/Developer/"]
+    path = ./personal.config
 
-[includeIf "hasconfig:remote.*.url:git@github.com:einride/**"]
-    path = ./einride.config
+[includeIf "gitdir:/Users/nikita/Developer/"]
+    path = ./einride.personal.config
 
-[includeIf "hasconfig:remote.*.url:https://github.com/einride-labs/**"]
-    path = ./einride.config
-
-[includeIf "hasconfig:remote.*.url:git@github.com:einride-labs/**"]
+[includeIf "gitdir:/Users/nikita/Developer/einride/"]
     path = ./einride.config
