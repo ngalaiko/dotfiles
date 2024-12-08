@@ -1,7 +1,7 @@
 [include]
     path = ./global.config
 
-[includeIf "gitdir:/Users/nikita.galaiko/Developer/"]
+[includeIf "gitdir:/Users/nikita.galaiko/"]
     path = ./personal.config
 
 [includeIf "gitdir:/Users/nikita/Developer/"]
