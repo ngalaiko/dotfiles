@@ -58,6 +58,9 @@ compinit -C
 # atuin search
 [[ -z $(command -v atuin) ]] || source "$HOME/.config/zsh/plugins/_atuin"
 
+# jj
+[[ -z $(command -v jj) ]] || source "$HOME/.config/zsh/plugins/_jj"
+
 # load aliases
 source "$HOME/.config/zsh/aliases"
 
