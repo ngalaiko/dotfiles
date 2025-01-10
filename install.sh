@@ -14,6 +14,7 @@ ln -sf $(pwd)/.config/wezterm "$HOME/.config/"
 ln -sf $(pwd)/.config/starship.toml "$HOME/.config/starship.toml"
 ln -sf $(pwd)/.config/ghostty "$HOME/.config/"
 ln -sf $(pwd)/.config/zed "$HOME/.config/"
+ln -sf $(pwd)/.config/helix "$HOME/.config/helix"
 
 # gpg
 mkdir -p "$HOME/.gnupg"
