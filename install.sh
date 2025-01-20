@@ -2,11 +2,9 @@
 
 set -euo pipefail
 
-ln -sf $(pwd)/.aliases "$HOME/"
 ln -sf $(pwd)/.hushlogin "$HOME/"
 ln -sf $(pwd)/.config/nvim "$HOME/.config/"
 ln -sf $(pwd)/.config/git "$HOME/.config/"
-ln -sf $(pwd)/.config/starship.toml "$HOME/.config/starship.toml"
 ln -sf $(pwd)/.config/ghostty "$HOME/.config/"
 ln -sf $(pwd)/.config/zed "$HOME/.config/"
 ln -sf $(pwd)/.config/helix "$HOME/.config/helix"
