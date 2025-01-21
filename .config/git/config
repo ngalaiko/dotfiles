@@ -1,5 +1,8 @@
 [include]
     path = ./global.config
 
-[includeIf "gitdir:/Users/nikita.galaiko/"]
+[includeIf "hasconfig:remote.*.url:git@github.com:ngalaiko/**"]
     path = ./personal.config
+
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:cerve/**"]
+    path = ./work.config
