@@ -3,9 +3,3 @@
 
 [includeIf "gitdir:/Users/nikita.galaiko/"]
     path = ./personal.config
-
-[includeIf "gitdir:/Users/nikita/Developer/"]
-    path = ./einride.personal.config
-
-[includeIf "gitdir:/Users/nikita/Developer/einride/"]
-    path = ./einride.config
