@@ -1,1 +1,1 @@
-set --global --export LEDGER_FILE "$HOME/Documents/ledger/main.ledger"
+set --global --export LEDGER_FILE "$HOME/Developer/ledger/main.ledger"
