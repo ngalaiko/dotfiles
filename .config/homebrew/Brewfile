@@ -1,25 +1,52 @@
 tap "homebrew/bundle"
+# Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
+# User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Easy plain text accounting with command-line, terminal and web UIs
 brew "hledger"
+# Mac App Store command-line interface
 brew "mas"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Tool for managing OCI containers and pods
 brew "podman"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# E-books management software
 cask "calibre"
+# OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
+# VPN client
 cask "mullvadvpn"
+# Free and open-source RSS reader
 cask "netnewswire"
+# GUI client for PostgreSQL databases
 cask "postico@1"
+# HTTP client that helps testing and describing APIs
 cask "rapidapi"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Team communication and collaboration software
 cask "slack"
+# Messaging app with a focus on speed and security
 cask "telegram"
+# File transfer application
+cask "transmit"
+# Native desktop client for WhatsApp
 cask "whatsapp"
+# Video communication and virtual meeting platform
 cask "zoom"
+mas "1Password for Safari", id: 1569813296
 mas "NextDNS", id: 1464122853
 mas "Strongbox", id: 897283731
