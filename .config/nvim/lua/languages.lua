@@ -34,6 +34,7 @@ return {
 		ft = { "go" },
 		formatters = { "gofumpt", "gci", "goimports" },
 		linters = { "golangcilint" },
+		packages = { "golsp" },
 		lsp = {
 			gopls = {
 				cmd = { "gopls", "serve" },
