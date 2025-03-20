@@ -12,6 +12,14 @@ return {
 	},
 	{
 		ft = { "yaml" },
+		lsp = {
+			yamlls = {
+				schemas = {
+					["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/refs/tags/3.1.0/schemas/v3.0/schema.yaml"] = "/*",
+				},
+			},
+		},
+		packages = { "yaml-language-server" },
 	},
 	{
 		ft = { "graphql" },
