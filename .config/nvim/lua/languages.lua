@@ -40,7 +40,7 @@ return {
 	},
 	{
 		ft = { "go" },
-		formatters = { "gofumpt", "gci", "goimports" },
+		formatters = { "golangci-lint" },
 		linters = { "golangcilint" },
 		packages = { "golsp" },
 		lsp = {
@@ -56,7 +56,7 @@ return {
 				},
 			},
 		},
-		packages = { "gofumpt", "gci", "goimports", "golangci-lint", "gopls" },
+		packages = { "golangci-lint", "gopls" },
 	},
 	{
 		ft = { "gomod" },
@@ -75,9 +75,9 @@ return {
 	{
 		ft = { "terraform", "terraform-vars" },
 		formatters = { "terraform_fmt" },
-		linters = { "tflint", "tfsec" },
+		linters = { "tflint", "trivy" },
 		lsp = { terraformls = {} },
-		packages = { "tflint", "tfsec", "terraform-ls" },
+		packages = { "tflint", "terraform-ls", "trivy" },
 	},
 	{
 		ft = { "sql" },
