@@ -6,78 +6,88 @@ for _, language in ipairs(languages) do
 	end
 end
 
+local severities = {
+	error = vim.diagnostic.severity.ERROR,
+	warning = vim.diagnostic.severity.WARN,
+	refactor = vim.diagnostic.severity.INFO,
+	convention = vim.diagnostic.severity.HINT,
+}
+
+local golangcilintv2 = {
+	cmd = "golangci-lint",
+	append_fname = false,
+	args = (function()
+		local ok, value = pcall(vim.fn.system, { "golangci-lint", "version" })
+		if ok and (string.find(value, "version v2") or string.find(value, "version 2")) then
+			return {
+				"run",
+				"--output.json.path=stdout",
+				"--issues-exit-code=0",
+				"--show-stats=false",
+				function()
+					return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
+				end,
+			}
+		else
+			return {
+				"run",
+				"--out-format",
+				"json",
+				"--issues-exit-code=0",
+				"--show-stats=false",
+				"--print-issued-lines=false",
+				"--print-linter-name=false",
+				function()
+					return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
+				end,
+			}
+		end
+	end)(),
+	stream = "stdout",
+	parser = function(output, bufnr, cwd)
+		if output == "" then
+			return {}
+		end
+		local decoded = vim.json.decode(output)
+		if decoded["Issues"] == nil or type(decoded["Issues"]) == "userdata" then
+			return {}
+		end
+
+		local diagnostics = {}
+		for _, item in ipairs(decoded["Issues"]) do
+			local curfile = vim.api.nvim_buf_get_name(bufnr)
+			local curfile_abs = vim.fn.fnamemodify(curfile, ":p")
+			local curfile_norm = vim.fs.normalize(curfile_abs)
+
+			local lintedfile = cwd .. "/" .. item.Pos.Filename
+			local lintedfile_abs = vim.fn.fnamemodify(lintedfile, ":p")
+			local lintedfile_norm = vim.fs.normalize(lintedfile_abs)
+
+			if curfile_norm == lintedfile_norm then
+				-- only publish if those are the current file diagnostics
+				local sv = severities[item.Severity] or severities.warning
+				table.insert(diagnostics, {
+					lnum = item.Pos.Line > 0 and item.Pos.Line - 1 or 0,
+					col = item.Pos.Column > 0 and item.Pos.Column - 1 or 0,
+					end_lnum = item.Pos.Line > 0 and item.Pos.Line - 1 or 0,
+					end_col = item.Pos.Column > 0 and item.Pos.Column - 1 or 0,
+					severity = sv,
+					source = item.FromLinter,
+					message = item.Text,
+				})
+			end
+		end
+		return diagnostics
+	end,
+}
+
 return {
 	"https://github.com/mfussenegger/nvim-lint",
 	config = function()
 		local lint = require("lint")
 
-		function exists(file)
-			local ok, err, code = os.rename(file, file)
-			if not ok then
-				if code == 13 then
-					-- Permission denied, but it exists
-					return true
-				end
-			end
-			return ok, err
-		end
+		lint.linters.golangcilint = golangcilintv2
 
-		--- Check if a directory exists in this path
-		function is_dir(path)
-			return exists(path .. "/")
-		end
-
-		function get_git_root()
-			local command = "git rev-parse --show-toplevel 2>/dev/null"
-			local file = io.popen(command):read("*l")
-			return file and file or nil
-		end
-
-		function get_sage_root()
-			local git_root = get_git_root()
-			if not git_root then
-				return nil
-			end
-			local sage_root = git_root .. "/.sage"
-			if is_dir(sage_root) then
-				return sage_root
-			end
-			return nil
-		end
-
-		function find_file(filename)
-			local sage_root = get_sage_root()
-			if not sage_root then
-				return nil
-			end
-			local command = "find -L '"
-				.. sage_root
-				.. "' -type d \\( -name 'node_modules' -o -name '.git' \\) -prune -o -type f -name '"
-				.. filename
-				.. "' -print | head -n 1"
-			local file = io.popen(command):read("*l")
-			return file and file or nil
-		end
-
-		local use_golangci_config_if_available = function()
-			local config_file = find_file(".golangci.yml")
-			if config_file then
-				return {
-					"run",
-					"--out-format",
-					"json",
-					"--config",
-					config_file,
-					function()
-						return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
-					end,
-				}
-			else
-				return lint.linters.golangcilint.args
-			end
-		end
-
-		lint.linters.golangcilint.args = use_golangci_config_if_available()
 		lint.linters_by_ft = linters_by_ft
 
 		function debounce(ms, fn)
