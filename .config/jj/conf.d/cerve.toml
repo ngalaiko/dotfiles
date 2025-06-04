@@ -1,0 +1,4 @@
+--when.repositories = ["~/Developer/cerve"]
+
+[user]
+email = "nikita.galaiko@cerve.com"
