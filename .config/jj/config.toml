@@ -32,6 +32,7 @@ retrunk = ["rebase", "-d", "trunk()"]
 "format_timestamp(timestamp)" = "timestamp.ago()"
 
 [ui]
+editor = "nvim"
 default-command = "log"
 diff-editor = ":builtin"
 merge-editor = ":builtin"
