@@ -33,6 +33,6 @@ retrunk = ["rebase", "-d", "trunk()"]
 
 [ui]
 editor = "nvim"
-default-command = "log"
+default-command = "st"
 diff-editor = ":builtin"
 merge-editor = ":builtin"
