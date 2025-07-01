@@ -22,9 +22,6 @@ return {
 		packages = { "yaml-language-server" },
 	},
 	{
-		ft = { "graphql" },
-	},
-	{
 		ft = { "javascript", "javascriptreact" },
 		formatters = { "prettierd" },
 		linters = { "eslint_d" },
@@ -42,7 +39,6 @@ return {
 		ft = { "go" },
 		formatters = { "golangci-lint" },
 		linters = { "golangcilint" },
-		packages = { "golsp" },
 		lsp = {
 			gopls = {
 				cmd = { "gopls", "serve" },
@@ -83,12 +79,6 @@ return {
 		ft = { "sql" },
 		formatters = { "sqlfmt" },
 		packages = { "sqlfmt" },
-	},
-	{
-		ft = { "proto" },
-		linters = { "buf_lint" },
-		lsp = { buf_ls = {} },
-		packages = { "buf", "buf-language-server" },
 	},
 	{
 		ft = { "html" },
