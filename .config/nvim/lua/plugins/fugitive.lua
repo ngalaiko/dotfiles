@@ -3,7 +3,4 @@ return {
 	dependencies = {
 		"https://github.com/tpope/vim-rhubarb",
 	},
-	config = function()
-		vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { noremap = true })
-	end,
 }

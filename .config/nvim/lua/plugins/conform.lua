@@ -11,13 +11,5 @@ return {
 	opts = {
 		formatters_by_ft = formatters_by_ft,
 	},
-	config = function(_, opts)
-		local conform = require("conform")
-
-		conform.setup(opts)
-
-		vim.keymap.set("n", "<space>f", function()
-			conform.format()
-		end, { noremap = true })
-	end,
+	config = true,
 }

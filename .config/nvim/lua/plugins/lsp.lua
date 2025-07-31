@@ -54,38 +54,5 @@ return {
 		for server, value in pairs(servers) do
 			nvim_lsp[server].setup(value)
 		end
-
-		-- Utility function to set key mappings
-		local function set_keymap(mode, lhs, rhs, opts)
-			local options = { noremap = true, silent = true }
-			if opts then
-				options = vim.tbl_extend("force", options, opts)
-			end
-			vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-		end
-
-		-- Go to definition
-		set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-
-		-- Go to references
-		set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-
-		-- Go to implementation
-		set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-
-		-- Change definition
-		set_keymap("n", "cd", "<cmd>lua vim.lsp.buf.rename()<CR>")
-
-		-- Set location list (commented out)
-		-- set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>')
-
-		-- Format buffer (commented out)
-		-- set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format()<CR>')
-
-		-- Show signature help
-		set_keymap("n", "<space>s", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
-
-		-- Show hover documentation
-		set_keymap("n", "<space>h", "<cmd>lua vim.lsp.buf.hover()<CR>")
 	end,
 }

@@ -8,23 +8,43 @@ local function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- trouble
+map("n", "<space>q", "<cmd>Trouble diagnostics toggle<CR>")
+
+-- picker
+map("n", "<C-P>", ":Pick files<CR>")
+map("n", "<leader>ps", ":Pick grep<CR>")
+
+-- outline
+map("n", "<leader>tt", "<cmd>Outline<CR>")
+
+-- navigator
+map({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
+map({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
+map({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
+map({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
+
+-- lsp
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
+map("n", "cd", "<cmd>lua vim.lsp.buf.rename()<CR>")
+
+-- copilot
+map("i", "<C-A>", 'copilot#Accept("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
+
+-- conform
+map("n", "<space>f", function()
+	require("conform").format()
+end)
+
+-- neotree
 map("n", "<leader>o", ":Neotree toggle<CR>")
 map("n", "<leader>O", ":Neotree reveal<CR>")
-
-map("n", "J", "mzJ'z")
-
-map("n", "<C-d>", "<C-d>zz")
-map("n", "<C-u>", "<C-u>zz")
-
-map("n", "n", "nzzzv")
-map("n", "N", "Nzzzv")
-
-map("x", "<leader>p", '"_dP')
-
-map("n", "<C-k>", "<cmd>cnext<CR>zz")
-map("n", "<C-j>", "<cmd>cprev<CR>zz")
-map("n", "<leader>k", "<cmd>lnext<CR>zz")
-map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- split tab vertically and horizontally
 map("n", "<leader>v", vim.cmd.vsp)
