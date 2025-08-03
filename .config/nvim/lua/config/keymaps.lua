@@ -9,7 +9,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- mini.diff
-map("n", "go", "<cmd>lua MiniDiff.toggle_overlay()<CR>")
+map("n", "to", "<cmd>lua MiniDiff.toggle_overlay()<CR>")
 
 -- trouble
 map("n", "<space>q", "<cmd>Trouble diagnostics toggle<CR>")
