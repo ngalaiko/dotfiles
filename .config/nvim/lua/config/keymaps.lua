@@ -8,10 +8,15 @@ local function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- mini.diff
+map("n", "gh", function()
+	require("mini.diff").toggle_overlay()
+end)
+
 -- trouble
 map("n", "<space>q", "<cmd>Trouble diagnostics toggle<CR>")
 
--- picker
+-- mini.pick
 map("n", "<C-P>", ":Pick files<CR>")
 map("n", "<leader>ps", ":Pick grep<CR>")
 
