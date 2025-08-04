@@ -15,7 +15,9 @@ map("n", "to", "<cmd>lua MiniDiff.toggle_overlay()<CR>")
 map("n", "<space>q", "<cmd>Trouble diagnostics toggle<CR>")
 
 -- mini.pick
-map("n", "<C-P>", ":Pick files<CR>")
+map("n", "<C-P>", function()
+	require("mini.pick").builtin.files({ tool = "git" })
+end)
 map("n", "<leader>ps", ":Pick grep<CR>")
 
 -- outline
