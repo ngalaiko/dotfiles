@@ -2,7 +2,20 @@ return {
 	{
 		ft = { "lua" },
 		formatters = { "stylua" },
-		packages = { "stylua" },
+		lsp = {
+			lua_ls = {
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+						},
+					},
+				},
+			},
+		},
 	},
 	{
 		ft = { "json" },
@@ -19,21 +32,18 @@ return {
 				},
 			},
 		},
-		packages = { "yaml-language-server" },
 	},
 	{
 		ft = { "javascript", "javascriptreact" },
 		formatters = { "prettierd" },
 		linters = { "eslint_d" },
 		lsp = { ts_ls = {} },
-		packages = { "eslint_d", "prettierd" },
 	},
 	{
 		ft = { "typescript", "typescriptreact" },
 		formatters = { "prettierd" },
 		linters = { "eslint_d" },
 		lsp = { ts_ls = {} },
-		packages = { "eslint_d", "prettierd", "typescript-language-server" },
 	},
 	{
 		ft = { "go" },
@@ -52,7 +62,6 @@ return {
 				},
 			},
 		},
-		packages = { "golangci-lint", "gopls" },
 	},
 	{
 		ft = { "gomod" },
@@ -60,45 +69,37 @@ return {
 	{
 		ft = { "svelte" },
 		lsp = { svelte = {} },
-		packages = { "svelte-language-server" },
 	},
 	{
 		ft = { "python" },
 		formatters = { "black" },
 		lsp = { pylsp = {} },
-		packages = { "black", "python-lsp-server" },
 	},
 	{
 		ft = { "terraform", "terraform-vars" },
 		formatters = { "terraform_fmt" },
 		linters = { "tflint", "trivy" },
 		lsp = { terraformls = {} },
-		packages = { "tflint", "terraform-ls", "trivy" },
 	},
 	{
 		ft = { "sql" },
 		formatters = { "sqlfmt" },
-		packages = { "sqlfmt" },
 	},
 	{
 		ft = { "html" },
 		lsp = { html = {} },
-		packages = { "html-lsp" },
 	},
 	{
 		ft = { "css" },
 		lsp = { cssls = {} },
-		packages = { "css-lsp" },
 	},
 	{
 		ft = { "bash", "sh" },
 		lsp = { bashls = {} },
-		packages = { "bash-language-server" },
 	},
 	{
 		ft = { "dockerfile" },
 		lsp = { dockerls = {} },
-		packages = { "dockerfile-language-server" },
 	},
 	{
 		ft = { "rust" },
@@ -131,6 +132,5 @@ return {
 				},
 			},
 		},
-		packages = { "rust-analyzer" },
 	},
 }

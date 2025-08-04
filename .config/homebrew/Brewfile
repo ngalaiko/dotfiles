@@ -1,22 +1,48 @@
 tap "cooklang/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "nikitabobko/tap"
+tap "osx-cross/arm"
+tap "osx-cross/avr"
+tap "qmk/qmk"
+tap "sst/tap"
+tap "tattoy-org/tap"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
-# Isolated development environments using Docker
-brew "docker-compose"
+# Platform built on V8 to build network applications
+brew "node"
+# Language Server for Bash
+brew "bash-language-server"
+# Python code formatter
+brew "black"
+# Utility for connecting securely to your Cloud SQL instances
+brew "cloud-sql-proxy"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
+# Language server for Dockerfiles powered by Node, TypeScript, and VSCode
+brew "dockerfile-language-server"
+# Speed up eslint to accelerate your development workflow
+brew "eslint_d"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Command-line tools for fly.io services
 brew "flyctl"
+# GitHub command-line tool
+brew "gh"
 # Git extension for versioning large files
 brew "git-lfs"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
+# Language server for the Go language
+brew "gopls"
+# Post-modern modal text editor
+brew "helix"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
-# Build and deploy Go applications on Kubernetes
-brew "ko"
+# Git-compatible distributed version control system
+brew "jj"
 # Command-line, double-entry accounting tool
 brew "ledger"
 # Make/rake-like build tool using Go
@@ -25,42 +51,70 @@ brew "mage"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
-brew "node"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
+# Fast, disk space efficient package manager
+brew "pnpm"
 # Tool for managing OCI containers and pods
 brew "podman"
+# Prettier daemon
+brew "prettierd"
+# Python Language Server for the Language Server Protocol
+brew "python-lsp-server"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Experimental Rust compiler front-end for IDEs
+brew "rust-analyzer"
+# SQL formatter with width-aware output
+brew "sqlfmt"
+# Opinionated Lua code formatter
+brew "stylua"
+# Tool to build, change, and version infrastructure
+brew "terraform"
+# Terraform Language Server
+brew "terraform-ls"
+# Linter for Terraform files
+brew "tflint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Vulnerability scanner for container images, file systems, and Git repos
+brew "trivy"
+# Language Server Protocol implementation for TypeScript wrapping tsserver
+brew "typescript-language-server"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Command-line XML and HTML beautifier and content extractor
+brew "xq"
+# Language Server for Yaml Files
+brew "yaml-language-server"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
-# CLI tool for CookLang Recipe Markup Language
-brew "cooklang/tap/cook"
+# Quantum Mechanical Keyboard (QMK) Firmware
+brew "qmk/qmk/qmk"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
 # E-books management software
 cask "calibre"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Trains AIs to understand and translate texts
+# AI-powered translator
 cask "deepl"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Set of tools to manage resources and applications hosted on Google Cloud
-cask "google-cloud-sdk"
 # VPN client
-cask "mullvadvpn"
+cask "mullvad-vpn"
 # Free and open-source RSS reader
 cask "netnewswire"
+# Utility to uninstall apps and remove leftover files from old/uninstalled apps
+cask "pearcleaner"
 # Browse, manage, inspect containers and images
 cask "podman-desktop"
 # GUI client for PostgreSQL databases
 cask "postico@1"
+# Command-line shell and scripting language
+cask "powershell"
 # HTTP client that helps testing and describing APIs
 cask "rapidapi"
 # Control your tools with a few keystrokes
@@ -78,9 +132,16 @@ cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Baking Soda", id: 1601151613
-mas "CrystalFetch", id: 6454431289
+mas "Emcee for Music", id: 408774844
+mas "Hush", id: 1544743900
+mas "Kagi for Safari", id: 1622835804
 mas "NextDNS", id: 1464122853
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pure Paste", id: 1611378436
+mas "SonicWall Mobile Connect", id: 822514576
 mas "Strongbox", id: 897283731
+mas "Sweet Home 3D", id: 669289700
 mas "The Unarchiver", id: 425424353
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
