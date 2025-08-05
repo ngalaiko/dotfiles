@@ -27,6 +27,8 @@ brew "eslint_d"
 brew "fish"
 # Command-line tools for fly.io services
 brew "flyctl"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GitHub command-line tool
 brew "gh"
 # Git extension for versioning large files
@@ -45,6 +47,8 @@ brew "imagemagick"
 brew "jj"
 # Command-line, double-entry accounting tool
 brew "ledger"
+# Language Server for the Lua language
+brew "lua-language-server"
 # Make/rake-like build tool using Go
 brew "mage"
 # Mac App Store command-line interface
@@ -63,8 +67,6 @@ brew "python-lsp-server"
 brew "ripgrep"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
-# SQL formatter with width-aware output
-brew "sqlfmt"
 # Opinionated Lua code formatter
 brew "stylua"
 # Tool to build, change, and version infrastructure
