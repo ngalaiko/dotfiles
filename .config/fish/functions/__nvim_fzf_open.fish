@@ -13,7 +13,7 @@ function __nvim_fzf_open
     
     if test -n "$selection"
         if test -d "$selection"
-            cd "$selection"
+            cd "$selection" && commandline -f repaint
         else
             nvim "$selection"
         end
