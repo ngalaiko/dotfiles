@@ -11,11 +11,4 @@ ln -sf $(pwd)/.config/atuin "$HOME/.config/atuin"
 ln -sf $(pwd)/.config/homebrew "$HOME/.config/homebrew"
 ln -sf $(pwd)/.config/jj "$HOME/.config/jj"
 
-# gpg
-mkdir -p "$HOME/.gnupg"
-chmod 700 "$HOME/.gnupg"
-ln -sf $(pwd)/.gnupg/dirmngr.conf "$HOME/.gnupg/"
-ln -sf $(pwd)/.gnupg/gpg-agent.conf "$HOME/.gnupg/"
-ln -sf $(pwd)/.gnupg/gpg.conf "$HOME/.gnupg/"
-
 brew bundle install
