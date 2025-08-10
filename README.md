@@ -1,11 +1,7 @@
-# Dotfiles
+# dotfiles
 
-## Installation
+dotfiles for tools i use. 
 
-this should do it:
+use [./install.sh](./install.sh) to setup symlinks
 
-```bash
-$ ./install.sh
-```
-
-if that doesn't work, good luck and don't forget to open a PR.
+use [./macos.sh](./macos.sh) to apply macos specific configs
