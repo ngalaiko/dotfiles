@@ -6,12 +6,23 @@ return {
 			default = { "lsp", "path", "buffer" },
 		},
 		completion = {
-			ghost_text = { enabled = true },
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 100,
+			},
+			menu = {
+				draw = {
+					treesitter = { "lsp" },
+				},
+			},
 		},
 		keymap = {
-			-- set to 'none' to disable the 'default' preset
-			preset = "default",
-			["<Enter>"] = { "select_and_accept" },
+			preset = "enter",
+			["<Tab>"] = { "select_next", "fallback" },
+			["<S-Tab>"] = { "select_prev", "fallback" },
+		},
+		appearance = {
+			nerd_font_variant = "mono",
 		},
 	},
 	config = true,

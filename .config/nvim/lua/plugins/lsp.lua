@@ -11,11 +11,15 @@ end
 
 return {
 	"https://github.com/neovim/nvim-lspconfig",
+	dependencies = {
+		"https://github.com/saghen/blink.cmp",
+	},
 	config = function()
 		local nvim_lsp = require("lspconfig")
 
 		-- register servers
 		for server, value in pairs(servers) do
+			value.capabilities = require("blink.cmp").get_lsp_capabilities(value.capabilities)
 			nvim_lsp[server].setup(value)
 		end
 	end,
