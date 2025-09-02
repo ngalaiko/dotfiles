@@ -11,20 +11,8 @@ end
 
 return {
 	"https://github.com/neovim/nvim-lspconfig",
-	dependencies = {
-		{
-			"https://github.com/hrsh7th/cmp-nvim-lsp",
-		},
-	},
 	config = function()
 		local nvim_lsp = require("lspconfig")
-
-		-- nvim-cmp source setup
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		for _, value in pairs(servers) do
-			value.capabilities = capabilities
-			value.capabilities.textDocument.completion.completionItem.snippetSupport = false
-		end
 
 		-- register servers
 		for server, value in pairs(servers) do
