@@ -16,6 +16,9 @@ sign-on-push = true
 # tug: bring nearest bookmark up to recent commit
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 
+# start: start a new revision base on the latest trunk
+start = ["new", "-r", "trunk()"]
+
 # retrunk:
 # `jj rebase -d 'trunk()'` is shorthand for `jj rebase -b @ -d 'trunk()'`
 #
