@@ -12,9 +12,14 @@ key = "~/.ssh/id_ed25519.pub"
 [git]
 sign-on-push = true
 
+# https://andre.arko.net/2025/09/28/stupid-jj-tricks/
 [aliases]
 # tug: bring nearest bookmark up to recent commit
-tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+tug = 'bookmark move --from "heads(::@ & bookmarks())" --to "closest_pushable(@)"'
+pr = ["util", "exec", "--", "bash", "-c", """
+gh pr create --head $(jj log -r 'closest_bookmark(@)' -T 'bookmarks' --no-graph | cut -d ' ' -f 1)
+"""]
+ll = ["log", "-T", "log_with_files"]
 
 # start: start a new revision base on the latest trunk
 start = ["new", "-r", "trunk()"]
@@ -28,14 +33,37 @@ start = ["new", "-r", "trunk()"]
 # `-d trunk()` sets the destination. trunk() finds the most recent `main | master | trunk` branch thats on a remote. trunk() is builtin.
 retrunk = ["rebase", "-d", "trunk()"]
 
+[templates]
+draft_commit_description = '''
+  concat(
+    coalesce(description, default_commit_description, "\n"),
+    surround(
+      "\nJJ: This commit contains the following changes:\n", "",
+      indent("JJ:     ", diff.stat(72)),
+    ),
+    "\nJJ: ignore-rest\n",
+    diff.git(),
+  )
+'''
+log_node = '''
+if(self && !current_working_copy && !immutable && !conflict && in_branch(self),
+  "◇",
+  builtin_log_node
+)
+'''
+
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 
 [template-aliases]
 "format_timestamp(timestamp)" = "timestamp.ago()"
+"in_branch(commit)" = 'commit.contained_in("immutable_heads()..bookmarks()")'
 
 [ui]
 editor = "nvim"
-default-command = "st"
+default-command = "status"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
 diff-editor = ":builtin"
 merge-editor = ":builtin"
+
