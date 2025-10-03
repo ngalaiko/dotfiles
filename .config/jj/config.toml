@@ -63,7 +63,7 @@ if(self && !current_working_copy && !immutable && !conflict && in_branch(self),
 [ui]
 editor = "nvim"
 default-command = "status"
-diff-formatter = ["difft", "--color=always", "$left", "$right"]
+diff-formatter = ["difft", "--display", "inline", "--color=always", "$left", "$right"]
 diff-editor = ":builtin"
 merge-editor = ":builtin"
 
