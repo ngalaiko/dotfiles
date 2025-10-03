@@ -15,12 +15,10 @@ return {
 		"https://github.com/saghen/blink.cmp",
 	},
 	config = function()
-		local nvim_lsp = require("lspconfig")
-
 		-- register servers
 		for server, value in pairs(servers) do
 			value.capabilities = require("blink.cmp").get_lsp_capabilities(value.capabilities)
-			nvim_lsp[server].setup(value)
+			vim.lsp.config(server, value)
 		end
 	end,
 }
