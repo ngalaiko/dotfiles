@@ -1,0 +1,14 @@
+[tools]
+python = "3.12"
+"pipx:shandy-sqlfmt" = "latest"
+
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:lua-3p-language-servers" = "latest"
+"npm:svelte-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+"npm:bash-language-server" = "latest"
+"npm:dockerfile-language-server-nodejs" = "latest"
+"npm:eslint_d" = "latest"
+"npm:@fsouza/prettierd" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:yaml-language-server" = "latest"
