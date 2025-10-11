@@ -6,13 +6,10 @@ return {
 			default = { "lsp", "path", "buffer" },
 		},
 		completion = {
-			documentation = {
-				auto_show = true,
-				auto_show_delay_ms = 100,
-			},
 			menu = {
 				draw = {
-					treesitter = { "lsp" },
+					cursorline_priority = 0, -- disables weird highlight of just completed text
+					treesitter = {},
 				},
 			},
 		},

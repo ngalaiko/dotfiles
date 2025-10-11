@@ -1,28 +1,27 @@
+# brew bundle dump --describe
 tap "cooklang/tap"
+tap "daveshanley/vacuum"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "nikitabobko/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "qmk/qmk"
+tap "speakeasy-api/tap"
 tap "sst/tap"
 tap "tattoy-org/tap"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
-# Platform built on V8 to build network applications
-brew "node"
-# Language Server for Bash
-brew "bash-language-server"
 # Python code formatter
 brew "black"
 # Utility for connecting securely to your Cloud SQL instances
 brew "cloud-sql-proxy"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
-# Language server for Dockerfiles powered by Node, TypeScript, and VSCode
-brew "dockerfile-language-server"
-# Speed up eslint to accelerate your development workflow
-brew "eslint_d"
+# Diff that understands syntax
+brew "difftastic"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Command-line tools for fly.io services
@@ -37,14 +36,20 @@ brew "git-lfs"
 brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
+# Language server for `golangci-lint`
+brew "golangci-lint-langserver"
 # Language server for the Go language
 brew "gopls"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # Post-modern modal text editor
 brew "helix"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Git-compatible distributed version control system
 brew "jj"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Command-line, double-entry accounting tool
 brew "ledger"
 # Language Server for the Lua language
@@ -53,14 +58,16 @@ brew "lua-language-server"
 brew "mage"
 # Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Fast, disk space efficient package manager
-brew "pnpm"
+# Platform built on V8 to build network applications
+brew "node"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Tool for managing OCI containers and pods
 brew "podman"
-# Prettier daemon
-brew "prettierd"
 # Python Language Server for the Language Server Protocol
 brew "python-lsp-server"
 # Search tool like grep and The Silver Searcher
@@ -79,18 +86,22 @@ brew "tflint"
 brew "tree"
 # Vulnerability scanner for container images, file systems, and Git repos
 brew "trivy"
-# Language Server Protocol implementation for TypeScript wrapping tsserver
-brew "typescript-language-server"
+# ODBC 3 connectivity for UNIX
+brew "unixodbc"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Command-line XML and HTML beautifier and content extractor
 brew "xq"
-# Language Server for Yaml Files
-brew "yaml-language-server"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# The worlds fastest and most scalable OpenAPI linter
+brew "daveshanley/vacuum/vacuum"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
+# The Speakeasy CLI for interacting with the Speakeasy Platform
+brew "speakeasy-api/tap/speakeasy"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # AeroSpace is an i3-like tiling window manager for macOS
@@ -99,12 +110,16 @@ cask "aerospace"
 cask "calibre"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 # AI-powered translator
 cask "deepl"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Vector graphics editor
+cask "inkscape"
 # VPN client
 cask "mullvad-vpn"
 # Free and open-source RSS reader
@@ -141,9 +156,10 @@ mas "NextDNS", id: 1464122853
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pure Paste", id: 1611378436
-mas "SonicWall Mobile Connect", id: 822514576
 mas "Strongbox", id: 897283731
 mas "Sweet Home 3D", id: 669289700
 mas "The Unarchiver", id: 425424353
+mas "uBlock Origin Lite", id: 6745342698
+mas "Vinegar", id: 1591303229
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
