@@ -1,3 +1,6 @@
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']
+
 [tools]
 python = "3.12"
 "pipx:shandy-sqlfmt" = "latest"
