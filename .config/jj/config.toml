@@ -34,6 +34,7 @@ start = ["new", "-r", "trunk()"]
 retrunk = ["rebase", "-d", "trunk()"]
 
 [templates]
+git_push_bookmark = 'concat("ngalaiko/push-", change_id.short())'
 draft_commit_description = '''
   concat(
     coalesce(description, default_commit_description, "\n"),
