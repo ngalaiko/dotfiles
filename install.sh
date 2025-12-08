@@ -11,5 +11,6 @@ ln -sf $(pwd)/.config/atuin "$HOME/.config/atuin"
 ln -sf $(pwd)/.config/homebrew "$HOME/.config/homebrew"
 ln -sf $(pwd)/.config/jj "$HOME/.config/jj"
 ln -sf $(pwd)/.config/mise "$HOME/.config/mise"
+ln -sf $(pwd)/.config/rift "$HOME/.config/rift"
 
 brew bundle install
