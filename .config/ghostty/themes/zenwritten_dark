@@ -1,21 +1,36 @@
-palette = 0=#191919
-palette = 1=#de6e7c
-palette = 2=#819b69
-palette = 3=#b77e64
-palette = 4=#6099c0
-palette = 5=#b279a7
-palette = 6=#66a5ad
-palette = 7=#bbbbbb
-palette = 8=#3d3839
-palette = 9=#e8838f
-palette = 10=#8bae68
-palette = 11=#d68c67
-palette = 12=#61abda
-palette = 13=#cf86c1
-palette = 14=#65b8c1
-palette = 15=#8e8e8e
-background = 191919
-foreground = bbbbbb
-cursor-color = c9c9c9
-selection-background = 404040
-selection-foreground = bbbbbb
+# source: https://github.com/fredrikaverpil/zenbones.nvim/blob/b852ff1d776b25a8a21ec3dfdc013be30fc13cd3/extras/ghostty/zenbones_dark
+
+# Basic colors
+foreground = "#B4BDC3"
+background = "#1C1917"
+# Selection colors
+selection-foreground = "#B4BDC3"
+selection-background = "#3D4042"
+# Cursor colors
+cursor-color = "#C4CACF"
+cursor-text = "#1C1917"
+# The basic 16 colors
+# black
+palette = 0=#1C1917
+palette = 8=#403833
+# red
+palette = 1=#DE6E7C
+palette = 9=#E8838F
+# green
+palette = 2=#819B69
+palette = 10=#8BAE68
+# yellow
+palette = 3=#B77E64
+palette = 11=#D68C67
+# blue
+palette = 4=#6099C0
+palette = 12=#61ABDA
+# magenta
+palette = 5=#B279A7
+palette = 13=#CF86C1
+# cyan
+palette = 6=#66A5AD
+palette = 14=#65B8C1
+# white
+palette = 7=#B4BDC3
+palette = 15=#888F94
