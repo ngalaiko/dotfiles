@@ -373,7 +373,7 @@ comb1 = "Alt + Shift"
 # this will show the mission control view shown in the readme
 # "Alt + Ctrl + M" = "show_mission_control_all"
 
-"Alt + Shift + D" = "debug" # prints layout tree
-
-"Alt + Ctrl + S" = "serialize"
-"Alt + Ctrl + Q" = "save_and_exit"
+# "Alt + Shift + D" = "debug" # prints layout tree
+#
+# "Alt + Ctrl + S" = "serialize"
+# "Alt + Ctrl + Q" = "save_and_exit"
