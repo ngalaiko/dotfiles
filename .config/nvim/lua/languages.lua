@@ -109,7 +109,6 @@ return {
 				settings = {
 					["rust-analyzer"] = {
 						assist = {
-							importMergeBehavior = "last",
 							importPrefix = "by_self",
 						},
 						cargo = {
@@ -125,9 +124,7 @@ return {
 						procMacro = {
 							enable = true,
 						},
-						checkOnSave = {
-							command = "clippy",
-						},
+						checkOnSave = true,
 					},
 				},
 			},
