@@ -66,5 +66,5 @@ editor = "nvim"
 default-command = "status"
 diff-formatter = ["difft", "--display", "inline", "--color=always", "$left", "$right"]
 diff-editor = ":builtin"
-merge-editor = ":builtin"
+merge-editor = "smerge"
 
