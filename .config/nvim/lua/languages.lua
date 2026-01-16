@@ -102,6 +102,12 @@ return {
 		lsp = { dockerls = {} },
 	},
 	{
+		ft = { "templ" },
+		lsp = {
+			templ = {},
+		},
+	},
+	{
 		ft = { "rust" },
 		formatters = { "rustfmt" },
 		lsp = {
