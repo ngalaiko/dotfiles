@@ -17,7 +17,7 @@ sign-on-push = true
 # tug: bring nearest bookmark up to recent commit
 tug = ['bookmark', 'move', '--from', 'heads(::@ & bookmarks())', '--to', 'closest_pushable(@)']
 pr = ["util", "exec", "--", "bash", "-c", """
-gh pr create --head $(jj log -r 'closest_bookmark(@)' -T 'bookmarks' --no-graph | cut -d ' ' -f 1)
+gh pr create --head $(jj log -r 'closest_bookmark(@)' -T 'bookmarks' --no-graph | cut -d ' ' -f 1) --web
 """]
 ll = ["log", "-T", "log_with_files"]
 
