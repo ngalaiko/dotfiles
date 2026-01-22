@@ -24,6 +24,9 @@ ll = ["log", "-T", "log_with_files"]
 # start: start a new revision base on the latest trunk
 start = ["new", "-r", "trunk()"]
 
+# tidy: abandon empty, undescribed, mutable, non-merge commits
+tidy = ["abandon", "empty() & description(exact:\"\") & mutable() & ~@ & ~merges()"]
+
 # retrunk:
 # `jj rebase -d 'trunk()'` is shorthand for `jj rebase -b @ -d 'trunk()'`
 #
