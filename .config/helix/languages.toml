@@ -1,3 +1,7 @@
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
 [language-server.copilot]
 command = "copilot-language-server"
 args = ["--stdio"]
@@ -7,93 +11,85 @@ editorInfo = { name = "Helix", version = "25.01" }
 editorPluginInfo = { name = "helix-copilot", version = "0.1.0" }
 
 [[language]]
-name = "*"
-language-servers = [ "copilot" ]
-
-[[language]]
 name = "rust"
-language-servers = [ "copilot", "rust-analyzer" ]
+language-servers = [ "harper-ls", "copilot", "rust-analyzer" ]
 
 [[language]]
 name = "toml"
-language-servers = [ "copilot", "taplo", "tombi" ]
+language-servers = [ "harper-ls", "copilot", "taplo", "tombi" ]
 
 [[language]]
 name = "fish"
-language-servers = [ "copilot", "fish-lsp" ]
+language-servers = [ "harper-ls", "copilot", "fish-lsp" ]
 
 [[language]]
 name = "json"
-language-servers = [ "copilot", "vscode-json-language-server" ]
+language-servers = [ "harper-ls", "copilot", "vscode-json-language-server" ]
 
 [[language]]
 name = "go"
-language-servers = [ "copilot", "gopls", "golangci-lint-lsp" ]
+language-servers = [ "harper-ls", "copilot", "gopls", "golangci-lint-lsp" ]
 
 [[language]]
 name = "gotmpl"
-language-servers = [ "copilot", "gopls" ]
+language-servers = [ "harper-ls", "copilot", "gopls" ]
 
 [[language]]
 name = "gowork"
-language-servers = [ "copilot", "gopls" ]
+language-servers = [ "harper-ls", "copilot", "gopls" ]
 
 [[language]]
 name = "javascript"
-language-servers = [ "copilot", "typescript-language-server" ]
+language-servers = [ "harper-ls", "copilot", "typescript-language-server" ]
 
 [[language]]
 name = "jsx"
-language-servers = [ "copilot", "typescript-language-server" ]
+language-servers = [ "harper-ls", "copilot", "typescript-language-server" ]
 
 [[language]]
 name = "typescript"
-language-servers = [ "copilot", "typescript-language-server" ]
+language-servers = [ "harper-ls", "copilot", "typescript-language-server" ]
 
 [[language]]
 name = "tsx"
-language-servers = [ "copilot", "typescript-language-server" ]
+language-servers = [ "harper-ls", "copilot", "typescript-language-server" ]
 
 [[language]]
 name = "css"
-language-servers = [ "copilot", "vscode-css-language-server" ]
+language-servers = [ "harper-ls", "copilot", "vscode-css-language-server" ]
 
 [[language]]
 name = "html"
-language-servers = [ "copilot", "vscode-html-language-server", "superhtml" ]
+language-servers = [ "harper-ls", "copilot", "vscode-html-language-server", "superhtml" ]
 
 [[language]]
 name = "python"
-language-servers = [ "copilot", "ty", "ruff", "jedi", "pylsp" ]
+language-servers = [ "harper-ls", "copilot", "ty", "ruff", "jedi", "pylsp" ]
 
 [[language]]
 name = "bash"
-language-servers = [ "copilot", "bash-language-server" ]
+language-servers = [ "harper-ls", "copilot", "bash-language-server" ]
 
 [[language]]
 name = "svelte"
-language-servers = [ "copilot", "svelteserver" ]
+language-servers = [ "harper-ls", "copilot", "svelteserver" ]
 
 [[language]]
 name = "yaml"
-language-servers = [ "copilot", "yaml-language-server", "ansible-language-server" ]
+language-servers = [ "harper-ls", "copilot", "yaml-language-server", "ansible-language-server" ]
 
 [[language]]
 name = "markdown"
-language-servers = [ "copilot", "marksman", "markdown-oxide", "rumdl" ]
+language-servers = [ "harper-ls", "copilot", "marksman", "markdown-oxide", "rumdl" ]
 
 [[language]]
 name = "dockerfile"
-language-servers = [ "copilot", "docker-langserver", "docker-language-server" ]
-
-[[language]]
-name = "github-action"
-language-servers = [ "copilot", "actions-language-server", "yaml-language-server" ]
+language-servers = [ "harper-ls", "copilot", "docker-langserver", "docker-language-server" ]
 
 [[language]]
 name = "tfvars"
-language-servers = [ "copilot", "terraform-ls" ]
+language-servers = [ "harper-ls", "copilot", "terraform-ls" ]
 
 [[language]]
 name = "templ"
-language-servers = [ "copilot", "templ" ]
+language-servers = [ "harper-ls", "copilot", "templ" ]
