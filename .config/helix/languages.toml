@@ -16,7 +16,7 @@ language-servers = [ "harper-ls", "copilot", "rust-analyzer" ]
 
 [[language]]
 name = "toml"
-language-servers = [ "harper-ls", "copilot", "taplo", "tombi" ]
+language-servers = [ "harper-ls", "copilot", "tombi" ]
 
 [[language]]
 name = "fish"
@@ -64,7 +64,7 @@ language-servers = [ "harper-ls", "copilot", "vscode-html-language-server", "sup
 
 [[language]]
 name = "python"
-language-servers = [ "harper-ls", "copilot", "ty", "ruff", "jedi", "pylsp" ]
+language-servers = [ "harper-ls", "copilot", "ty", "ruff" ]
 
 [[language]]
 name = "bash"
@@ -76,15 +76,15 @@ language-servers = [ "harper-ls", "copilot", "svelteserver" ]
 
 [[language]]
 name = "yaml"
-language-servers = [ "harper-ls", "copilot", "yaml-language-server", "ansible-language-server" ]
+language-servers = [ "harper-ls", "copilot", "yaml-language-server" ]
 
 [[language]]
 name = "markdown"
-language-servers = [ "harper-ls", "copilot", "marksman", "markdown-oxide", "rumdl" ]
+language-servers = [ "harper-ls", "copilot", "rumdl" ]
 
 [[language]]
 name = "dockerfile"
-language-servers = [ "harper-ls", "copilot", "docker-langserver", "docker-language-server" ]
+language-servers = [ "harper-ls", "copilot", "docker-language-server" ]
 
 [[language]]
 name = "tfvars"
