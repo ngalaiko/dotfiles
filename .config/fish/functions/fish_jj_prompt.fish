@@ -9,33 +9,22 @@ function fish_jj_prompt --description 'Write out the jj prompt'
         return 1
     end
 
-    # Generate prompt
-    jj log --ignore-working-copy --no-graph --color always -r @ -T '
-        surround(
-            " [",
-            "]",
-            separate(
-                " ",
-                bookmarks.join(", "),
-                coalesce(
-                    surround(
-                        "\"",
-                        "\"",
-                        if(
-                            description.first_line().substr(0, 24).starts_with(description.first_line()),
-                            description.first_line().substr(0, 24),
-                            description.first_line().substr(0, 23) ++ "…"
-                        )
-                    ),
-                    "(no desc.)"
-                ),
-                change_id.shortest(),
-                commit_id.shortest(),
-                if(conflict, "(conflict)"),
-                if(empty, "(empty)"),
-                if(divergent, "(divergent)"),
-                if(hidden, "(hidden)"),
-            )
-        )
-    '
+    # Bookmark template: name + sync status indicator
+    #   (nothing) = synced with remote
+    #   ↑ = ahead of remote
+    #   ↓ = behind remote
+    #   ↕ = ahead and behind (diverged)
+    set -l bookmark_sync 'local_bookmarks.map(|b| b.name() ++ if(b.synced(), "", if(b.tracking_ahead_count().zero(), "↓", if(b.tracking_behind_count().zero(), "↑", "↕"))))'
+
+    # Find the bookmark to display:
+    # - If @ has bookmarks, show them directly
+    # - Otherwise, show the closest ancestor bookmark prefixed with ~
+    set -l bookmark_display (jj log --ignore-working-copy --no-graph --color always -r @ -T "$bookmark_sync"'.join(", ")' 2>/dev/null)
+    if test -z "$bookmark_display"
+        set bookmark_display (jj log --ignore-working-copy --no-graph --color always -r 'heads(::@ & bookmarks())' -T '"~" ++ '"$bookmark_sync"'.join(", ~")' 2>/dev/null)
+    end
+
+    if test -n "$bookmark_display"
+        printf ' [%s]' "$bookmark_display"
+    end
 end
