@@ -9,22 +9,27 @@ function fish_jj_prompt --description 'Write out the jj prompt'
         return 1
     end
 
-    # Bookmark template: name + sync status indicator
-    #   (nothing) = synced with remote
-    #   ↑ = ahead of remote
-    #   ↓ = behind remote
-    #   ↕ = ahead and behind (diverged)
-    set -l bookmark_sync 'local_bookmarks.map(|b| b.name() ++ if(b.synced(), "", if(b.tracking_ahead_count().zero(), "↓", if(b.tracking_behind_count().zero(), "↑", "↕"))))'
+    # Dirty/clean status of @
+    set -l wc_status (jj log --ignore-working-copy --no-graph -r @ -T 'if(empty, "clean", "dirty")' 2>/dev/null)
 
-    # Find the bookmark to display:
-    # - If @ has bookmarks, show them directly
-    # - Otherwise, show the closest ancestor bookmark prefixed with ~
-    set -l bookmark_display (jj log --ignore-working-copy --no-graph --color always -r @ -T "$bookmark_sync"'.join(", ")' 2>/dev/null)
-    if test -z "$bookmark_display"
-        set bookmark_display (jj log --ignore-working-copy --no-graph --color always -r 'heads(::@ & bookmarks())' -T '"~" ++ '"$bookmark_sync"'.join(", ~")' 2>/dev/null)
+    # If @ has bookmarks, show them directly
+    set -l bookmark_display (jj log --ignore-working-copy --no-graph --color always -r @ -T 'local_bookmarks.join(", ")' 2>/dev/null)
+    if test -n "$bookmark_display"
+        printf ' [%s %s]' "$bookmark_display" "$wc_status"
+        return 0
     end
 
-    if test -n "$bookmark_display"
-        printf ' [%s]' "$bookmark_display"
+    # Otherwise, show the closest ancestor bookmark prefixed with ~
+    # and append +N for the number of commits between it and @ (excluding @)
+    set -l closest (jj log --ignore-working-copy --no-graph --color always -r 'heads(::@ & bookmarks())' -T '"~" ++ local_bookmarks.join(", ~")' 2>/dev/null)
+    if test -z "$closest"
+        return 0
+    end
+
+    set -l ahead (string length -- (jj log --ignore-working-copy --no-graph -r 'heads(::@ & bookmarks())::@- ~ heads(::@ & bookmarks())' -T '"x"' 2>/dev/null))
+    if test -n "$ahead" -a "$ahead" -gt 0
+        printf ' [%s +%s %s]' "$closest" "$ahead" "$wc_status"
+    else
+        printf ' [%s %s]' "$closest" "$wc_status"
     end
 end
