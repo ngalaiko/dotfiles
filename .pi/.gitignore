@@ -1,0 +1,4 @@
+agent/**
+!agent/settings.json
+!agent/skills
+!agent/skills/**
