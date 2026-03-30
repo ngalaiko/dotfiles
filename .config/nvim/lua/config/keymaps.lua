@@ -32,12 +32,6 @@ map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
 map("n", "cd", "<cmd>lua vim.lsp.buf.rename()<CR>")
 
--- copilot
-map("i", "<C-A>", 'copilot#Accept("\\<CR>")', {
-	expr = true,
-	replace_keycodes = false,
-})
-vim.g.copilot_no_tab_map = true
 
 -- conform
 map("n", "<space>f", function()
