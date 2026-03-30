@@ -25,11 +25,6 @@ end)
 -- outline
 map("n", "<leader>tt", "<cmd>Outline<CR>")
 
--- navigator
-map({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
-map({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
-map({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
-map({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
 
 -- lsp
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")

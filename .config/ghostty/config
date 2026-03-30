@@ -7,10 +7,6 @@ command = /opt/homebrew/bin/fish
 keybind = ctrl+alt+s=new_split:down
 keybind = ctrl+alt+v=new_split:right
 
-keybind = ctrl+alt+h=goto_split:left
-keybind = ctrl+alt+j=goto_split:bottom
-keybind = ctrl+alt+k=goto_split:top
-keybind = ctrl+alt+l=goto_split:right
 
 ## tabs
 
