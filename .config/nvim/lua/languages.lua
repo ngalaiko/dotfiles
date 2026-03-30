@@ -72,8 +72,9 @@ return {
 	},
 	{
 		ft = { "python" },
-		formatters = { "black" },
-		lsp = { pylsp = {} },
+		formatters = { "ruff_format" },
+		linters = { "ruff" },
+		lsp = { ruff = {} },
 	},
 	{
 		ft = { "terraform", "terraform-vars" },
