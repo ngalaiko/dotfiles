@@ -12,7 +12,7 @@ ln -sf $(pwd)/.config/homebrew "$HOME/.config/homebrew"
 ln -sf $(pwd)/.config/jj "$HOME/.config/jj"
 ln -sf $(pwd)/.config/mise "$HOME/.config/mise"
 ln -sf $(pwd)/.config/rift "$HOME/.config/rift"
-ln -sf $(pwd)/.pi "$HOME/.pi"
-ln -sf $(pwd)/.agents "$HOME/.agents"
+ln -sf $(pwd)/.claude/skills "$HOME/.claude/skills"
+ln -sf $(pwd)/.claude/CLAUDE.md "$HOME/.claude/CLAUDE.md"
 
 brew bundle install
