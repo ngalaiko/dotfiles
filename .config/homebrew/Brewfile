@@ -127,12 +127,8 @@ brew "trivy"
 brew "typst"
 # Tool for working with usage-spec CLIs
 brew "usage"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # World's fastest OpenAPI & Swagger linter
 brew "vacuum", link: false
-# High-performance data structure server that primarily serves key/value workloads
-brew "valkey"
 # Command-line interface for Vercel
 brew "vercel-cli"
 # Generate your Xcode project from a spec file and your folder structure
@@ -147,14 +143,8 @@ brew "yt-dlp"
 brew "zoxide"
 # Tiling window manager for macOS
 brew "acsandmann/tap/rift"
-# CLI app to manage your Apple Notes and Apple reminders
-brew "antoniorodr/memo/memo"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
-# Terraform state management and visualization CLI
-brew "stategraph/stategraph/stategraph"
-# Autonomous plan execution with Claude Code
-brew "umputun/apps/ralphex"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # The macOS screen recorder you deserve - always free and open source
@@ -219,7 +209,9 @@ mas "The Unarchiver", id: 425424353
 mas "Translate for Safari", id: 1445040281
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
+go "github.com/jasonlong/bsky-orbit"
 go "cmd/go"
 go "cmd/gofmt"
 cargo "helix-term"
+uv "frida-tools"
 uv "pricehist"
