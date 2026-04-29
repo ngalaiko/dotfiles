@@ -26,13 +26,6 @@ end)
 map("n", "<leader>tt", "<cmd>Outline<CR>")
 
 
--- lsp
-map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-map("n", "cd", "<cmd>lua vim.lsp.buf.rename()<CR>")
-
-
 -- conform
 map("n", "<space>f", function()
 	require("conform").format()
