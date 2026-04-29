@@ -1,15 +1,24 @@
 tap "acsandmann/tap"
+tap "antoniorodr/memo"
 tap "cooklang/tap"
 tap "daveshanley/vacuum"
+tap "hamed-elfayome/claude-usage"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "jsattler/tap"
 tap "nikitabobko/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "qmk/qmk"
-tap "speakeasy-api/tap"
 tap "sst/tap"
+tap "stategraph/stategraph"
 tap "tattoy-org/tap"
+tap "tldev/tap"
+tap "umputun/apps"
+# Library to render SVG files using Cairo
+brew "librsvg"
+# Tool for reverse engineering 3rd party, closed, binary Android apps
+brew "apktool"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
 # Python code formatter
@@ -18,16 +27,22 @@ brew "black"
 brew "cloud-sql-proxy"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Modern diagram scripting language that turns text to diagrams
+brew "d2"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Diff that understands syntax
 brew "difftastic"
 # Tool for exploring each layer in a docker image
 brew "dive"
-# Play, record, convert, and stream audio and video
+# Command-line tool for DigitalOcean
+brew "doctl"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Free and Open Source empire-building strategy game
+brew "freeciv"
 # ODBC 3 connectivity for UNIX
 brew "unixodbc"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
@@ -38,25 +53,15 @@ brew "fzf"
 brew "gh"
 # Git extension for versioning large files
 brew "git-lfs"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
-# Fast linters runner for Go
-brew "golangci-lint"
 # Language server for `golangci-lint`
 brew "golangci-lint-langserver"
-# Language server for the Go language
-brew "gopls"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# Post-modern modal text editor
-brew "helix"
 # Library to communicate with iOS devices natively
 brew "libimobiledevice"
 # Tool for managing apps on iOS devices
 brew "ideviceinstaller"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # CLI tool for searching and downloading app packages from the iOS App Store
 brew "ipatool"
@@ -72,26 +77,36 @@ brew "ledger"
 brew "libpq", link: true
 # Language Server for the Lua language
 brew "lua-language-server"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Deep clean and optimize your Mac
+brew "mole"
 # Fast, highly customisable system info script
 brew "neofetch"
+# Incremental parsing library
+brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # CLI tools for working with OpenAPI, Arazzo and Overlay specifications
 brew "openapi"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Tool for managing OCI containers and pods
 brew "podman"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Python Language Server for the Language Server Protocol
 brew "python-lsp-server"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
 # Opinionated Lua code formatter
@@ -104,36 +119,52 @@ brew "terraform-ls"
 brew "tflint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Parser generator tool
+brew "tree-sitter-cli"
 # Vulnerability scanner for container images, file systems, and Git repos
 brew "trivy"
+# Markup-based typesetting system
+brew "typst"
 # Tool for working with usage-spec CLIs
 brew "usage"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# World's fastest OpenAPI & Swagger linter
+brew "vacuum", link: false
 # High-performance data structure server that primarily serves key/value workloads
 brew "valkey"
 # Command-line interface for Vercel
 brew "vercel-cli"
+# Generate your Xcode project from a spec file and your folder structure
+brew "xcodegen"
 # Command-line XML and HTML beautifier and content extractor
 brew "xq"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Tiling window manager for macOS
 brew "acsandmann/tap/rift"
-# The worlds fastest and most scalable OpenAPI linter
-brew "daveshanley/vacuum/vacuum"
+# CLI app to manage your Apple Notes and Apple reminders
+brew "antoniorodr/memo/memo"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
+# Terraform state management and visualization CLI
+brew "stategraph/stategraph/stategraph"
+# Autonomous plan execution with Claude Code
+brew "umputun/apps/ralphex"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# The macOS screen recorder you deserve - always free and open source
+cask "jsattler/tap/bettercapture"
 # E-books management software
 cask "calibre"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Universal database tool and SQL client
-cask "dbeaver-community"
+# Native macOS menu bar app for monitoring Claude AI usage limits
+cask "hamed-elfayome/claude-usage/claude-usage-tracker"
 # AI-powered translator
 cask "deepl"
 # Set of tools to manage resources and applications hosted on Google Cloud
@@ -146,8 +177,6 @@ cask "inkscape"
 cask "mullvad-vpn"
 # Free and open-source RSS reader
 cask "netnewswire"
-# Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
 # Browse, manage, inspect containers and images
 cask "podman-desktop"
 # GUI client for PostgreSQL databases
@@ -168,20 +197,29 @@ cask "tailscale-app"
 cask "telegram"
 # File transfer application
 cask "transmit"
+# The worlds fastest and most scalable OpenAPI linter
+cask "daveshanley/vacuum/vacuum"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "1Password for Safari", id: 1569813296
+mas "Aeronaut", id: 6670275450
 mas "Amphetamine", id: 937984704
+mas "Developer", id: 640199958
 mas "Emcee for Music", id: 408774844
 mas "Kagi for Safari", id: 1622835804
 mas "NextDNS", id: 1464122853
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+mas "Numbers", id: 361304891
+mas "Obsidian Web Clipper", id: 6720708363
+mas "Page Screenshot for Safari", id: 1472715727
+mas "Pages", id: 361309726
 mas "Strongbox", id: 897283731
 mas "Sweet Home 3D", id: 669289700
 mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
+mas "Translate for Safari", id: 1445040281
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
-go "github.com/armsnyder/openapi-language-server"
-go "github.com/cloudspannerecosystem/spanner-cli"
-go "github.com/cloudspannerecosystem/wrench"
+go "cmd/go"
+go "cmd/gofmt"
+cargo "helix-term"
+uv "pricehist"
